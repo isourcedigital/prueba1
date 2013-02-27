@@ -1,31 +1,44 @@
-<!DOCTYPE HTML>
-<html>
-    <head>
-        <title>Employee Directory</title>
-        <meta name="viewport" content="width=device-width,initial-scale=1"/>
-        <link rel="stylesheet" href="css/styles.css" />
-    </head>
+<!DOCTYPE html> 
+<html> 
+    <head> 
+    <meta name="viewport" content="width=device-width, initial-scale=1">    
+    <title></title> 
+    <link rel="stylesheet" href="js/jquery.mobile-1.0.min.css" />
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
+	<script src="js/jquery.mobile-1.0.min.js"></script>
+    <script src="js/main.js"></script>
+</head> 
+<body> 
 
-    <body>
+<div data-role="page" id="mainPage">
+
+    <div data-role="header">
+        <h1></h1>
+    </div>
+
+    <div data-role="content">  
+		<div id="status"></div>  
+        <ul id="linksList" data-role="listview" data-inset="true"></ul>
+    </div>
+
+    <div data-role="footer">
+        <h4>SimpleBlog by Raymond Camden</h4>
+    </div>
+
+    
+</div>
+
+<div data-role="page" id="contentPage">
+
+    <div data-role="header">
+        <a href="#mainPage" data-rel="back">Home</a>
+        <h1></h1>
+    </div>
+
+    <div data-role="content" id="entryText">
+    </div>
         
-	<div id="header" class="header">
-		<h1>Employee Directory</h1>
-	</div>
-	<div id="header2">
-		<h2>Employee List</h2>
-	</div>
-	
-	<div id="wrapper">
-		<ul id="employeeList" class="icon-list"></ul>
-	</div>
+</div>
 
-	<div id="busy"/>Loading...</div>
-
-	<script src="js/phonegap.js"></script>
-    <script src="js/jquery.js"></script>
-    <script src="js/iscroll.js"></script>
-    <script src="js/employeelist.js"></script>
-
-    </body>
-
+</body>
 </html>
