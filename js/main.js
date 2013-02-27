@@ -10,7 +10,7 @@ $.ajaxSetup({
 //Title of the blog
 var TITLE = "ColdFusion Jedi";
 //RSS url
-var RSS = "http://feedproxy.google.com/RaymondCamdensColdfusionBlog";
+var RSS = "http://blog.kaspersky.com/feed";
 //Stores entries
 var entries = [];
 var selectedEntry = "";
