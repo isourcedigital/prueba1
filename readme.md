@@ -1,12 +1,16 @@
-# PhoneGap Workshop #
+# Employee Directory App #
 
-In this tutorial, you create a fully functional employee directory application with PhoneGap. You will learn:
+Employee Directory allows you to look for employees by name, view their details, add them to your contacts, and see their manager and direct reports, as well as call, text, or email them.
 
-- How to use different local data storage strategies.
-- How to use several PhoneGap APIs such as Geolocation, Contacts, and Camera.
-- How to handle specific mobile problems such as touch events, scrolling, styling, page transitions, etc.
-- How to build an application using a single page architecture and HTML templates.
-- How to build (compile and package) an application for 6 platforms using PhoneGap Build.
-- To complete this tutorial, all you need is a code editor, a modern browser, and a connection to the Internet. A working knowledge of HTML and JavaScript is assumed, but you don’t need to be a JavaScript guru.
+The application is available on the [Apple App Store](http://itunes.apple.com/gb/app/employee-directory/id536343553?mt=8). 
+Read the [blog post](http://coenraets.org/blog/2012/06/employee-directory-is-now-available-on-the-app-store/).
 
-Complete instructions for this tutorial are available here: http://coenraets.org/blog/phonegap-tutorial/.
+Employee Directory always accesses the employee data from a local database on your iPhone. The information is always available, even when you are offline.
+
+The application comes with a sample dataset to provide an "out-of-the-box" experience, and with a simple offline synchronization mechanism to sync with your own data.
+
+Watch the [video](http://youtu.be/lG2rJtGQ32E).
+
+## Synchronizing with your own data ##
+
+See the documentation [here](http://employeedirectory.org/app/index.html)
