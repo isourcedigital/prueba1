@@ -1,5 +1,5 @@
 /* CSS Document */
-
+body{font: 62.5%/1.5}
 
 p.colum:first-of-type {font-weight:600;}
  
@@ -42,16 +42,15 @@ p.colum   {
 }
 
 @media all and (max-width: 900px) {
- #popupPanel-popup {
-     width:50%;
+ #popupPanel {
+     width:40%;
     
 }
 }
 
 
 #popupPanel {
-		width:100%;
-    border: 1px solid #000;
+		border: 1px solid #000;
     border-right: none;
     background: rgba(0,0,0,.5);
     margin: -1px 0;
@@ -59,4 +58,105 @@ p.colum   {
 }
 #popupPanel .ui-btn {
     margin: 2em 15px;
+}
+
+
+
+.enable{
+background-image: linear-gradient(bottom, #989898 0%, #D0D0D0 80%);
+background-image: -o-linear-gradient(bottom, #989898 0%, #D0D0D0 80%);
+background-image: -moz-linear-gradient(bottom, #989898 0%, #D0D0D0 80%);
+background-image: -webkit-linear-gradient(bottom, #989898 0%, #D0D0D0 80%);
+background-image: -ms-linear-gradient(bottom, #989898 0%, #D0D0D0 80%);
+
+background-image: -webkit-gradient(
+	linear,
+	left bottom,
+	left top,
+	color-stop(0, #989898),
+	color-stop(0.8, #D0D0D0)
+);
+margin:8px;
+}
+
+
+
+.disable{
+background-image: linear-gradient(bottom, #016D55 0%, #28B495 80%);
+background-image: -o-linear-gradient(bottom, #016D55 0%, #28B495 80%);
+background-image: -moz-linear-gradient(bottom, #016D55 0%, #28B495 80%);
+background-image: -webkit-linear-gradient(bottom, #016D55 0%, #28B495 80%);
+background-image: -ms-linear-gradient(bottom, #016D55 0%, #28B495 80%);
+
+background-image: -webkit-gradient(
+	linear,
+	left bottom,
+	left top,
+	color-stop(0, #016D55),
+	color-stop(0.8, #28B495)
+);
+margin:8px;
+}
+
+.button{
+ padding-top:10px;
+ display:block;
+ font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+ text-decoration:none!important;
+ padding-bottom:10px;
+ padding-left:8px;
+ padding-right:8px;
+
+}
+
+.bajorrelieve {
+-webkit-background-clip: text;
+-moz-background-clip: text;
+background-clip: text;
+color: transparent!important;
+text-shadow: 1px 2px 3px rgba(255,255,255,0.3),-1px -1px 1px rgba(0,0,0,.3);
+}
+
+
+img {max-width: 100%;}
+
+.contentTit{
+margin: 8px;
+padding-top: 30px;
+font-family: 'Trebuchet MS', Arial, Helvetica, sans-serif;
+font-size: 50px;
+text-align: right;
+font-weight: bold;
+color: #c5c5c5;
+ }
+ 
+ 
+ 
+ 
+@media (min-width:35em){
+
+/* wrap on wide viewports once open */
+
+.ui-responsive-panel.ui-page-panel-open .ui-panel-content-fixed-toolbar-display-push.ui-panel-content-fixed-toolbar-position-left,
+.ui-responsive-panel.ui-page-panel-open .ui-panel-content-fixed-toolbar-display-reveal.ui-panel-content-fixed-toolbar-position-left,
+.ui-responsive-panel.ui-page-panel-open .ui-panel-content-wrap-display-push.ui-panel-content-wrap-position-left,
+.ui-responsive-panel.ui-page-panel-open .ui-panel-content-wrap-display-reveal.ui-panel-content-wrap-position-left {
+    margin-right: 17em;
+}
+.ui-responsive-panel.ui-page-panel-open .ui-panel-content-fixed-toolbar-display-push.ui-panel-content-fixed-toolbar-position-right,
+.ui-responsive-panel.ui-page-panel-open .ui-panel-content-fixed-toolbar-display-reveal.ui-panel-content-fixed-toolbar-position-right,
+.ui-responsive-panel.ui-page-panel-open .ui-panel-content-wrap-display-push.ui-panel-content-wrap-position-right,
+.ui-responsive-panel.ui-page-panel-open .ui-panel-content-wrap-display-reveal.ui-panel-content-wrap-position-right {
+    margin-left: 17em;
+}
+.ui-responsive-panel.ui-page-panel-open .ui-panel-content-fixed-toolbar-display-push,
+.ui-responsive-panel.ui-page-panel-open .ui-panel-content-fixed-toolbar-display-reveal {
+    width: auto;
+}
+
+/* disable "dismiss" on wide viewports */
+.ui-responsive-panel .ui-panel-dismiss-display-push {
+    display: none;
+}
+
 }

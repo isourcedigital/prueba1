@@ -1,0 +1,62 @@
+/* CSS Document */
+
+
+p.colum:first-of-type {font-weight:600;}
+ 
+ @media all and (max-width: 900px) and (min-width: 600px) {
+p.colum   {
+  -webkit-column-count: 2; /* Saf3, Chrome*/
+  -webkit-column-gap: 4%; /* Saf3, Chrome*/
+  -moz-column-count: 2; /* FF3.5+ */
+  -moz-column-gap: 4%; /* FF3.5+ */
+  column-count: 2; /* Opera 11+*/
+  column-gap: 4%; /* Opera 11+*/
+  }
+}
+
+@media all and (min-width: 900px) {
+p.colum:first-of-type  {
+  -webkit-column-count: 2;
+  -webkit-column-gap: 3%; /* Saf3, Chrome*/
+  -moz-column-count: 2;   
+  -moz-column-gap: 3%; /* FF3.5+ */
+  column-count: 2;        
+  column-gap: 3%; /* Opera 11+*/
+  }
+p.colum   {
+  -webkit-column-count:1;
+  -webkit-column-gap: 1%; /* Saf3, Chrome*/
+  -moz-column-count:1;   
+  -moz-column-gap: 1%; /* FF3.5+ */
+  column-count:1;        
+  column-gap: 1%; /* Opera 11+*/
+  }
+}
+
+#popupPanel-popup {
+    right: 0 !important;
+    left: auto !important;
+    width:25%;
+		height:100%;
+    
+}
+
+@media all and (max-width: 900px) {
+ #popupPanel-popup {
+     width:50%;
+    
+}
+}
+
+
+#popupPanel {
+		width:100%;
+    border: 1px solid #000;
+    border-right: none;
+    background: rgba(0,0,0,.5);
+    margin: -1px 0;
+    height:100%;
+}
+#popupPanel .ui-btn {
+    margin: 2em 15px;
+}
