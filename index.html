@@ -36,6 +36,26 @@
 		$("#home .contentTit").fitText(1, {maxFontSize: '50px'});
 		$("#home .button").fitText(1, { minFontSize:'15px', maxFontSize: '40px'});
 		
+		$(".selectMenu").click(function(){
+				$(".selectMenu img").addClass("rot180");
+		});
+		
+		var alto_ventana = $(window).height(); 
+		console.log(alto_ventana);
+		
+		$("#flipBlog1").flip({
+			height: alto_ventana,
+		});
+		
+		$(window).bind("orientationchange", function(event){            
+                if (event.orientation){          
+                   $("#home").append("Me han reorientado a " + event.orientation);     
+								}
+     });
+		$(window).trigger("orientationchange");
+	
+		
+		
 	});
 	
 	
@@ -82,13 +102,14 @@
 			<p class="blog"><a data-role="button" data-theme="b" data-icon="star" data-mini="true">BLOG5</a></p>
 			<p class="blog"><a data-role="button" data-theme="b" data-icon="star" data-mini="true">BLOG6</a></p>
 			<p class="blog"><a data-role="button" data-theme="b" data-icon="star" data-mini="true">BLOG7</a></p>
+			<p class="blog"><a data-role="button" data-theme="b" data-icon="star" data-mini="true">BLOG8</a></p>
 		</div>
 		
-		<div data-role="panel" id="panelMore" data-theme="b" data-display="reveal" data-position="left">
-			<p><a href="#panelMore" data-role="button" data-theme="a" data-icon="back" data-mini="true" id="closePanel">close</a></p>
-			<p class="blog"><a data-role="button" data-theme="b" data-icon="star" data-mini="true">BLOG5</a></p>
-			<p class="blog"><a data-role="button" data-theme="b" data-icon="star" data-mini="true">BLOG6</a></p>
-			<p class="blog"><a data-role="button" data-theme="b" data-icon="star" data-mini="true">BLOG7</a></p>
+		<div data-role="panel" id="panelOptions" data-theme="b" data-display="reveal" data-position="left">
+			<p><a href="#panelOptions" data-role="button" data-theme="a" data-icon="back" data-mini="true" id="closePanel">close</a></p>
+			<p ><a data-role="button" data-theme="b" data-icon="star" data-mini="true">BLOG5</a></p>
+			<p ><a data-role="button" data-theme="b" data-icon="star" data-mini="true">BLOG6</a></p>
+			<p ><a data-role="button" data-theme="b" data-icon="star" data-mini="true">BLOG7</a></p>
 		</div>
 
 		
@@ -101,7 +122,7 @@
 		</div>
 		
 		<div data-role="header" data-theme="none" >
-			<div style="width:100%; margin:auto">
+			<div style="width:736px; margin:auto">
 				<img src="images/logo.jpg">
 			</div>
 			<div class="contentTit">Content</div>
@@ -156,8 +177,8 @@
 		</div>
 		
 		<div data-role="footer" data-theme="none" >
-			<div style="width:100%; height:auto; margin:auto">
-				<div style="margin-right:8px; float:left;"><a href="#panelOptions" data-rel="panel"><img src="images/app_18.jpg"></a></div>
+			<div style="width:736px; height:auto; margin:auto">
+				<div style="margin-right:8px; float:right;"><a href="#panelOptions" data-rel="panel"><img src="images/app_18.jpg"></a></div>
 				<div style="text-align:center;" id="cantidad">blogs 4 de 7</div>
 				
 			</div>
@@ -166,48 +187,56 @@
 
 <!---blog1-paginas--->
 <div data-role="page" id="blog1-page">
-	<div data-role="header">
-		<h1>Demo</h1>
+	<div class="header">
+	
+		<div class="logo">
+					<a href="#home" data-transition="slide" data-direction="reverse"><img src="images/logoInterno.png" height="31" width="143" alt="kaspersky"></a>	
+		</div>
+		
+		<div class="menu">
+		
+			<div class="blogActual"><a href="#popupSelcBlog" data-rel="popup" data-transition="slidedown" data-position-to="origin" class="selectMenu">Kaspersky Lab <img src="images/flechita.png" class="flechita"></a></div>
+			
+			<div data-role="popup" id="popupSelcBlog" data-theme="d">
+        <ul data-role="listview" data-inset="true" style="min-width:210px;" data-theme="d">
+            <li><a href="#">BLOG 2</a></li>
+            <li><a href="#">BLOG 3</a></li>
+            <li><a href="#">BLOG 4</a></li>
+	    </ul>
+</div>
+				
+			
+		</div>
+		
 	</div>
 		
 		<div data-role="content" data-theme="c">
  
-      <div data-role="flip" data-flip-show-pager="false" data-flip-forward-dir="rtol" data-flip-keyboard-nav="true" data-flip-height="300" >
+      <div id="flipBlog1" data-role="flip" data-flip-show-pager="false" data-flip-forward-dir="rtol" data-flip-keyboard-nav="true" data-flip-height="" >
 			<!--page1-->
 			<div class="p" id="blog1-page1">
-					<div class="ui-header">
-						HEAEDER
+					<div class="notaPrincipal">
 					</div>
-					<div>
+					<div class="nota">
+					</div>
+					<div class="nota">
 					</div>
 			</div>
 			<!--page1-->
 			<!--page2-->			
 			<div class="p" id="blog1-page2">
-						<h1>PAGE2</h1>
-						<p class="colum" style="color:#00F">
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce malesuada egestas nibh, eget ultrices lacus vestibulum id. Pellentesque tristique elit in lorem bibendum sed pretium nisi posuere. Nunc a neque et lacus interdum accumsan non non tellus. Vivamus quis dolor augue, et sodales libero. Duis vel odio nunc, sit amet auctor erat. Cras pellentesque turpis dolor, quis molestie nulla. Morbi sit amet nibh ac quam blandit gravida. Suspendisse cursus, libero ut molestie tristique, quam purus pellentesque tortor, fringilla facilisis risus massa et sem. Suspendisse sagittis interdum tincidunt. Nulla facilisi. Proin vulputate eleifend sodales. Cras euismod, sapien sit amet facilisis varius, justo dui viverra ipsum, nec blandit dolor velit sit amet lacus. Cras suscipit nibh quam. Donec congue elementum arcu a sagittis. Duis vulputate aliquet libero id molestie.
-						</p>
-								
+					2		
 			</div>
 			<!--page2-->
 			<!--page3-->
 			<div class="p" id="blog1-page3">
-						<h1>PAGE3</h1>
-						<p class="colum">
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce malesuada egestas nibh, eget ultrices lacus vestibulum id. Pellentesque tristique elit in lorem bibendum sed pretium nisi posuere. Nunc a neque et lacus interdum accumsan non non tellus. Vivamus quis dolor augue, et sodales libero. Duis vel odio nunc, sit amet auctor erat. Cras pellentesque turpis dolor, quis molestie nulla. Morbi sit amet nibh ac quam blandit gravida. Suspendisse cursus, libero ut molestie tristique, quam purus pellentesque tortor, fringilla facilisis risus massa et sem. Suspendisse sagittis interdum tincidunt. Nulla facilisi. Proin vulputate eleifend sodales. Cras euismod, sapien sit amet facilisis varius, justo dui viverra ipsum, nec blandit dolor velit sit amet lacus. Cras suscipit nibh quam. Donec congue elementum arcu a sagittis. Duis vulputate aliquet libero id molestie.
-						</p>
-						
+					3
 			</div>
 			<!--page3-->
 			
 			<!--page4-->
 			<div class="p" id="blog1-page4">
-						<h1>PAGE4</h1>
-						<p class="colum">
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce malesuada egestas nibh, eget ultrices lacus vestibulum id. Pellentesque tristique elit in lorem bibendum sed pretium nisi posuere. Nunc a neque et lacus interdum accumsan non non tellus. Vivamus quis dolor augue, et sodales libero. Duis vel odio nunc, sit amet auctor erat. Cras pellentesque turpis dolor, quis molestie nulla. Morbi sit amet nibh ac quam blandit gravida. Suspendisse cursus, libero ut molestie tristique, quam purus pellentesque tortor, fringilla facilisis risus massa et sem. Suspendisse sagittis interdum tincidunt. Nulla facilisi. Proin vulputate eleifend sodales. Cras euismod, sapien sit amet facilisis varius, justo dui viverra ipsum, nec blandit dolor velit sit amet lacus. Cras suscipit nibh quam. Donec congue elementum arcu a sagittis. Duis vulputate aliquet libero id molestie.
-						</p>
-						
+				4
 			</div>
 			<!--page4-->
 			
