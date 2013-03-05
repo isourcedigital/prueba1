@@ -121,16 +121,20 @@ text-shadow: 1px 2px 3px rgba(255,255,255,0.3),-1px -1px 1px rgba(0,0,0,.3);
 img {max-width: 100%;}
 
 .contentTit{
-margin: 8px;
+margin:auto;
 padding-top: 30px;
 font-family: 'Trebuchet MS', Arial, Helvetica, sans-serif;
 font-size: 50px;
 text-align: right;
 font-weight: bold;
 color: #c5c5c5;
+width:736px;
  }
  
- 
+.header{
+ height:60px;
+ background-color:#424242;
+}
  
  
 @media (min-width:35em){
@@ -160,3 +164,66 @@ color: #c5c5c5;
 }
 
 }
+
+
+
+.logo{
+ float:left;
+ margin-left:34px;
+ margin-top:13px;
+ position:relative;
+ z-index:999;
+}
+ 
+.menu{
+ width:100%;
+ float:left;
+ position:relative;
+}
+ 
+.selectMenu{
+
+ }
+.blogActual{
+ width:100%;
+ text-align:center;
+ margin-top: -42px;
+ }
+.blogActual a{
+  font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+  font-size:34px;
+  color:#FFF!important;
+  text-decoration:none;
+  text-shadow:none!important;
+ }
+ 
+#popupSelcBlog-popup{
+ top:55px!important
+}
+
+.flechita{
+top: -4px;
+position: relative;
+}
+
+.rot180 {
+	-webkit-transform: rotate(180deg);
+	-moz-transform: rotate(180deg);
+	rotation: 180deg;
+	}
+  
+ .notaPrincipal{
+ width:725px;
+ float:left;
+ height:437px;
+ background-color:#FFFFFF;
+ margin:5px; 
+}
+.nota{
+ width:358px;
+ float:left;
+ height:437px;
+ background-color:#FFFFFF;
+ margin:5px;
+}
+
