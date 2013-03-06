@@ -1,37 +1,19 @@
 /* CSS Document */
-body{font: 62.5%/1.5}
 
-p.colum:first-of-type {font-weight:600;}
+p { margin-top:0!important; margin-bottom:0!important}
  
- @media all and (max-width: 900px) and (min-width: 600px) {
+
 p.colum   {
   -webkit-column-count: 2; /* Saf3, Chrome*/
-  -webkit-column-gap: 4%; /* Saf3, Chrome*/
+  -webkit-column-gap: 14px; /* Saf3, Chrome*/
   -moz-column-count: 2; /* FF3.5+ */
-  -moz-column-gap: 4%; /* FF3.5+ */
+  -moz-column-gap:14px; /* FF3.5+ */
   column-count: 2; /* Opera 11+*/
-  column-gap: 4%; /* Opera 11+*/
+  column-gap: 14px /* Opera 11+*/
   }
-}
 
-@media all and (min-width: 900px) {
-p.colum:first-of-type  {
-  -webkit-column-count: 2;
-  -webkit-column-gap: 3%; /* Saf3, Chrome*/
-  -moz-column-count: 2;   
-  -moz-column-gap: 3%; /* FF3.5+ */
-  column-count: 2;        
-  column-gap: 3%; /* Opera 11+*/
-  }
-p.colum   {
-  -webkit-column-count:1;
-  -webkit-column-gap: 1%; /* Saf3, Chrome*/
-  -moz-column-count:1;   
-  -moz-column-gap: 1%; /* FF3.5+ */
-  column-count:1;        
-  column-gap: 1%; /* Opera 11+*/
-  }
-}
+
+
 
 #popupPanel-popup {
     right: 0 !important;
@@ -137,33 +119,6 @@ width:736px;
 }
  
  
-@media (min-width:35em){
-
-/* wrap on wide viewports once open */
-
-.ui-responsive-panel.ui-page-panel-open .ui-panel-content-fixed-toolbar-display-push.ui-panel-content-fixed-toolbar-position-left,
-.ui-responsive-panel.ui-page-panel-open .ui-panel-content-fixed-toolbar-display-reveal.ui-panel-content-fixed-toolbar-position-left,
-.ui-responsive-panel.ui-page-panel-open .ui-panel-content-wrap-display-push.ui-panel-content-wrap-position-left,
-.ui-responsive-panel.ui-page-panel-open .ui-panel-content-wrap-display-reveal.ui-panel-content-wrap-position-left {
-    margin-right: 17em;
-}
-.ui-responsive-panel.ui-page-panel-open .ui-panel-content-fixed-toolbar-display-push.ui-panel-content-fixed-toolbar-position-right,
-.ui-responsive-panel.ui-page-panel-open .ui-panel-content-fixed-toolbar-display-reveal.ui-panel-content-fixed-toolbar-position-right,
-.ui-responsive-panel.ui-page-panel-open .ui-panel-content-wrap-display-push.ui-panel-content-wrap-position-right,
-.ui-responsive-panel.ui-page-panel-open .ui-panel-content-wrap-display-reveal.ui-panel-content-wrap-position-right {
-    margin-left: 17em;
-}
-.ui-responsive-panel.ui-page-panel-open .ui-panel-content-fixed-toolbar-display-push,
-.ui-responsive-panel.ui-page-panel-open .ui-panel-content-fixed-toolbar-display-reveal {
-    width: auto;
-}
-
-/* disable "dismiss" on wide viewports */
-.ui-responsive-panel .ui-panel-dismiss-display-push {
-    display: none;
-}
-
-}
 
 
 
@@ -198,7 +153,8 @@ width:736px;
  }
  
 #popupSelcBlog-popup{
- top:55px!important
+ top:60px!important;
+ z-index: 10;
 }
 
 .flechita{
@@ -212,18 +168,338 @@ position: relative;
 	rotation: 180deg;
 	}
   
- .notaPrincipal{
+.notaPrincipal{
  width:725px;
  float:left;
- height:437px;
- background-color:#FFFFFF;
- margin:5px; 
-}
-.nota{
- width:358px;
- float:left;
- height:437px;
+ height:463px;
+ display:block;
  background-color:#FFFFFF;
  margin:5px;
 }
+.nota{
+ width:330px;
+ float:left;
+ height:389px;
+ display:block; 
+ background-color:#FFFFFF;
+  margin:5px;
+  padding:14px;
+}
 
+.notaDestacada{
+ width:697px;
+ float:left;
+ height:435px;
+ display:block;
+ background-color:#FFFFFF;
+ margin:5px;
+ padding:14px;
+}
+
+.contenedorNotas{
+ width:736px;
+ height:899px;
+ margin:auto;
+}
+
+
+.notaPrincipal .imagen{
+ 	height:338px;
+  width:725px;
+  float:left;
+  position:relative;
+}
+
+.notaPrincipal .imagen .titulo{
+font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+font-size: 52px;
+color: #FFF;
+float: left;
+position: relative;
+z-index: 9999;
+top: -155px;
+padding: 14px;
+font-weight: bold;
+line-height: 50px;
+text-shadow: 1px 1px 3px #141414;
+filter: dropshadow(color=#141414, offx=1, offy=1);
+ }
+ 
+.notaPrincipal .imagen  .contentFechaComent{
+ width:100%;
+ float:left;
+ position:relative;
+top: -175px;
+padding: 14px;
+ }
+ 
+.notaPrincipal .imagen  .contentFechaComent .fecha{
+ float:left;
+ color:#FFF;
+ margin-right:10px;
+}
+.notaPrincipal .imagen  .contentFechaComent .fecha p{
+ float:left;
+ margin-left:10px;
+ margin-top:0!important;
+ margin-bottom:0!important; 
+}
+.notaPrincipal .imagen  .contentFechaComent .fecha img{
+ float:left;
+}
+.notaPrincipal .imagen  .contentFechaComent .coment{
+ float:left;
+ color:#FFF; 
+}
+.notaPrincipal .imagen  .contentFechaComent .coment p{
+ float:left;
+ margin-left:10px;
+ margin-top:0!important;
+ margin-bottom:0!important; 
+}
+.notaPrincipal .imagen  .contentFechaComent .coment img{
+ float:left;
+}
+.texto{
+ font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+ color:#5e5e5e;
+ font-size:14px;
+ float:left;
+ line-height:24px;
+
+}
+.texto p{
+ margin-top:0!important;
+ margin-bottom:0!important;
+  padding:14px;
+}
+
+
+
+.nota .imagen{
+ 	height:178px;
+  width:333px;
+  float:left;
+}
+
+.nota .titulo{
+font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+font-size: 20px;
+color: #373737;
+float: left;
+font-weight: bold;
+line-height:25px;
+margin-top:20px;
+}
+ 
+.nota  .contentFechaComent{
+ width:100%;
+ float:left;
+ margin-top:10px;
+ }
+ 
+.nota  .contentFechaComent .fecha{
+ float:left;
+ color:#b2b2b2;
+ margin-right:10px;
+}
+.nota  .contentFechaComent .fecha p{
+ float:left;
+ margin-left:10px;
+ margin-top:0!important;
+ margin-bottom:0!important; 
+}
+.nota  .contentFechaComent .fecha img{
+ float:left;
+}
+.nota  .contentFechaComent .coment{
+ float:left;
+ color:#b2b2b2; 
+}
+.nota  .contentFechaComent .coment p{
+ float:left;
+ margin-left:10px;
+ margin-top:0!important;
+ margin-bottom:0!important; 
+}
+.nota  .contentFechaComent .coment img{
+ float:left;
+}
+.nota .texto p{ padding:0; margin-top:10px!important; float:left;}
+
+
+
+.notaDestacada .imagen{
+  float:right;
+}
+
+.notaDestacada .titulo{
+font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+font-size:23px;
+color: #373737;
+float: left;
+font-weight: bold;
+line-height:28px;
+width:347px;
+ }
+ 
+.notaDestacada .contentFechaComent{
+ width:347px;
+ float:left;
+ margin-top:6px;
+ 
+ }
+ 
+.notaDestacada .contentFechaComent .fecha{
+ float:left;
+ color:#b2b2b2;
+ margin-right:10px;
+}
+.notaDestacada .contentFechaComent .fecha p{
+ float:left;
+ margin-left:10px;
+ margin-top:0!important;
+ margin-bottom:0!important; 
+}
+.notaDestacada .contentFechaComent .fecha img{
+ float:left;
+}
+.notaDestacada .contentFechaComent .coment{
+ float:left;
+ color:#b2b2b2; 
+}
+.notaDestacada .contentFechaComent .coment p{
+ float:left;
+ margin-left:10px;
+ margin-top:0!important;
+ margin-bottom:0!important; 
+}
+.notaDestacada .contentFechaComent .coment img{
+ float:left;
+}
+
+.notaDestacada  .texto{
+ font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+ color:#5e5e5e;
+ font-size:14px;
+ float:left;
+ line-height:24px;
+ width: 330px;
+ margin-top:10px;
+}
+
+.notaDestacada  .texto2{
+ font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+ color:#5e5e5e;
+ font-size:14px;
+ float:left;
+ line-height:24px;
+}
+.notaDestacada  .texto p{
+ margin-top:0!important;
+ margin-bottom:0!important;
+  padding:0px;
+   width: 330px;
+    float:left;
+}
+.notaDestacada  .texto2 p{
+ margin-top:0!important;
+ margin-bottom:0!important;
+  padding:0px;
+}
+
+
+#popupSelcBlog-screen{
+ z-index:9;
+ }
+ 
+.volver{
+ position:absolute;
+ z-index:999;
+ top:0;
+ left:0;
+ }
+ 
+ 
+.notaPop .notaPrincipal{
+ width:697px;
+ float:left;
+ height:914px;
+ display:block;
+ background-color:#FFFFFF;
+ margin:5px;
+ padding:14px;
+}
+ 
+.notaPop .notaPrincipal .imagen{
+ 	height:314px;
+  width:697px;
+  float:left;
+  position:relative;
+  overflow:hidden;
+}
+
+.notaPop .notaPrincipal .titulo{
+font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+font-size:40px;
+color: #373737;
+float: left;
+font-weight: bold;
+line-height:48px;
+margin-top:10px;
+
+}
+ 
+.notaPop .notaPrincipal .contentFechaComent{
+ width:100%;
+ float:left;
+ margin-top:10px;
+}
+ 
+.notaPop .notaPrincipal .contentFechaComent .fecha{
+ float:left;
+ color:#b2b2b2;
+ margin-right:10px;
+}
+.notaPop .notaPrincipal .contentFechaComent .fecha p{
+ float:left;
+ margin-left:10px;
+ margin-top:0!important;
+ margin-bottom:0!important; 
+}
+
+.notaPop .notaPrincipal .contentFechaComent .fecha img{
+ float:left;
+}
+
+.notaPop .notaPrincipal .contentFechaComent .coment{
+ float:left;
+ color:#b2b2b2; 
+}
+
+.notaPop .notaPrincipal .contentFechaComent .coment p{
+ float:left;
+ margin-left:10px;
+ margin-top:0!important;
+ margin-bottom:0!important; 
+}
+
+.notaPop .notaPrincipal .contentFechaComent .coment img{
+ float:left;
+}
+
+.notaPop  .texto{
+ font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+ color:#5e5e5e;
+ font-size:14px;
+ float:left;
+ line-height:30px;
+ margin-top:10px;
+}
+
+.notaPop  .texto p{
+ margin-top:0!important;
+ margin-bottom:0!important;
+ padding:0px;
+float:left;
+}
