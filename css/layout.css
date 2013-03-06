@@ -1,505 +1,665 @@
 /* CSS Document */
 
-p { margin-top:0!important; margin-bottom:0!important}
- 
 
-p.colum   {
-  -webkit-column-count: 2; /* Saf3, Chrome*/
-  -webkit-column-gap: 14px; /* Saf3, Chrome*/
-  -moz-column-count: 2; /* FF3.5+ */
-  -moz-column-gap:14px; /* FF3.5+ */
-  column-count: 2; /* Opera 11+*/
-  column-gap: 14px /* Opera 11+*/
-  }
-
-
-
-
-#popupPanel-popup {
-    right: 0 !important;
-    left: auto !important;
-    width:25%;
-		height:100%;
-    
+p
+{
+ margin-top: 0!important;
+ margin-bottom: 0!important
 }
 
-@media all and (max-width: 900px) {
- #popupPanel {
-     width:40%;
-    
-}
-}
+.p { background: #F9F9F9; }
 
-
-#popupPanel {
-		border: 1px solid #000;
-    border-right: none;
-    background: rgba(0,0,0,.5);
-    margin: -1px 0;
-    height:100%;
-}
-#popupPanel .ui-btn {
-    margin: 2em 15px;
+p.colum
+{
+ -webkit-column-count: 2; /* Saf3, Chrome*/
+ -webkit-column-gap: 14px; /* Saf3, Chrome*/
+ -moz-column-count: 2; /* FF3.5+ */
+ -moz-column-gap: 14px; /* FF3.5+ */
+ column-count: 2; /* Opera 11+*/
+ column-gap: 14px /* Opera 11+*/
 }
 
+#popupPanel-popup
+{
+ right: 0 !important;
+ left: auto !important;
+ width: 25%;
+ height: 100%;
+}
+ @media all and (max-width: 900px) {
 
-
-.enable{
-background-image: linear-gradient(bottom, #989898 0%, #D0D0D0 80%);
-background-image: -o-linear-gradient(bottom, #989898 0%, #D0D0D0 80%);
-background-image: -moz-linear-gradient(bottom, #989898 0%, #D0D0D0 80%);
-background-image: -webkit-linear-gradient(bottom, #989898 0%, #D0D0D0 80%);
-background-image: -ms-linear-gradient(bottom, #989898 0%, #D0D0D0 80%);
-
-background-image: -webkit-gradient(
-	linear,
-	left bottom,
-	left top,
-	color-stop(0, #989898),
-	color-stop(0.8, #D0D0D0)
-);
-margin:8px;
+#popupPanel { width: 40%; }
 }
 
-
-
-.disable{
-background-image: linear-gradient(bottom, #016D55 0%, #28B495 80%);
-background-image: -o-linear-gradient(bottom, #016D55 0%, #28B495 80%);
-background-image: -moz-linear-gradient(bottom, #016D55 0%, #28B495 80%);
-background-image: -webkit-linear-gradient(bottom, #016D55 0%, #28B495 80%);
-background-image: -ms-linear-gradient(bottom, #016D55 0%, #28B495 80%);
-
-background-image: -webkit-gradient(
-	linear,
-	left bottom,
-	left top,
-	color-stop(0, #016D55),
-	color-stop(0.8, #28B495)
-);
-margin:8px;
+#popupPanel
+{
+ border: 1px solid #000;
+ border-right: none;
+ background: rgba(0,0,0,.5);
+ margin: -1px 0;
+ height: 100%;
 }
 
-.button{
- padding-top:10px;
- display:block;
- font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
- text-decoration:none!important;
- padding-bottom:10px;
- padding-left:8px;
- padding-right:8px;
+#popupPanel .ui-btn { margin: 2em 15px; }
 
+.enable
+{
+ background-image: linear-gradient(bottom, #989898 0%, #D0D0D0 80%);
+ background-image: -o-linear-gradient(bottom, #989898 0%, #D0D0D0 80%);
+ background-image: -moz-linear-gradient(bottom, #989898 0%, #D0D0D0 80%);
+ background-image: -webkit-linear-gradient(bottom, #989898 0%, #D0D0D0 80%);
+ background-image: -ms-linear-gradient(bottom, #989898 0%, #D0D0D0 80%);
+ background-image: -webkit-gradient( linear, left bottom, left top, color-stop(0, #989898), color-stop(0.8, #D0D0D0) );
+ margin: 8px;
 }
 
-.bajorrelieve {
--webkit-background-clip: text;
--moz-background-clip: text;
-background-clip: text;
-color: transparent!important;
-text-shadow: 1px 2px 3px rgba(255,255,255,0.3),-1px -1px 1px rgba(0,0,0,.3);
+.disable
+{
+ background-image: linear-gradient(bottom, #016D55 0%, #28B495 80%);
+ background-image: -o-linear-gradient(bottom, #016D55 0%, #28B495 80%);
+ background-image: -moz-linear-gradient(bottom, #016D55 0%, #28B495 80%);
+ background-image: -webkit-linear-gradient(bottom, #016D55 0%, #28B495 80%);
+ background-image: -ms-linear-gradient(bottom, #016D55 0%, #28B495 80%);
+ background-image: -webkit-gradient( linear, left bottom, left top, color-stop(0, #016D55), color-stop(0.8, #28B495) );
+ margin: 8px;
 }
 
-
-img {max-width: 100%;}
-
-.contentTit{
-margin:auto;
-padding-top: 30px;
-font-family: 'Trebuchet MS', Arial, Helvetica, sans-serif;
-font-size: 50px;
-text-align: right;
-font-weight: bold;
-color: #c5c5c5;
-width:736px;
- }
- 
-.header{
- height:60px;
- background-color:#424242;
+.button
+{
+ padding-top: 10px;
+ display: block;
+ font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+ text-decoration: none!important;
+ padding-bottom: 10px;
+ padding-left: 8px;
+ padding-right: 8px;
 }
- 
- 
 
-
-
-.logo{
- float:left;
- margin-left:34px;
- margin-top:13px;
- position:relative;
- z-index:999;
+.bajorrelieve
+{
+ -webkit-background-clip: text;
+ -moz-background-clip: text;
+ background-clip: text;
+ color: transparent!important;
+ text-shadow: 1px 2px 3px rgba(255,255,255,0.3), -1px -1px 1px rgba(0,0,0,.3);
 }
- 
-.menu{
- width:100%;
- float:left;
- position:relative;
-}
- 
-.selectMenu{
 
- }
-.blogActual{
- width:100%;
- text-align:center;
+img { max-width: 100%; }
+
+.contentTit
+{
+ margin: auto;
+ font-family: 'Trebuchet MS', Arial, Helvetica, sans-serif;
+ font-size: 50px;
+ text-align: right;
+ font-weight: bold;
+ color: #c5c5c5;
+ width: 736px;
+}
+
+.header
+{
+ height: 60px;
+ background-color: #424242;
+}
+
+.logoHome
+{
+ width: 735px;
+ margin: auto;
+ margin-top: 30px;
+}
+
+.logo
+{
+ float: left;
+ margin-left: 34px;
+ margin-top: 13px;
+ position: relative;
+ z-index: 999;
+}
+
+.menu
+{
+ width: 100%;
+ float: left;
+ position: relative;
+}
+
+.selectMenu { }
+
+.blogActual
+{
+ width: 100%;
+ text-align: center;
  margin-top: -42px;
- }
-.blogActual a{
-  font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
-  font-size:34px;
-  color:#FFF!important;
-  text-decoration:none;
-  text-shadow:none!important;
- }
- 
-#popupSelcBlog-popup{
- top:60px!important;
+}
+
+.blogActual a
+{
+ font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+ font-size: 34px;
+ color: #FFF!important;
+ text-decoration: none;
+ text-shadow: none!important;
+}
+
+#popupSelcBlog-popup
+{
+ top: 60px!important;
  z-index: 10;
 }
 
-.flechita{
-top: -4px;
-position: relative;
+.flechita
+{
+ top: -4px;
+ position: relative;
 }
 
-.rot180 {
-	-webkit-transform: rotate(180deg);
-	-moz-transform: rotate(180deg);
-	rotation: 180deg;
-	}
-  
-.notaPrincipal{
- width:725px;
- float:left;
- height:463px;
- display:block;
- background-color:#FFFFFF;
- margin:5px;
-}
-.nota{
- width:330px;
- float:left;
- height:389px;
- display:block; 
- background-color:#FFFFFF;
-  margin:5px;
-  padding:14px;
+.rot180
+{
+ -webkit-transform: rotate(180deg);
+ -moz-transform: rotate(180deg);
+ rotation: 180deg;
 }
 
-.notaDestacada{
- width:697px;
- float:left;
- height:435px;
- display:block;
- background-color:#FFFFFF;
- margin:5px;
- padding:14px;
+.notaPrincipal
+{
+ width: 725px;
+ float: left;
+ height: 463px;
+ display: block;
+ background-color: #FFFFFF;
+ margin: 5px;
 }
 
-.contenedorNotas{
- width:736px;
- height:899px;
- margin:auto;
-}
-
-
-.notaPrincipal .imagen{
- 	height:338px;
-  width:725px;
-  float:left;
-  position:relative;
-}
-
-.notaPrincipal .imagen .titulo{
-font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
-font-size: 52px;
-color: #FFF;
-float: left;
-position: relative;
-z-index: 9999;
-top: -155px;
-padding: 14px;
-font-weight: bold;
-line-height: 50px;
-text-shadow: 1px 1px 3px #141414;
-filter: dropshadow(color=#141414, offx=1, offy=1);
- }
- 
-.notaPrincipal .imagen  .contentFechaComent{
- width:100%;
- float:left;
- position:relative;
-top: -175px;
-padding: 14px;
- }
- 
-.notaPrincipal .imagen  .contentFechaComent .fecha{
- float:left;
- color:#FFF;
- margin-right:10px;
-}
-.notaPrincipal .imagen  .contentFechaComent .fecha p{
- float:left;
- margin-left:10px;
- margin-top:0!important;
- margin-bottom:0!important; 
-}
-.notaPrincipal .imagen  .contentFechaComent .fecha img{
- float:left;
-}
-.notaPrincipal .imagen  .contentFechaComent .coment{
- float:left;
- color:#FFF; 
-}
-.notaPrincipal .imagen  .contentFechaComent .coment p{
- float:left;
- margin-left:10px;
- margin-top:0!important;
- margin-bottom:0!important; 
-}
-.notaPrincipal .imagen  .contentFechaComent .coment img{
- float:left;
-}
-.texto{
- font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
- color:#5e5e5e;
- font-size:14px;
- float:left;
- line-height:24px;
-
-}
-.texto p{
- margin-top:0!important;
- margin-bottom:0!important;
-  padding:14px;
-}
-
-
-
-.nota .imagen{
- 	height:178px;
-  width:333px;
-  float:left;
-}
-
-.nota .titulo{
-font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
-font-size: 20px;
-color: #373737;
-float: left;
-font-weight: bold;
-line-height:25px;
-margin-top:20px;
-}
- 
-.nota  .contentFechaComent{
- width:100%;
- float:left;
- margin-top:10px;
- }
- 
-.nota  .contentFechaComent .fecha{
- float:left;
- color:#b2b2b2;
- margin-right:10px;
-}
-.nota  .contentFechaComent .fecha p{
- float:left;
- margin-left:10px;
- margin-top:0!important;
- margin-bottom:0!important; 
-}
-.nota  .contentFechaComent .fecha img{
- float:left;
-}
-.nota  .contentFechaComent .coment{
- float:left;
- color:#b2b2b2; 
-}
-.nota  .contentFechaComent .coment p{
- float:left;
- margin-left:10px;
- margin-top:0!important;
- margin-bottom:0!important; 
-}
-.nota  .contentFechaComent .coment img{
- float:left;
-}
-.nota .texto p{ padding:0; margin-top:10px!important; float:left;}
-
-
-
-.notaDestacada .imagen{
-  float:right;
-}
-
-.notaDestacada .titulo{
-font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
-font-size:23px;
-color: #373737;
-float: left;
-font-weight: bold;
-line-height:28px;
-width:347px;
- }
- 
-.notaDestacada .contentFechaComent{
- width:347px;
- float:left;
- margin-top:6px;
- 
- }
- 
-.notaDestacada .contentFechaComent .fecha{
- float:left;
- color:#b2b2b2;
- margin-right:10px;
-}
-.notaDestacada .contentFechaComent .fecha p{
- float:left;
- margin-left:10px;
- margin-top:0!important;
- margin-bottom:0!important; 
-}
-.notaDestacada .contentFechaComent .fecha img{
- float:left;
-}
-.notaDestacada .contentFechaComent .coment{
- float:left;
- color:#b2b2b2; 
-}
-.notaDestacada .contentFechaComent .coment p{
- float:left;
- margin-left:10px;
- margin-top:0!important;
- margin-bottom:0!important; 
-}
-.notaDestacada .contentFechaComent .coment img{
- float:left;
-}
-
-.notaDestacada  .texto{
- font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
- color:#5e5e5e;
- font-size:14px;
- float:left;
- line-height:24px;
+.nota
+{
  width: 330px;
- margin-top:10px;
+ float: left;
+ height: 389px;
+ display: block;
+ background-color: #FFFFFF;
+ margin: 5px;
+ padding: 14px;
 }
 
-.notaDestacada  .texto2{
- font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
- color:#5e5e5e;
- font-size:14px;
- float:left;
- line-height:24px;
+.notaDestacada
+{
+ width: 697px;
+ float: left;
+ height: 435px;
+ display: block;
+ background-color: #FFFFFF;
+ margin: 5px;
+ padding: 14px;
 }
-.notaDestacada  .texto p{
- margin-top:0!important;
- margin-bottom:0!important;
-  padding:0px;
-   width: 330px;
-    float:left;
+
+.contenedorNotas
+{
+ width: 736px;
+ height: 899px;
+ margin: auto;
 }
-.notaDestacada  .texto2 p{
- margin-top:0!important;
- margin-bottom:0!important;
-  padding:0px;
+
+.notaPrincipal .imagen
+{
+ height: 338px;
+ width: 725px;
+ float: left;
+ position: relative;
+}
+
+.notaPrincipal .imagen .titulo
+{
+ font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+ font-size: 52px;
+ color: #FFF;
+ float: left;
+ position: relative;
+ z-index: 9999;
+ top: -155px;
+ padding: 14px;
+ font-weight: bold;
+ line-height: 50px;
+ text-shadow: 1px 1px 3px #141414;
+ filter: dropshadow(color=#141414, offx=1, offy=1);
+}
+
+.notaPrincipal .imagen .contentFechaComent
+{
+ width: 100%;
+ float: left;
+ position: relative;
+ top: -175px;
+ padding: 14px;
+}
+
+.notaPrincipal .imagen .contentFechaComent .fecha
+{
+ float: left;
+ color: #FFF;
+ margin-right: 10px;
+}
+
+.notaPrincipal .imagen .contentFechaComent .fecha p
+{
+ float: left;
+ margin-left: 10px;
+ margin-top: 0!important;
+ margin-bottom: 0!important;
+}
+
+.notaPrincipal .imagen .contentFechaComent .fecha img { float: left; }
+
+.notaPrincipal .imagen .contentFechaComent .coment
+{
+ float: left;
+ color: #FFF;
+}
+
+.notaPrincipal .imagen .contentFechaComent .coment p
+{
+ float: left;
+ margin-left: 10px;
+ margin-top: 0!important;
+ margin-bottom: 0!important;
+}
+
+.notaPrincipal .imagen .contentFechaComent .coment img { float: left; }
+
+.texto
+{
+ font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+ color: #5e5e5e;
+ font-size: 14px;
+ float: left;
+ line-height: 24px;
+}
+
+.texto p
+{
+ margin-top: 0!important;
+ margin-bottom: 0!important;
+ padding: 14px;
+}
+
+.nota .imagen
+{
+ height: 178px;
+ width: 333px;
+ float: left;
+}
+
+.nota .titulo
+{
+ font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+ font-size: 20px;
+ color: #373737;
+ float: left;
+ font-weight: bold;
+ line-height: 25px;
+ margin-top: 20px;
+}
+
+.nota .contentFechaComent
+{
+ width: 100%;
+ float: left;
+ margin-top: 10px;
+}
+
+.nota .contentFechaComent .fecha
+{
+ float: left;
+ color: #b2b2b2;
+ margin-right: 10px;
+}
+
+.nota .contentFechaComent .fecha p
+{
+ float: left;
+ margin-left: 10px;
+ margin-top: 0!important;
+ margin-bottom: 0!important;
+}
+
+.nota .contentFechaComent .fecha img { float: left; }
+
+.nota .contentFechaComent .coment
+{
+ float: left;
+ color: #b2b2b2;
+}
+
+.nota .contentFechaComent .coment p
+{
+ float: left;
+ margin-left: 10px;
+ margin-top: 0!important;
+ margin-bottom: 0!important;
+}
+
+.nota .contentFechaComent .coment img { float: left; }
+
+.nota .texto p
+{
+ padding: 0;
+ margin-top: 10px!important;
+ float: left;
+}
+
+.notaDestacada .imagen { float: right; }
+
+.notaDestacada .titulo
+{
+ font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+ font-size: 23px;
+ color: #373737;
+ float: left;
+ font-weight: bold;
+ line-height: 28px;
+ width: 347px;
+}
+
+.notaDestacada .contentFechaComent
+{
+ width: 347px;
+ float: left;
+ margin-top: 6px;
+}
+
+.notaDestacada .contentFechaComent .fecha
+{
+ float: left;
+ color: #b2b2b2;
+ margin-right: 10px;
+}
+
+.notaDestacada .contentFechaComent .fecha p
+{
+ float: left;
+ margin-left: 10px;
+ margin-top: 0!important;
+ margin-bottom: 0!important;
+}
+
+.notaDestacada .contentFechaComent .fecha img { float: left; }
+
+.notaDestacada .contentFechaComent .coment
+{
+ float: left;
+ color: #b2b2b2;
+}
+
+.notaDestacada .contentFechaComent .coment p
+{
+ float: left;
+ margin-left: 10px;
+ margin-top: 0!important;
+ margin-bottom: 0!important;
+}
+
+.notaDestacada .contentFechaComent .coment img { float: left; }
+
+.notaDestacada .texto
+{
+ font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+ color: #5e5e5e;
+ font-size: 14px;
+ float: left;
+ line-height: 24px;
+ width: 330px;
+ margin-top: 10px;
+}
+
+.notaDestacada .texto2
+{
+ font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+ color: #5e5e5e;
+ font-size: 14px;
+ float: left;
+ line-height: 24px;
+}
+
+.notaDestacada .texto p
+{
+ margin-top: 0!important;
+ margin-bottom: 0!important;
+ padding: 0px;
+ width: 330px;
+ float: left;
+}
+
+.notaDestacada .texto2 p
+{
+ margin-top: 0!important;
+ margin-bottom: 0!important;
+ padding: 0px;
+}
+
+#popupSelcBlog-screen { z-index: 9; }
+
+.volver
+{
+ position: absolute;
+ z-index: 999;
+ top: 0;
+ left: 0;
+}
+
+.notaPop .notaPrincipal
+{
+ width: 697px;
+ float: left;
+ height: 914px;
+ display: block;
+ background-color: #FFFFFF;
+ margin: 5px;
+ padding: 14px;
+}
+
+.notaPop .notaPrincipal .imagen
+{
+ height: 314px;
+ width: 697px;
+ float: left;
+ position: relative;
+ overflow: hidden;
+}
+
+.notaPop .notaPrincipal .titulo
+{
+ font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+ font-size: 40px;
+ color: #373737;
+ float: left;
+ font-weight: bold;
+ line-height: 48px;
+ margin-top: 10px;
+}
+
+.notaPop .notaPrincipal .contentFechaComent
+{
+ width: 100%;
+ float: left;
+ margin-top: 10px;
+}
+
+.notaPop .notaPrincipal .contentFechaComent .fecha
+{
+ float: left;
+ color: #b2b2b2;
+ margin-right: 10px;
+}
+
+.notaPop .notaPrincipal .contentFechaComent .fecha p
+{
+ float: left;
+ margin-left: 10px;
+ margin-top: 0!important;
+ margin-bottom: 0!important;
+}
+
+.notaPop .notaPrincipal .contentFechaComent .fecha img { float: left; }
+
+.notaPop .notaPrincipal .contentFechaComent .coment
+{
+ float: left;
+ color: #b2b2b2;
+}
+
+.notaPop .notaPrincipal .contentFechaComent .coment p
+{
+ float: left;
+ margin-left: 10px;
+ margin-top: 0!important;
+ margin-bottom: 0!important;
+}
+
+.notaPop .notaPrincipal .contentFechaComent .coment img { float: left; }
+
+.notaPop .texto
+{
+ font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+ color: #5e5e5e;
+ font-size: 14px;
+ float: left;
+ line-height: 30px;
+ margin-top: 10px;
+}
+
+.notaPop .texto p
+{
+ margin-top: 0!important;
+ margin-bottom: 0!important;
+ padding: 0px;
+ float: left;
+}
+
+.ui-grid-a div.blog
+{
+ text-align: center;
+ margin-top: 2px;
+ margin-bottom: 3px;
+}
+
+.customPanel { background-color: #F0F0F0; }
+
+.close
+{
+ float: left;
+ position: relative;
+ z-index: 999;
+}
+
+.close a
+{
+ color: #5e5e5e!important;
+ text-decoration: none;
+}
+
+.customPanel.ui-panel { width: 50%!important; }
+
+#panelMore { }
+
+.contenedorBlogMore
+{
+ float: left;
+ width: 360px;
+ margin-top: 130px;
+ margin-left: 20px;
+}
+
+.contenedorBlogMore p
+{
+ font-size: 38px;
+ font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+ color: #006c54;
+ float: left;
+ margin-bottom:20px!important
+}
+
+.contenedorBlogMore .blogMore
+{
+ float: left;
+}
+
+.contenedorBlogMore .blogMore img
+{
+ float: left;
+ margin: 10px;
+ margin-left:2px;
+ -webkit-box-shadow: 0px 0px 15px 0px #666;
+ box-shadow: 0px 0px 15px 0px #666;
+ border:6px #fff solid;
+}
+
+.contenedorBlogMore .blogMore p
+{
+font-size: 18px!important;
+font-weight: bold!important;
+float: left!important;
+margin-top: 50px;
+color: #4c4c4c;
+width: 200px;
+margin-left: 5px;
+}
+
+.contenedorBlogMore .blogMore:first-child p
+{
+
+margin-top:30px!important;
+}
+
+.contenedorBlogMore .blogMore p span { color: #e2061a }
+
+.clear{ clear:both;}
+
+#popupAdd{ width:400px!important;}
+
+
+
+.custom .blogMore p{margin-top: 20px;}
+.customFieldcontain{
+position: relative!important;
+margin-top: -17px!important;
+float: left!important;
+margin-left: 17px!important;
 }
 
 
-#popupSelcBlog-screen{
- z-index:9;
- }
- 
-.volver{
- position:absolute;
- z-index:999;
- top:0;
- left:0;
- }
- 
- 
-.notaPop .notaPrincipal{
- width:697px;
- float:left;
- height:914px;
- display:block;
- background-color:#FFFFFF;
- margin:5px;
- padding:14px;
-}
- 
-.notaPop .notaPrincipal .imagen{
- 	height:314px;
-  width:697px;
-  float:left;
-  position:relative;
-  overflow:hidden;
+.closeRight
+{
+ float: right;
+ position: relative;
+ z-index: 999;
 }
 
-.notaPop .notaPrincipal .titulo{
-font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
-font-size:40px;
-color: #373737;
+.closeRight a
+{
+ color: #5e5e5e!important;
+ text-decoration: none;
+}
+
+.tituloBlog{
+width: 301px;
+height: 59px;
 float: left;
-font-weight: bold;
-line-height:48px;
-margin-top:10px;
-
-}
+margin: 12px;
+position: absolute;
+background-color: rgba(0,0,0,0.4);
+margin-top: -96px;
+margin-left: 18px;
+text-align:left;
+padding:10px 15px;
+color:#FFF!important;
+text-decoration:none;
+text-shadow: -2px 2px 2px #363636;
+filter: dropshadow(color=#363636, offx=-2, offy=2);
+font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+font-size:32px;
+line-height:30px;
+text-transform:uppercase;
+ }
  
-.notaPop .notaPrincipal .contentFechaComent{
- width:100%;
- float:left;
- margin-top:10px;
-}
- 
-.notaPop .notaPrincipal .contentFechaComent .fecha{
- float:left;
- color:#b2b2b2;
- margin-right:10px;
-}
-.notaPop .notaPrincipal .contentFechaComent .fecha p{
- float:left;
- margin-left:10px;
- margin-top:0!important;
- margin-bottom:0!important; 
-}
-
-.notaPop .notaPrincipal .contentFechaComent .fecha img{
- float:left;
-}
-
-.notaPop .notaPrincipal .contentFechaComent .coment{
- float:left;
- color:#b2b2b2; 
-}
-
-.notaPop .notaPrincipal .contentFechaComent .coment p{
- float:left;
- margin-left:10px;
- margin-top:0!important;
- margin-bottom:0!important; 
-}
-
-.notaPop .notaPrincipal .contentFechaComent .coment img{
- float:left;
-}
-
-.notaPop  .texto{
- font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
- color:#5e5e5e;
- font-size:14px;
- float:left;
- line-height:30px;
- margin-top:10px;
-}
-
-.notaPop  .texto p{
- margin-top:0!important;
- margin-bottom:0!important;
- padding:0px;
-float:left;
-}

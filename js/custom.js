@@ -4,7 +4,7 @@ $(document).ready(function(e) {
 	total = ($('#home .blog').length);
 	visibles = ($('#home .ui-grid-a .blog').length);
 	//Print cantidad de Blogs
-	$('#home').find('#cantidad').html("blogs "+visibles+" de "+total);  
+	$('#home').find('#cantidad').html("Blogs "+visibles+" of "+total);  
 	
 	//cantidad de Paginas Blog
 	totalPaginas = ($('#blog1-page .p').length);
@@ -56,19 +56,26 @@ $(document).ready(function(e) {
 	});
 	
 	
-	$( "#slider-4" ).on( "slidestart", function( event, ui ) {
+	$( "#slider-4" ).on("slidestart", function( event, ui ) {
 		console.log("ok");
-		console.log(event);
+		alert("ok");
 	});
 	
-		/*$('div#blog4').bind('pinch', function(){
-			console.log("pinch");
-			$.mobile.changePage( "#blog2-page", {
-								transition: "slide",
-								reverse: true,
-								changeHash: false
-							});
-		});*/
-
-
+	//pinch
+	$("a#pinchTest").fidget({
+		swipe: null,
+		dragThis: false,
+		pinch: handleSwipe,
+		zoomThis: false,
+		rotateThis: false,
+		tap: null,
+		doubleTap: null
+	});
+	function handleSwipe(event, fidget) {
+		//$('.dragMe').html('<p>Status: ' + fidget.swipe.status + '</p>');
+		alert("pinch");
+	}
+			
+	//alert("probando 2");
+	
 });
