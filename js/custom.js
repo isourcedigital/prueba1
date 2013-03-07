@@ -35,7 +35,7 @@ $(document).ready(function(e) {
 	console.log(alto_ventana);
 	
 	$("#flipBlog1").flip({
-		height: "889px",
+		height: alto_ventana,
 	});
 	
 	$(window).bind("orientationchange", function(event){            
@@ -47,7 +47,7 @@ $(document).ready(function(e) {
 		
 
 	
-	$('.p:first-child').live("swiperight", function(){
+	$('#flipBlog1 .p:first-child').live("swiperight", function(){
 		$.mobile.changePage( "#home", {
 			transition: "slide",
 			reverse: true,
