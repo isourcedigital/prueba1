@@ -11,8 +11,6 @@ $(document).ready(function(e) {
 	//Print cantidad de paginas
 	$('#blog1-page').find('#slider-4').attr("max",totalPaginas);
 	
-	$("#home .contentTit").fitText(1, {maxFontSize: '50px'});
-	$("#home .button").fitText(1, { minFontSize:'15px', maxFontSize: '40px'});
 	
 	
 	
