@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Kaspersky Mobile</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<link rel="stylesheet" type="text/css" href="css/jquery.mobile.flip.css" />
+<link rel="stylesheet" type="text/css" href="css/layout.css">
+<link rel="stylesheet" type="text/css" href="css/jquery.mobile.theme-1.3.0.css">
+<link rel="stylesheet" type="text/css" href="css/jquery.mobile.structure-1.3.0.css">
+<link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.3.0.css">
+
+<script type="text/javascript" src="js/jquery-1.8.2.min.js"></script>
+<script type="text/javascript" src="js/jquery.mobile-1.3.0.js"></script>
+
+<script type="text/javascript" src="js/jquery.mobile.flip.js"></script>
+<script type="text/javascript" src="js/jquery.fittext.js"></script>
+
+
+<!--<script type="text/javascript" src="js/jgestures.js"></script>-->
+<script>
+	$(document).ready(function(e) {
+		
+		//cantidad de blogs
+		total = ($('#home .blog').length);
+		visibles = ($('#home .ui-grid-a .blog').length);
+		//Print cantidad de Blogs
+		$('#home').find('#cantidad').html("blogs "+visibles+" de "+total);  
+		
+		//cantidad de Paginas Blog
+		totalPaginas = ($('#blog1-page .p').length);
+		//Print cantidad de paginas
+		$('#blog1-page').find('#slider-4').attr("max",totalPaginas);
+		
+		$("#home .contentTit").fitText(1, {maxFontSize: '50px'});
+		$("#home .button").fitText(1, { minFontSize:'15px', maxFontSize: '40px'});
+		
+		$(".selectMenu").click(function(){
+				$(".selectMenu img").addClass("rot180");
+		});
+		
+		var alto_ventana = $(window).height(); 
+		console.log(alto_ventana);
+		
+		$("#flipBlog1").flip({
+			height: "889px",
+		});
+		
+		$(window).bind("orientationchange", function(event){            
+                if (event.orientation){          
+                   $("#home").append("Me han reorientado a " + event.orientation);     
+								}
+     });
+		$(window).trigger("orientationchange");
+	
+		
+		
+	});
+	
+	
+	$('.p:first-child').live("swiperight", function(){
+			$.mobile.changePage( "#home", {
+				transition: "slide",
+				reverse: true,
+				changeHash: true,
+			});
+	});
+	
+	function slideBlog(slide){
+		console.log(slide.value);
+	}
+			/*$('div#blog4').bind('pinch', function(){
+				console.log("pinch");
+				$.mobile.changePage( "#blog2-page", {
+									transition: "slide",
+									reverse: true,
+									changeHash: false
+								});
+			});*/
+	
+	
+ 
+			
+</script>
+
+
+
+<style>
+  .p {
+    background: #F0F0F0;
+  }
+</style>
+
+</head>
+<body style="background-color:#f1f1f1">
+
+<div id="home" data-role="page">
+		
+		<div data-role="panel" id="panelMore" data-theme="b" data-display="overlay" data-position="right">
+			<p><a href="#panelMore" data-role="button" data-theme="a" data-icon="back" data-mini="true" id="closePanel">close</a></p>
+			<p class="blog"><a data-role="button" data-theme="b" data-icon="star" data-mini="true">BLOG5</a></p>
+			<p class="blog"><a data-role="button" data-theme="b" data-icon="star" data-mini="true">BLOG6</a></p>
+			<p class="blog"><a data-role="button" data-theme="b" data-icon="star" data-mini="true">BLOG7</a></p>
+			<p class="blog"><a data-role="button" data-theme="b" data-icon="star" data-mini="true">BLOG8</a></p>
+		</div>
+		
+		<div data-role="panel" id="panelOptions" data-theme="b" data-display="reveal" data-position="left">
+			<p><a href="#panelOptions" data-role="button" data-theme="a" data-icon="back" data-mini="true" id="closePanel">close</a></p>
+			<p ><a data-role="button" data-theme="b" data-icon="star" data-mini="true">BLOG5</a></p>
+			<p ><a data-role="button" data-theme="b" data-icon="star" data-mini="true">BLOG6</a></p>
+			<p ><a data-role="button" data-theme="b" data-icon="star" data-mini="true">BLOG7</a></p>
+		</div>
+
+		
+		<div data-role="popup" id="popupAdd" data-theme="a" class="ui-corner-all">
+			 <a href="#" data-rel="back" data-role="button" data-theme="a" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a>
+			 <div data-role="fieldcontain">
+			 	<label for="textinput">Agregar Blog:</label><input type="text" name="textinput" id="textinput" value=""  />
+		 	</div>
+			 
+		</div>
+		
+		<div data-role="header" data-theme="none" >
+			<div style="width:725px; margin:auto">
+				<img src="images/logo.png">
+			</div>
+			<div class="contentTit" style="width:725px; margin:auto">Content</div>
+		</div>
+		
+		<div data-role="content" data-theme="c">
+			<div class="ui-grid-a" style="width:725px; height:735px; margin:auto">
+				<div class="ui-block-a blog" id="blog1">
+					<a href="#blog1-page" data-transition="slide">
+						<div style="text-align: right;">
+								<img src="images/app_07.jpg" style="border: 12px solid #fff;">
+						</div>
+					</a>
+				</div>
+				<div class="ui-block-b blog" id="blog2">
+					<a href="#blog2-page" data-transition="slide">
+						<div style="">
+								<img src="images/app_03.jpg" style="border: 12px solid #fff;">
+						</div>
+					</a>
+				</div>
+				<div class="ui-block-a blog" id="blog3">
+					<a href="#blog3-page" data-transition="slide">
+						<div style="text-align: right;">
+								<img src="images/app_10.jpg" style="border: 12px solid #fff;">
+						</div>
+					</a>
+				</div>
+				<div class="ui-block-b blog" id="blog4">
+					<a href="#blog4-page" data-transition="slide">
+						<div style="">
+								<img src="images/app_13.jpg" style="border: 12px solid #fff;">
+						</div>
+					</a>
+				</div>
+				
+				
+			</div>
+			<div class="ui-grid-a" style="width:725px; margin:auto">
+				<div class="ui-block-a " id="blogAdd">
+					<a href="#popupAdd" data-rel="popup" class=" button disable" data-position-to="window" data-transition="pop">
+						<div style="text-align: right;" class="bajorrelieve">ADD MY BLOG ></div>
+					</a>
+				</div>
+				<div class="ui-block-b" id="blogMore">
+					<a href="#panelMore" data-rel="panel" class=" button enable">
+						<div style="text-align: right;" class="bajorrelieve">VIEW MORE ></div>
+					</a>
+				</div>
+			</div>
+			
+		</div>
+		
+		<div data-role="footer" data-theme="none" >
+			<div style="width:736px; height:auto; margin:auto">
+				<div style="margin-right:8px; float:right;"><a href="#panelOptions" data-rel="panel"><img src="images/app_18.jpg"></a></div>
+				<div style="text-align:center;" id="cantidad">blogs 4 de 7</div>
+				
+			</div>
+		</div>
+</div>
+
+<!---blog1-paginas--->
+<div data-role="page" id="blog1-page">
+	<div class="header">
+	
+		<div class="logo">
+					<a href="#home" data-transition="slide" data-direction="reverse"><img src="images/logoInterno.png" height="31" width="143" alt="kaspersky"></a>	
+		</div>
+		
+		<div class="menu">
+		
+			<div class="blogActual"><a href="#popupSelcBlog" data-rel="popup" data-transition="slidedown" data-position-to="origin" class="selectMenu">Kaspersky Lab <img src="images/flechita.png" class="flechita"></a></div>
+			
+			<div data-role="popup" id="popupSelcBlog" data-theme="d">
+        <ul data-role="listview" data-inset="true" style="min-width:210px;" data-theme="d">
+            <li><a href="#">BLOG 2</a></li>
+            <li><a href="#">BLOG 3</a></li>
+            <li><a href="#">BLOG 4</a></li>
+	    </ul>
+</div>
+				
+			
+		</div>
+		
+	</div>
+		
+		<div data-role="content" data-theme="c">
+ 
+      <div id="flipBlog1" data-role="flip" data-flip-show-pager="false" data-flip-forward-dir="rtol" data-flip-keyboard-nav="true" data-flip-height="" >
+			<!--page1-->
+			<div class="p" id="blog1-page1">
+					<div class="notaPrincipal" style="background-color:#00F;">
+					</div>
+					<div class="nota" style="background-color:#F00;">
+					</div>
+					<div class="nota" style="background-color:#0F0;">
+					</div>
+			</div>
+			<!--page1-->
+			<!--page2-->			
+			<div class="p" id="blog1-page2">
+					2		
+			</div>
+			<!--page2-->
+			<!--page3-->
+			<div class="p" id="blog1-page3">
+					3
+			</div>
+			<!--page3-->
+			
+			<!--page4-->
+			<div class="p" id="blog1-page4">
+				4
+			</div>
+			<!--page4-->
+			
+      </div>
+		</div>
+		
+		<div data-role="footer">
+			<h4><form>
+    <input type="range" name="slider-4" id="slider-4" data-mini="true" min="0" max="10" value="0" onChange="slideBlog(this)" >
+</form></h4>
+		</div>
+</div>
+<!---blog1-paginas--->
+
+<!---blog2-paginas--->
+ <div data-role="page" id="blog2-page">
+ 
+      <div data-role="flip" data-flip-show-pager="false" data-flip-forward-dir="rtol" data-flip-keyboard-nav="true" data-flip-height="">
+					<!--page1-->
+					<div class="p" id="blog2-page1">
+								<h1 data-role="header">PAGE1</h1>
+								<p class="colum">
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce malesuada egestas nibh, eget ultrices lacus vestibulum id. Pellentesque tristique elit in lorem bibendum sed pretium nisi posuere. Nunc a neque et lacus interdum accumsan non non tellus. Vivamus quis dolor augue, et sodales libero. Duis vel odio nunc, sit amet auctor erat. Cras pellentesque turpis dolor, quis molestie nulla. Morbi sit amet nibh ac quam blandit gravida. Suspendisse cursus, libero ut molestie tristique, quam purus pellentesque tortor, fringilla facilisis risus massa et sem. Suspendisse sagittis interdum tincidunt. Nulla facilisi. Proin vulputate eleifend sodales. Cras euismod, sapien sit amet facilisis varius, justo dui viverra ipsum, nec blandit dolor velit sit amet lacus. Cras suscipit nibh quam. Donec congue elementum arcu a sagittis. Duis vulputate aliquet libero id molestie.
+								</p>
+								
+					</div>
+					<!--page1-->
+					<!--page2-->			
+					<div class="p" id="blog2-page2">
+								<h1 data-role="header">PAGE2</h1>
+								<p class="colum">
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce malesuada egestas nibh, eget ultrices lacus vestibulum id. Pellentesque tristique elit in lorem bibendum sed pretium nisi posuere. Nunc a neque et lacus interdum accumsan non non tellus. Vivamus quis dolor augue, et sodales libero. Duis vel odio nunc, sit amet auctor erat. Cras pellentesque turpis dolor, quis molestie nulla. Morbi sit amet nibh ac quam blandit gravida. Suspendisse cursus, libero ut molestie tristique, quam purus pellentesque tortor, fringilla facilisis risus massa et sem. Suspendisse sagittis interdum tincidunt. Nulla facilisi. Proin vulputate eleifend sodales. Cras euismod, sapien sit amet facilisis varius, justo dui viverra ipsum, nec blandit dolor velit sit amet lacus. Cras suscipit nibh quam. Donec congue elementum arcu a sagittis. Duis vulputate aliquet libero id molestie.
+								</p>
+										
+					</div>
+					<!--page2-->
+					<!--page3-->
+					<div class="p" id="blog2-page3">
+								<h1 data-role="header">PAGE3</h1>
+								<p class="colum">
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce malesuada egestas nibh, eget ultrices lacus vestibulum id. Pellentesque tristique elit in lorem bibendum sed pretium nisi posuere. Nunc a neque et lacus interdum accumsan non non tellus. Vivamus quis dolor augue, et sodales libero. Duis vel odio nunc, sit amet auctor erat. Cras pellentesque turpis dolor, quis molestie nulla. Morbi sit amet nibh ac quam blandit gravida. Suspendisse cursus, libero ut molestie tristique, quam purus pellentesque tortor, fringilla facilisis risus massa et sem. Suspendisse sagittis interdum tincidunt. Nulla facilisi. Proin vulputate eleifend sodales. Cras euismod, sapien sit amet facilisis varius, justo dui viverra ipsum, nec blandit dolor velit sit amet lacus. Cras suscipit nibh quam. Donec congue elementum arcu a sagittis. Duis vulputate aliquet libero id molestie.
+								</p>
+								
+					</div>
+					<!--page3-->
+					
+					<!--page4-->
+					<div class="p" id="blog2-page4">
+								<h1 data-role="header">PAGE4</h1>
+								<p class="colum">
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce malesuada egestas nibh, eget ultrices lacus vestibulum id. Pellentesque tristique elit in lorem bibendum sed pretium nisi posuere. Nunc a neque et lacus interdum accumsan non non tellus. Vivamus quis dolor augue, et sodales libero. Duis vel odio nunc, sit amet auctor erat. Cras pellentesque turpis dolor, quis molestie nulla. Morbi sit amet nibh ac quam blandit gravida. Suspendisse cursus, libero ut molestie tristique, quam purus pellentesque tortor, fringilla facilisis risus massa et sem. Suspendisse sagittis interdum tincidunt. Nulla facilisi. Proin vulputate eleifend sodales. Cras euismod, sapien sit amet facilisis varius, justo dui viverra ipsum, nec blandit dolor velit sit amet lacus. Cras suscipit nibh quam. Donec congue elementum arcu a sagittis. Duis vulputate aliquet libero id molestie.
+								</p>
+								
+					</div>
+					<!--page4-->
+      </div>
+</div>
+<!---blog2-paginas--->
+
+
+
+</body>
+</html>

@@ -67,29 +67,7 @@ position: relative;}
 img { max-width: 100%; }
 
 .footerMargin{ margin-top:50px!important;}
-/*--CONTENEDORES--*/
-.contentTit
-{
- margin: auto;
- font-family: 'Trebuchet MS', Arial, Helvetica, sans-serif;
- font-size: 50px;
- text-align: right;
- font-weight: bold;
- color: #c5c5c5;
- width: 735px;
-}
 
-.contenti{width:735px; margin:auto}
-
-
-.logoHome
-{
- width: 735px;
- margin: auto;
- margin-top: 30px;
-}
-
-/*--CONTENEDORES--*/
 
 .header
 {
@@ -654,5 +632,55 @@ text-transform:uppercase;
  
  
 
+/*---RESPONSIVE CONTENEDORES---*/
 
 
+/*--CONTENEDORES--*/
+.contentTit
+{
+ margin: auto;
+ font-family: 'Trebuchet MS', Arial, Helvetica, sans-serif;
+ font-size: 50px;
+ text-align: right;
+ font-weight: bold;
+ color: #c5c5c5;
+ width: 735px;
+}
+
+.contenti{width:735px; margin:auto}
+
+
+.logoHome
+{
+ width: 735px;
+ margin: auto;
+ margin-top: 30px;
+}
+
+/*--CONTENEDORES--*/
+
+
+@media (max-width: 640px) {
+  
+  .contentTit
+{
+ margin: auto;
+ font-family: 'Trebuchet MS', Arial, Helvetica, sans-serif;
+ font-size: 50px;
+ text-align: right;
+ font-weight: bold;
+ color: #c5c5c5;
+ width: 620px;
+}
+
+.contenti{width:620px; margin:auto}
+
+
+.logoHome
+{
+ width: 620px;
+ margin: auto;
+ margin-top: 30px;
+}
+
+}
