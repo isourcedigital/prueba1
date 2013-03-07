@@ -745,11 +745,11 @@ img { max-width: 100%; }
  height: 30px;
  line-height: 30px;
 }
-
+.contenedorBlogMore
 
 }
 
-@media  (min-width:321px) and (max-width:768px){
+@media  (min-width:321px) and (max-width:520px){
   .contentTit
 {
  margin: auto;
