@@ -63,7 +63,7 @@ $(document).ready(function(e) {
 	} else {
 	
 		altovariable = alto_ventana - 76;
-		
+
 	}
 	
 	var altovariablePx = altovariable + "px";
@@ -74,10 +74,10 @@ $(document).ready(function(e) {
 	alert("alto variable de "+navegador+": "+altovariablePx);
 	
 	$("#flipBlog1").flip({
-		height:altovariablePx,
+		height:"928px",
 	});
-	$("#panelOptions").css("height",altovariablePx);
-	$("#panelMore").css("height",altovariablePx);
+	$("#panelOptions").css("height","928px");
+	$("#panelMore").css("height","928px");
 	
 	/*$(window).bind("orientationchange", function(event){            
 		if (event.orientation){          
