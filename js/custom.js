@@ -77,7 +77,7 @@ $(document).ready(function(e) {
 		height:"865px", /*-+5-*/
 	});
 	$("#flipBlog2").flip({
-		height:"890px",/*--+30--*/
+		height:"890px",/*--30--*/
 	});
 	$("#panelOptions").css("height","800px");
 	$("#panelMore").css("height","800px");
