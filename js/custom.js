@@ -57,7 +57,7 @@ $(document).ready(function(e) {
 	
 	if(navegador == "ipod" || navegador == "iphone" ){
 		altovariable = alto_ventana - 44;
-		console.log(altovariable)
+		alert("alto variable de "+navegador+": "+altovariable)
 	}
 	
 	altovariable = alto_ventana - 27;
@@ -65,8 +65,8 @@ $(document).ready(function(e) {
 	
 	
 	
-	console.log(alto_ventana);
-	console.log(altovariable);
+	alert("alto de "+navegador+": "+alto_ventana)
+	alert("alto variable de "+navegador+": "+altovariable);
 	
 	$("#flipBlog1").flip({
 		height:altovariable,
