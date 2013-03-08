@@ -10,7 +10,7 @@ $(document).ready(function(e) {
 	
 	var navegador =  navigator.platform.toLowerCase();
 	
-	alert(navegador);
+	console.log(navegador);
 	
 	$(function() {
         	// Bind the tapHandler callback function to the tap event on div.box
@@ -55,16 +55,13 @@ $(document).ready(function(e) {
 	var alto_ventana = $(window).height(); 
 	var altovariable;
 	
-	if(navegador == "ipod"){
-		
-		altovariable = alto_ventana - 20;
-		alert(altovariable)
-		
-	}else{
-	
-		altovariable = alto_ventana - 27;
-		
+	if(navegador == "ipod" || navegador == "iphone" ){
+		altovariable = alto_ventana - 44;
+		console.log(altovariable)
 	}
+	
+	altovariable = alto_ventana - 27;
+		
 	
 	
 	

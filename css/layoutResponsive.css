@@ -180,7 +180,7 @@ img { max-width: 100%; }
 .notaPrincipal .imagen
 {
  height: 338px;
- width: 725px;
+ width: 100%;
  float: left;
  position: relative;
 }
