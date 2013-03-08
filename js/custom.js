@@ -70,15 +70,13 @@ $(document).ready(function(e) {
 		alert("alto variable de "+navegador+": "+altovariablePx);
 
 	}
-	
 
 	
-	
-	
-	
-	
 	$("#flipBlog1").flip({
-		height:"800px",
+		height:"860px",
+	});
+	$("#flipBlog2").flip({
+		height:"860px",
 	});
 	$("#panelOptions").css("height","800px");
 	$("#panelMore").css("height","800px");
