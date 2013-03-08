@@ -6,7 +6,7 @@ $(document).ready(function(e) {
 	});
 	*/
 	
-	alert("Platform: " + navigator.platform);
+	console.log("Platform: " + navigator.platform);
 	
 	$(function() {
         	// Bind the tapHandler callback function to the tap event on div.box
