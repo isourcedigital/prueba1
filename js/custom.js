@@ -56,23 +56,28 @@ $(document).ready(function(e) {
 	var altovariable;
 	
 	if(navegador == "ipod" || navegador == "iphone" ){
+		
 		altovariable = alto_ventana - 90;
-		alert("alto variable de "+navegador+": "+altovariable)
+		alert("alto variable de "+navegador+": "+altovariable);
+		
+	} else {
+	
+		altovariable = alto_ventana - 76;
+		
 	}
 	
-	altovariable = alto_ventana - 76;
-		
+	var altovariablePx = altovariable + "px";
 	
 	
 	
-	alert("alto de "+navegador+": "+alto_ventana)
-	alert("alto variable de "+navegador+": "+altovariable);
+	alert("alto de "+navegador+": "+alto_ventana+"px");
+	alert("alto variable de "+navegador+": "+altovariablePx);
 	
 	$("#flipBlog1").flip({
-		height:altovariable,
+		height:altovariablePx,
 	});
-	$("#panelOptions").css("height",altovariable);
-	$("#panelMore").css("height",altovariable);
+	$("#panelOptions").css("height",altovariablePx);
+	$("#panelMore").css("height",altovariablePx);
 	
 	/*$(window).bind("orientationchange", function(event){            
 		if (event.orientation){          
