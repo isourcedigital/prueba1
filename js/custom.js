@@ -60,7 +60,7 @@ $(document).ready(function(e) {
 		alert("alto variable de "+navegador+": "+altovariable)
 	}
 	
-	altovariable = alto_ventana - 27;
+	altovariable = alto_ventana - 76;
 		
 	
 	
