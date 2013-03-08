@@ -54,19 +54,20 @@ $(document).ready(function(e) {
 	
 	var alto_ventana = $(window).height(); 
 	var altovariable;
-	var altovariablePx = altovariable + "px";
+	var altovariablePx;
 	
 	alert("alto de "+navegador+": "+alto_ventana+"px");
 	
 	if(navegador == "ipod" || navegador == "iphone" ){
 		
 		altovariable = alto_ventana - 90;
-		alert("alto variable de "+navegador+": "+altovariable);
+		altovariablePx = altovariable + "px";
+		alert("alto variable de "+navegador+": "+altovariablePx);
 		
 	} else {
 	
 		altovariable = alto_ventana - 150;
-		
+		altovariablePx = altovariable + "px";
 		alert("alto variable de "+navegador+": "+altovariablePx);
 
 	}
