@@ -10,7 +10,7 @@ $(document).ready(function(e) {
 	
 	var navegador =  navigator.platform.toLowerCase();
 	
-	console.log(navegador);
+	alert(navegador);
 	
 	$(function() {
         	// Bind the tapHandler callback function to the tap event on div.box
