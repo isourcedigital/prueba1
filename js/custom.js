@@ -1,4 +1,10 @@
 $(document).ready(function(e) {
+	/*
+	$( "#slider-4" ).on("slidestart", function( event, ui ) {
+		console.log("ok");
+		alert("ok");
+	});
+	*/
 	
 	//cantidad de blogs
 	total = ($('#home .blog').length);
@@ -58,10 +64,6 @@ $(document).ready(function(e) {
 	});*/
 	
 	
-	$( "#slider-4" ).on("slidestart", function( event, ui ) {
-		console.log("ok");
-		alert("ok");
-	});
 	
 	//pinch
 /*	$("a#pinchTest").fidget({
