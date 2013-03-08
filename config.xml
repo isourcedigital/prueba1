@@ -3,7 +3,7 @@
         xmlns:gap = "http://phonegap.com/ns/1.0"
         id        = "com.phonegap.hello-world"
         version   = "2.2.0">
-    <name>Kaspersky Blogs</name>
+    <name>Kl Blogs</name>
 
     <description>
         Test

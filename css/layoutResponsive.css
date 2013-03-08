@@ -107,7 +107,7 @@ img { max-width: 100%; }
 {
  width: 100%;
  text-align: center;
- margin-top: -40px;
+ margin-top: -42px;
 }
 
 .blogActual a
@@ -574,7 +574,18 @@ img { max-width: 100%; }
  font-size: 18px!important;
  font-weight: bold!important;
  float: left!important;
- margin-top: 50px;
+ margin-top: 50px!important;
+ color: #4c4c4c;
+ width: 200px;
+ margin-left: 5px;
+}
+
+#panelOptions .contenedorBlogMore .blogMore p
+{
+ font-size: 18px!important;
+ font-weight: bold!important;
+ float: left!important;
+ margin-top:0!important;
  color: #4c4c4c;
  width: 200px;
  margin-left: 5px;
@@ -593,8 +604,7 @@ img { max-width: 100%; }
 .customFieldcontain
 {
  position: relative!important;
- margin-top: -17px!important;
- float: left!important;
+top: -17px!important;
  margin-left: 17px!important;
 }
 

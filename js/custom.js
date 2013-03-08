@@ -36,13 +36,13 @@ $(document).ready(function(e) {
 	
 	
 	var alto_ventana = $(window).height(); 
-	var alto_ventana_menos20 = alto_ventana - 20;
+	var alto_ventana_menos60 = alto_ventana - 60;
 	
 	console.log(alto_ventana);
-	console.log(alto_ventana_menos20);
+	console.log(alto_ventana_menos60);
 	
 	$("#flipBlog1").flip({
-		height: alto_ventana_menos20,
+		height: alto_ventana_menos60,
 	});
 	
 	/*$(window).bind("orientationchange", function(event){            
