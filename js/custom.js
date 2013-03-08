@@ -56,7 +56,7 @@ $(document).ready(function(e) {
 	var altovariable;
 	
 	if(navegador == "ipod" || navegador == "iphone" ){
-		altovariable = alto_ventana - 44;
+		altovariable = alto_ventana - 90;
 		alert("alto variable de "+navegador+": "+altovariable)
 	}
 	
