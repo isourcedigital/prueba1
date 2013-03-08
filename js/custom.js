@@ -42,7 +42,7 @@ $(document).ready(function(e) {
 	console.log(alto_ventana_menos60);
 	
 	$("#flipBlog1").flip({
-		height: alto_ventana_menos60,
+		height: "880px",
 	});
 	
 	/*$(window).bind("orientationchange", function(event){            
