@@ -5,6 +5,15 @@ $(document).ready(function(e) {
 		alert("ok");
 	});
 	*/
+	$(function() {
+        	// Bind the tapHandler callback function to the tap event on div.box
+            $( "a#testPop" ).on( 'tap', tapHandler );
+ 
+            // Callback function references the event target and adds the 'tap' class to it
+            function tapHandler( event ) {
+				$.mobile.navigate( "#blog1-nota1" );
+			}
+      });
 	
 	//cantidad de blogs
 	total = ($('#home .blog').length);
@@ -36,14 +45,16 @@ $(document).ready(function(e) {
 	
 	
 	var alto_ventana = $(window).height(); 
-	var alto_ventana_menos60 = alto_ventana - 60;
+	var alto_ventana_menos27 = alto_ventana - 27;
 	
 	console.log(alto_ventana);
-	console.log(alto_ventana_menos60);
+	console.log(alto_ventana_menos27);
 	
 	$("#flipBlog1").flip({
-		height: "880px",
+		height:""+alto_ventana_menos27+"",
 	});
+	$("#panelOptions").css("height",""+alto_ventana_menos27+"");
+	$("#panelMore").css("height",""+alto_ventana_menos27+"");
 	
 	/*$(window).bind("orientationchange", function(event){            
 		if (event.orientation){          
