@@ -69,10 +69,10 @@ $(document).ready(function(e) {
 	console.log(altovariable);
 	
 	$("#flipBlog1").flip({
-		height:""+altovariable+"",
+		height:altovariable,
 	});
-	$("#panelOptions").css("height",""+altovariable+"");
-	$("#panelMore").css("height",""+altovariable+"");
+	$("#panelOptions").css("height",altovariable);
+	$("#panelMore").css("height",altovariable);
 	
 	/*$(window).bind("orientationchange", function(event){            
 		if (event.orientation){          
