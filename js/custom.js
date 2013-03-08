@@ -30,28 +30,32 @@ $(document).ready(function(e) {
 	
 	
 	var alto_ventana = $(window).height(); 
+	var alto_ventana_menos20 = alto_ventana - 20;
+	
 	console.log(alto_ventana);
+	console.log(alto_ventana_menos20);
 	
 	$("#flipBlog1").flip({
-		height: alto_ventana,
+		height: alto_ventana_menos20,
 	});
 	
-	$(window).bind("orientationchange", function(event){            
+	/*$(window).bind("orientationchange", function(event){            
 		if (event.orientation){          
 			 console.log("Me han reorientado a " + event.orientation);     
 		}
  	});
-	$(window).trigger("orientationchange");
+	
+	$(window).trigger("orientationchange");*/
 		
 
 	
-	$('#flipBlog1 .p:first-child').live("swiperight", function(){
+/*	$('#flipBlog1 .p:first-child').live("swiperight", function(){
 		$.mobile.changePage( "#home", {
 			transition: "slide",
 			reverse: true,
 			changeHash: true,
 		});
-	});
+	});*/
 	
 	
 	$( "#slider-4" ).on("slidestart", function( event, ui ) {
@@ -60,7 +64,7 @@ $(document).ready(function(e) {
 	});
 	
 	//pinch
-	$("a#pinchTest").fidget({
+/*	$("a#pinchTest").fidget({
 		swipe: null,
 		dragThis: false,
 		pinch: handleSwipe,
@@ -72,7 +76,7 @@ $(document).ready(function(e) {
 	function handleSwipe(event, fidget) {
 		//$('.dragMe').html('<p>Status: ' + fidget.swipe.status + '</p>');
 		alert("pinch");
-	}
+	}*/
 			
 	//alert("probando 2");
 	
