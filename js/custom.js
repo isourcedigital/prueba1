@@ -5,6 +5,9 @@ $(document).ready(function(e) {
 		alert("ok");
 	});
 	*/
+	
+	alert("Platform: " + navigator.platform);
+	
 	$(function() {
         	// Bind the tapHandler callback function to the tap event on div.box
             $( "a#testPop" ).on( 'tap', tapHandler );
