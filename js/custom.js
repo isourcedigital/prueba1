@@ -74,10 +74,10 @@ $(document).ready(function(e) {
 
 	
 	$("#flipBlog1").flip({
-		height:"875px", /*-+5-*/
+		height:"877px", /*-+5-*/
 	});
 	$("#flipBlog2").flip({
-		height:"928px",/*--30--*/
+		height:"929px",/*--30--*/
 	});
 	$("#panelOptions").css("height","800px");
 	$("#panelMore").css("height","800px");
