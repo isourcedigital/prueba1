@@ -840,12 +840,11 @@ margin-left: 12px;
  
 .notaPrincipal
 {
- width:95%;
+ width:100%;
  float: left;
  height: auto;
  display: block;
  background-color: #FFFFFF;
- margin: 5px;
 }
 
 .nota
