@@ -36,14 +36,17 @@
 						<img src="images/app_07.jpg" width="117">
 						<p><span>></span> BLOG 5</p>
 					</div>
+					<div class="clear"></div>
 					<div class="blog blogMore">
 						<img src="images/app_03-03.jpg" width="117">
 						<p><span>></span>  BLOG 6</p>
 				</div>
+				<div class="clear"></div>
 					<div class="blog blogMore">
 						<img src="images/app_10.jpg" width="117">
 						<p><span>></span> BLOG 7</p>
 					</div>
+					<div class="clear"></div>
 					<div class="blog blogMore">
 						<img src="images/app_13.jpg" width="117">
 						<p><span>></span>  BLOG 8</p>
@@ -164,7 +167,7 @@
 		
 		<div data-role="popup" id="popupAdd" data-theme="c">
 			 <a href="#" data-rel="back" data-role="button" data-theme="a" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a>
-			 <div data-role="fieldcontain" style="padding-top: 20px;padding-bottom: 20px;padding-left: 25px;">
+			 <div data-role="fieldcontain" class="popAdd">
 			 	<label for="textinput" style="margin-top:5px;width: 100%;"> RSS URL:</label><input type="text" name="textinput" id="textinput" value="" /><button data-theme="d" data-mini="true" data-inline="true">Add</button>
 			 
 		 	</div>
@@ -267,7 +270,7 @@ official blog</p>
       <div id="flipBlog1" data-role="flip" data-flip-show-pager="false" data-flip-forward-dir="rtol" data-flip-keyboard-nav="true" data-flip-height="" >
 			<!--page1-->
 			<div class="p" id="blog1-page1">
-				<div class="contenedorNotas">
+				<div class="contenedorNotas" id="blog">
 					<a href="javascript:;" data-transition="pop" id="testPop">
 					<div class="notaPrincipal">
 					
@@ -278,11 +281,11 @@ official blog</p>
 								</div>
 								<div class="contentFechaComent">
 									<div class="fecha">
-										<img src="images/calendar.png" height="21" width="21" alt="calendar">
+										<img src="images/calendar.png" alt="calendar">
 										<p>02/27/2013</p>
 									</div>
 									<div class="coment">
-										<img src="images/coments.png" height="21" width="25" alt="comenta">
+										<img src="images/coments.png" alt="comenta">
 										<p>0 comments</p>
 									</div>
 								</div>
@@ -381,12 +384,12 @@ official blog</p>
 			<!--page1-->
 			<!--page2-->			
 			<div class="p" id="blog1-page2">
-				<div class="contenedorNotas">
+				<div class="contenedorNotas" id="blog">
 					<div class="notaDestacada">
 					
 						<div class="imagen">
 								
-									<p><img src="images/imagenDestacada.jpg" height="319" width="345" alt="destacada">
+									<p><img src="images/imagenDestacada.jpg" alt="destacada">
 										
 									</p>
 								
@@ -401,7 +404,7 @@ official blog</p>
 								<div class="contentFechaComent">
 									<div class="fecha">
 										
-											<p><img src="images/calendarGris.png" height="21" width="21" alt="calendar">
+											<p><img src="images/calendarGris.png" alt="calendar">
 											</p>
 											<p>02/26/2013</p>
 										
@@ -514,7 +517,7 @@ official blog</p>
 			<!--page2-->
 			<!--page3-->
 			<div class="p" id="blog1-page3">
-					<div class="contenedorNotas">
+					<div class="contenedorNotas" id="blog">
 					
 					<div class="nota">
 						<div class="imagen">
@@ -649,7 +652,7 @@ official blog</p>
 			
 			<!--page4-->
 			<div class="p" id="blog1-page4">
-				<div class="contenedorNotas">
+				<div class="contenedorNotas" id="blog">
 					<div class="nota">
 						<div class="imagen">
 								
@@ -868,11 +871,11 @@ official blog</p>
 								</div>
 								<div class="contentFechaComent">
 									<div class="fecha">
-										<img src="images/calendarGris.png" height="22" width="20" alt="calendarGris">
+										<img src="images/calendarGris.png" alt="calendarGris">
 										<p>02/27/2013</p>
 									</div>
 									<div class="coment">
-										<img src="images/comentGris.png" height="21" width="25" alt="coments">
+										<img src="images/comentGris.png"  alt="coments">
 										<p>0 comments</p>
 									</div>
 								</div>
@@ -955,8 +958,8 @@ The overwhelming majority of businesses today are encouraging employees to adopt
 		</div>
 		
 		<div data-role="footer" data-theme="c">
-			<div style="width:768px; margin:auto;">
-				<div style="width:735px; margin:auto;">
+			<div class="contenti">
+				<div style="width:100%; margin:auto; margin-top:10px;">
 					<a href="#blog1-page" data-transition="slide" style="float: left; margin-left:10px;">
 					<img src="images/app_20.png" alt="">
 					</a>
