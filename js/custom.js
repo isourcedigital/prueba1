@@ -233,8 +233,7 @@ $(document).ready(function(e) {
 		
 		
 
-		$('.ui-icon-delete').css('background-position','0 0 ');
-		$('.ui-icon,').css('background-image','url(images/icons-cerrar.png)');
+		
 		
 		
 		var textoCompletoNotaPop="";
@@ -290,7 +289,8 @@ $(document).ready(function(e) {
 		height: altovariablePx2, /*--75-- 929*/
 	});
 	
-	
+	$('.ui-icon-delete').css('background-position','0 0 ');
+		$('.ui-icon,').css('background-image','url(images/icons-cerrar.png)');
 	
 /*---PRUEBAS--*/
 	/*$(window).bind("orientationchange", function(event){            
