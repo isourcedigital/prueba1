@@ -247,9 +247,9 @@ $(document).ready(function(e) {
 		if(index > 0){
 			
 		  if(index%2 == 1){
-				$(element).html("The overwhelming majority of businesses today are encouraging employees to adopt “mobile” working practices, meaning that work can be done wherever, whenever and from whatever device – smartphone, tablet or laptop. This flexibility increases employees’ involvement and labor efficiency, but it also creates fundamentally new threats to business: securing smartphones is far more difficult than securing desktop computers. Mobile Device Management (MDM) has been one of the hottest topics at the Mobile World Congress in Barcelona. To promote this discussion, Kaspersky Lab arranged a panel at which it presented its MDM solution. Mobile security is demanding more and more attention from corporate IT directors. According to a Gartner survey in 2012, smartphones and tablets have skyrocketed to second place on the list of strategically important technologies, up from sixth place in 2011.");
+				$(element).html("The overwhelming majority of businesses today are encouraging employees to adopt “mobile” working practices, meaning that work can be done wherever, whenever and from whatever device – smartphone, tablet or laptop. This flexibility increases employees’ involvement and labor efficiency, but it also creates fundamentally new threats to business: securing smartphones is far more difficult than securing desktop computers. Mobile Device Management (MDM) has been one of the hottest topics at the Mobile World Congress in Barcelona. To promote this discussion, Kaspersky Lab arranged a panel at which it presented its MDM solution. Mobile security is demanding more and more attention from corporate IT directors. According to a Gartner survey in 2012, smartphones and tablets have skyrocketed to second place on the list of strategically important technologies, up from sixth place in 2011. According to a Gartner survey in 2012, smartphones and tablets have skyrocketed to second place on the list of strategically important technologies, up from sixth place in 2011.");
 			}else{
-				$(element).html("Meaning that work can be done wherever, whenever and from whatever device – smartphone, tablet or laptop. This flexibility increases employees’ involvement and labor efficiency, but it also creates fundamentally new threats to business: securing smartphones is far more difficult than securing desktop computers. Mobile Device Management (MDM) has been one of the hottest topics at the Mobile World Congress in Barcelona. To promote this discussion, Kaspersky Lab arranged a panel at which it presented its MDM solution. Mobile security is demanding more and more attention from corporate IT directors. According to a Gartner survey in 2012, smartphones and tablets have skyrocketed to second place on the list of strategically important technologies, up from sixth place in 2011. The overwhelming majority of businesses today are encouraging employees to adopt “mobile” working practices,");
+				$(element).html("Meaning that work can be done wherever, whenever and from whatever device – smartphone, tablet or laptop. This flexibility increases employees’ involvement and labor efficiency, but it also creates fundamentally new threats to business: securing smartphones is far more difficult than securing desktop computers. Mobile Device Management (MDM) has been one of the hottest topics at the Mobile World Congress in Barcelona. To promote this discussion, Kaspersky Lab arranged a panel at which it presented its MDM solution. Mobile security is demanding more and more attention from corporate IT directors. According to a Gartner survey in 2012, smartphones and tablets have skyrocketed to second place on the list of strategically important technologies, up from sixth place in 2011. The overwhelming majority of businesses today are encouraging employees to adopt “mobile” working practices, The overwhelming majority of businesses today are encouraging. The overwhelming majority of businesses");
 			}
 
 		}else{
@@ -289,8 +289,8 @@ $(document).ready(function(e) {
 	});
 	
 	
-	$('#closeBtn .ui-icon-delete').css('background-position','0');
-	$('#closeBtn .ui-icon').css('background-image','url(images/icons-cerrar.png)');
+	$('.ui-icon-delete').css('background-position','0% 0%');
+	$('.ui-icon').css('background-image','url(images/icons-cerrar.png)');
 	
 	
 	
