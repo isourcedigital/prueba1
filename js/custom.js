@@ -20,7 +20,7 @@ $(document).ready(function(e) {
 	var restaAlto1Ipod = 119;
 	
 	var restaAlto2Ipad = 75;
-	var restaAlto2Iphone = 630;
+	var restaAlto2Iphone = 620;
 	var restaAlto2Ipod = 70;
 	
 	/*--Alturas de los Devices---*/
