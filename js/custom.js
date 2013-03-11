@@ -202,7 +202,7 @@ $(document).ready(function(e) {
 		//alert("alto variable1 de "+navegador+": "+altovariablePx1);
 		//alert("alto variable2 de "+navegador+": "+altovariablePx2);
 		
-	$("#home").css("height", altoIphone+"px")	
+	
 		
 	} else {
 		
