@@ -16,7 +16,7 @@ $(document).ready(function(e) {
 	var altoIpod = 940;
 	
 	var restaAlto1Ipad = 127;
-	var restaAlto1Iphone = 650;
+	var restaAlto1Iphone = 640;
 	var restaAlto1Ipod = 119;
 	
 	var restaAlto2Ipad = 75;
