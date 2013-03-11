@@ -25,7 +25,7 @@ $(document).ready(function(e) {
 	
 	var restaAlto2Ipad = 75;
 	var restaAlto2Iphone = 635;
-	var restaAlto2Ipod = 555;
+	var restaAlto2Ipod = 560;
 	
 	/*--Alturas de los Devices---*/
 	
