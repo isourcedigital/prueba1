@@ -156,7 +156,7 @@ $(document).ready(function(e) {
 	
 	var paginasP = $('#flipBlog2:first-child').html();
 		
-		
+	$('#boxFooter').css('margin-top','-10px');
 	
 		
 	}else if(navegador == "iphone" || navegador == "iphone simulator"){
