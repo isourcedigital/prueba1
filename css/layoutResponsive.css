@@ -11,7 +11,7 @@ p
  margin-bottom: 0!important;
 }
 
-.p { background: #F9F9F9; }
+.p { background:#F1F1F1; }
 
 p.colum
 {
@@ -914,9 +914,20 @@ padding: 5px;
 {
  float: left;
  margin-left: 10px;
- margin-top: 0!important;
+ margin-top: 3px!important;
  margin-bottom: 0!important;
+ font-size:12px;
 }
+
+
+.notaPrincipal .imagen .contentFechaComent .coment p {
+float: left;
+margin-left: 10px;
+margin-top: 3px!important;
+margin-bottom: 0!important;
+font-size:12px;
+}
+
 .notaPrincipal .imagen
 {
  height: auto;
@@ -988,7 +999,7 @@ height: 50%;
 {
  float: left;
  margin-left: 10px;
- margin-top: 0!important;
+ margin-top: 3px!important;
  margin-bottom: 0!important;
 }
 
@@ -1004,7 +1015,7 @@ height: 50%;
 {
  float: left;
  margin-left: 10px;
- margin-top: 0!important;
+ margin-top: 3px!important;
  margin-bottom: 0!important;
 }
 
@@ -1175,6 +1186,22 @@ margin-left:0px;
  padding-top: 10px;padding-bottom: 10px;padding-left: 12px;}
 #popupAdd { width: 200px!important; padding:10px;}
 
+.nota .contentFechaComent .fecha p
+{
+ float: left;
+ margin-left: 10px;
+ margin-top: 3px!important;
+ margin-bottom: 0!important;
+ font-size:13px;
+}
+
+.nota .contentFechaComent .coment p {
+float: left;
+margin-left: 10px;
+margin-top: 3px!important;
+margin-bottom: 0!important;
+font-size: 13px;
+}
 
 }
 
