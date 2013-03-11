@@ -234,7 +234,7 @@ $(document).ready(function(e) {
 		
 
 		$('.ui-icon-delete').css('background-position','0 0 ');
-		$('.ui-icon-delete').css('background-image','url(images/icons-cerrar.png)');
+		$('.ui-icon,').css('background-image','url(images/icons-cerrar.png)');
 		
 		
 		var textoCompletoNotaPop="";
