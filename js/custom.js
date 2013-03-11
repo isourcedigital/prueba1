@@ -8,6 +8,8 @@ $(document).ready(function(e) {
 	
 	/*--Alturas de los Devices---*/
 	
+	var debug = "true";
+	
 	var alto_ventana = $(window).height(); 
 	var ancho_ventana = $(window).width();
 	
@@ -102,11 +104,15 @@ $(document).ready(function(e) {
 	/*---Contenidos--*/
 
 	
-	if(navegador == "ipod" || navegador == "ipod simulator" || alto_ventana <=480  ){
+	if(navegador == "ipod" || navegador == "ipod simulator" || alto_ventana <=480 || ancho_ventana<=600  ){
+		
+		if( debug == "true" ){
 		alert("ESTO ES "+navegador);	
 		
-		if (alto_ventana <=480){
-		alert("ESTO ES IPHONE 4");
+			if (alto_ventana <=480 && navegador=="iphone"){
+			alert("ESTO ES IPHONE 4");
+			}
+			
 		}
 		
 		altovariable1 = altoIpod - restaAlto1Ipod;
@@ -115,11 +121,11 @@ $(document).ready(function(e) {
 		altovariablePx1 = altovariable1 + "px";
 		altovariablePx2 = altovariable2 + "px";
 		
-		
+		if( debug == "true" ){
 		alert("alto completo de "+navegador+": "+alto_ventana+"px");
 		alert("alto variable1 de "+navegador+": "+altovariablePx1);
 		alert("alto variable2 de "+navegador+": "+altovariablePx2);
-		
+		}
 		
 		
 		$('#blog .notaPrincipal .imagen').html(imagenNotaPrincipal);
@@ -143,29 +149,70 @@ $(document).ready(function(e) {
 		var textoCompletoNotaPop="";
 	
 	$('.notaPop .texto p').each(function(index, element) {
-		//console.log(index);
-		//console.log(element);
+		
+		if( debug == "true" ){
+			/*console.log(index);
+			console.log(element);*/
+		}
 		//textoCompletoNotaPop += $(element).html();
 		$(element).removeClass('colum');
 		if(index > 0){
-			$(element).html("The overwhelming majority of businesses today are encouraging employees to adopt “mobile” working practices, meaning that work can be done wherever, whenever and from whatever device – smartphone, tablet or laptop. This flexibility increases employees’ involvement and labor efficiency, but it also creates fundamentally new threats to business: securing smartphones is far more difficult than securing desktop computers. Mobile Device Management (MDM) has been one of the hottest topics at the Mobile World Congress in Barcelona. To promote this discussion, Kaspersky Lab arranged a panel at which it presented its MDM solution. Mobile security is demanding more and more attention from corporate IT directors. According to a Gartner survey in 2012, smartphones and tablets have skyrocketed to second place on the list of strategically important technologies, up from sixth place in 2011. The situation has fundamentally changed over the past five years");
+			$(element).html("The overwhelming majority of businesses today are encouraging employees to adopt “mobile” working practices, meaning that work can be done wherever, whenever and from whatever device – smartphone, tablet or laptop. This flexibility increases employees’ involvement and labor efficiency, but it also creates fundamentally new threats to business: securing smartphones is far more difficult than securing desktop computers. Mobile Device Management (MDM) has been one of the hottest topics at the Mobile World Congress in Barcelona. To promote this discussion, Kaspersky Lab arranged a panel at which it presented its MDM solution. Mobile security is demanding more and more attention from corporate IT directors.");
 		}else{
-			$(element).html("The overwhelming majority of businesses today are encouraging employees to adopt “mobile” working practices, meaning that work can be done wherever, whenever and from whatever device – smartphone, tablet or laptop. This flexibility increases employees’ involvement and labor efficiency, but it also creates fundamentally new threats to business: securing smartphones is far more difficult than securing desktop computers. Mobile Device Management (MDM) has been one of...");
+			$(element).html("The overwhelming majority of businesses today are encouraging employees to adopt “mobile” working practices, meaning that work can be done wherever, whenever and from whatever device – smartphone, tablet or laptop.");
 		}
+		
 	});
 	
-	var paginasP = $('#flipBlog2:first-child').html();
 		
 	$('#boxFooter').css('margin-top','-10px');
 	
+	
+	
+	$('.contenedorNotas .nota').each(function(index, element) {
+		
+		if( debug == "true" ){
+			console.log(index);
+			console.log(element);
+		}
+		
+		
+		/*if(index > 0){
+			
+		}else{
+			
+		}*/
+		
+	});
+	
+	$('.notaPrincipa').css('margin-bottom','15px');
+	$('.notaPrincipal .imagen .titulo ').css('font-size','22px');
+	$('.notaPrincipal .imagen .titulo ').css('line-height','26px');
+	
+	$('.nota .titulo').css('font-size','13px');
+	$('.nota .titulo').css('line-height','20px');
+	
+		
+	
 		
 	}else if(navegador == "iphone" || navegador == "iphone simulator"){
-		//alert("ESTO ES "+navegador);
+		
+		if ( debug == "true" ){
+			alert("ESTO ES "+navegador);
+			alert("ESTO ES IPHONE 5");
+		}
+		
 		altovariable1 = altoIphone - restaAlto1Iphone;
 		altovariable2 = altoIphone - restaAlto2Iphone;
 		
 		altovariablePx1 = altovariable1 + "px";
 		altovariablePx2 = altovariable2 + "px";
+
+		if ( debug == "true" ){
+			alert("alto completo de "+navegador+": "+altoIphone+"px");
+			alert("alto variable1 de "+navegador+": "+altovariablePx1);
+			alert("alto variable2 de "+navegador+": "+altovariablePx2);
+		}
 
 		$('#blog .notaPrincipal .imagen').html(imagenNotaPrincipal);
 		$('#blog .notaPrincipal .texto').html("");
@@ -188,9 +235,13 @@ $(document).ready(function(e) {
 		var textoCompletoNotaPop="";
 	
 	$('.notaPop .texto p').each(function(index, element) {
-		//console.log(index);
-		//console.log(element);
-		//textoCompletoNotaPop += $(element).html();
+		
+		if ( debug == "true" ){
+			console.log(index);
+			console.log(element);
+			textoCompletoNotaPop += $(element).html();
+		}
+		
 		$(element).removeClass('colum');
 		if(index > 0){
 			$(element).html("The overwhelming majority of businesses today are encouraging employees to adopt “mobile” working practices, meaning that work can be done wherever, whenever and from whatever device – smartphone, tablet or laptop. This flexibility increases employees’ involvement and labor efficiency, but it also creates fundamentally new threats to business: securing smartphones is far more difficult than securing desktop computers. Mobile Device Management (MDM) has been one of the hottest topics at the Mobile World Congress in Barcelona. To promote this discussion, Kaspersky Lab arranged a panel at which it presented its MDM solution. Mobile security is demanding more and more attention from corporate IT directors. According to a Gartner survey in 2012, smartphones and tablets have skyrocketed to second place on the list of strategically important technologies, up from sixth place in 2011. The situation has fundamentally changed over the past five years");
@@ -199,12 +250,9 @@ $(document).ready(function(e) {
 		}
 	});
 	
-	var paginasP = $('#flipBlog2:first-child').html();
+
 		
 		
-		//alert("alto completo de "+navegador+": "+altoIphone+"px");
-		//alert("alto variable1 de "+navegador+": "+altovariablePx1);
-		//alert("alto variable2 de "+navegador+": "+altovariablePx2);
 
 	$('#boxFooter').css('margin-top','60px');
 	$('#boxTitContent').css('margin-top','30px');
@@ -212,7 +260,9 @@ $(document).ready(function(e) {
 		
 	} else {
 		
-		//alert("NO ENTRO EN MOBILES");
+		if ( debug == "true" ){
+			alert("NO ENTRO EN MOBILES");
+		}
 		
 		altovariable1 = altoIpad - restaAlto1Ipad;
 		altovariable2 = altoIpad - restaAlto2Ipad;
@@ -220,10 +270,11 @@ $(document).ready(function(e) {
 		altovariablePx1 = altovariable1 + "px";
 		altovariablePx2 = altovariable2 + "px";
 		
-		//alert("alto completo de "+navegador+": "+altoIpad+"px");	
-		//alert("alto variable1 de "+navegador+": "+altovariablePx1);
-		//alert("alto variable2 de "+navegador+": "+altovariablePx2);
-
+		if ( debug == "true" ){
+		alert("alto completo de "+navegador+": "+altoIpad+"px");	
+		alert("alto variable1 de "+navegador+": "+altovariablePx1);
+		alert("alto variable2 de "+navegador+": "+altovariablePx2);
+		}
 	}
 
 	
@@ -235,11 +286,8 @@ $(document).ready(function(e) {
 	});
 	
 	
-//	$("#panelOptions").css("height", alto_ventana+"px");
-//	$("#panelMore").css("height", alto_ventana+"px");
-
-
 	
+/*---PRUEBAS--*/
 	/*$(window).bind("orientationchange", function(event){            
 		if (event.orientation){          
 			 console.log("Me han reorientado a " + event.orientation);     
