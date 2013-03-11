@@ -8,8 +8,8 @@ $(document).ready(function(e) {
 	
 	/*--Alturas de los Devices---*/
 	
-	var debug = true;
-	var web = true;
+	var debug = false;
+	var web = false;
 	
 	var alto_ventana = $(window).height(); 
 	var ancho_ventana = $(window).width();
