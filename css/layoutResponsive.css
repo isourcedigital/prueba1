@@ -1213,7 +1213,9 @@ font-size: 13px;
 .ui-icon-arrow-r {
 background-position: -129px 0px;
 }
-
+#popupSelcBlog-popup{
+ top: 30px!important;
+}
 
 
 }
