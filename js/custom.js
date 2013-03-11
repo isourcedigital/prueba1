@@ -155,7 +155,7 @@ $(document).ready(function(e) {
 		
 	
 		
-	}else if(navegador == "iphone" || navegador == "iphone simulator" || ancho_ventana <= 600){
+	}else if(navegador == "iphone" || navegador == "iphone simulator"){
 		//alert("ESTO ES "+navegador);
 		altovariable1 = altoIphone - restaAlto1Iphone;
 		altovariable2 = altoIphone - restaAlto2Iphone;
