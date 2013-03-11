@@ -102,7 +102,7 @@ $(document).ready(function(e) {
 	/*---Contenidos--*/
 
 	
-	if(navegador == "ipod" || navegador == "ipod simulator" ){
+	if(navegador == "ipod" || navegador == "ipod simulator" || alto_ventana <=480  ){
 		alert("ESTO ES "+navegador);	
 		
 		altovariable1 = altoIpod - restaAlto1Ipod;
