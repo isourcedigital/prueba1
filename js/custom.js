@@ -103,7 +103,7 @@ $(document).ready(function(e) {
 
 	
 	if(navegador == "ipod" || navegador == "ipod simulator" ){
-		//alert("ESTO ES "+navegador);	
+		alert("ESTO ES "+navegador);	
 		
 		altovariable1 = altoIpod - restaAlto1Ipod;
 		altovariable2 = altoIpod - restaAlto2Ipod;
@@ -112,9 +112,9 @@ $(document).ready(function(e) {
 		altovariablePx2 = altovariable2 + "px";
 		
 		
-		//alert("alto completo de "+navegador+": "+alto_ventana+"px");
-		//alert("alto variable1 de "+navegador+": "+altovariablePx1);
-		//alert("alto variable2 de "+navegador+": "+altovariablePx2);
+		alert("alto completo de "+navegador+": "+alto_ventana+"px");
+		alert("alto variable1 de "+navegador+": "+altovariablePx1);
+		alert("alto variable2 de "+navegador+": "+altovariablePx2);
 		
 		
 		
