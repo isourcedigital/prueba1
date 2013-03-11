@@ -16,11 +16,11 @@ $(document).ready(function(e) {
 	var altoIpod = 940;
 	
 	var restaAlto1Ipad = 127;
-	var restaAlto1Iphone = 660;
+	var restaAlto1Iphone = 690;
 	var restaAlto1Ipod = 119;
 	
 	var restaAlto2Ipad = 75;
-	var restaAlto2Iphone = 630;
+	var restaAlto2Iphone = 650;
 	var restaAlto2Ipod = 70;
 	
 	/*--Alturas de los Devices---*/
@@ -143,9 +143,9 @@ $(document).ready(function(e) {
 		
 		
 		
-		//alert("alto completo de "+navegador+": "+altoIod+"px");
-		//alert("alto variable1 de "+navegador+": "+altovariablePx1);
-		//alert("alto variable2 de "+navegador+": "+altovariablePx2);
+		alert("alto completo de "+navegador+": "+altoIod+"px");
+		alert("alto variable1 de "+navegador+": "+altovariablePx1);
+		alert("alto variable2 de "+navegador+": "+altovariablePx2);
 		
 	}else if(navegador == "iphone"){
 		//alert("ESTO ES "+navegador);
