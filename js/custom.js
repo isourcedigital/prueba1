@@ -17,6 +17,8 @@ $(document).ready(function(e) {
 	var altoIphone = 1096;
 	var altoIpod = 940;
 	
+	
+	
 	var restaAlto1Ipad = 127;
 	var restaAlto1Iphone = 655;
 	var restaAlto1Ipod = 119;
@@ -101,7 +103,7 @@ $(document).ready(function(e) {
 
 	
 	if(navegador == "ipod" || navegador == "ipod simulator" ){
-		alert("ESTO ES "+navegador);	
+		//alert("ESTO ES "+navegador);	
 		
 		altovariable1 = altoIpod - restaAlto1Ipod;
 		altovariable2 = altoIpod - restaAlto2Ipod;
@@ -110,9 +112,9 @@ $(document).ready(function(e) {
 		altovariablePx2 = altovariable2 + "px";
 		
 		
-		alert("alto completo de "+navegador+": "+alto_ventana+"px");
-		alert("alto variable1 de "+navegador+": "+altovariablePx1);
-		alert("alto variable2 de "+navegador+": "+altovariablePx2);
+		//alert("alto completo de "+navegador+": "+alto_ventana+"px");
+		//alert("alto variable1 de "+navegador+": "+altovariablePx1);
+		//alert("alto variable2 de "+navegador+": "+altovariablePx2);
 		
 		
 		
@@ -154,7 +156,7 @@ $(document).ready(function(e) {
 	
 		
 	}else if(navegador == "iphone" || navegador == "iphone simulator" || ancho_ventana <= 600){
-		alert("ESTO ES "+navegador);
+		//alert("ESTO ES "+navegador);
 		altovariable1 = altoIphone - restaAlto1Iphone;
 		altovariable2 = altoIphone - restaAlto2Iphone;
 		
@@ -200,6 +202,8 @@ $(document).ready(function(e) {
 		//alert("alto variable1 de "+navegador+": "+altovariablePx1);
 		//alert("alto variable2 de "+navegador+": "+altovariablePx2);
 		
+	$("#home").css("height", altoIphone+"px")	
+		
 	} else {
 		
 		//alert("NO ENTRO EN MOBILES");
@@ -225,8 +229,10 @@ $(document).ready(function(e) {
 	});
 	
 	
-	$("#panelOptions").css("height", alto_ventana+"px");
-	$("#panelMore").css("height", alto_ventana+"px");
+//	$("#panelOptions").css("height", alto_ventana+"px");
+//	$("#panelMore").css("height", alto_ventana+"px");
+
+
 	
 	/*$(window).bind("orientationchange", function(event){            
 		if (event.orientation){          
