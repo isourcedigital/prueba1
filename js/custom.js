@@ -99,7 +99,10 @@ $(document).ready(function(e) {
 
 	
 	if(navegador == "ipod" ){
-		//alert("ESTO ES "+navegador);
+		alert("ESTO ES "+navegador);	
+		alert("alto completo de "+navegador+": "+altoIod+"px");
+		alert("alto variable1 de "+navegador+": "+altovariablePx1);
+		alert("alto variable2 de "+navegador+": "+altovariablePx2);
 		altovariable1 = altoIpod - restaAlto1Ipod;
 		altovariable2 = altoIpod - restaAlto2Ipod;
 		
@@ -142,10 +145,7 @@ $(document).ready(function(e) {
 	var paginasP = $('#flipBlog2:first-child').html();
 		
 		
-		
-		alert("alto completo de "+navegador+": "+altoIod+"px");
-		alert("alto variable1 de "+navegador+": "+altovariablePx1);
-		alert("alto variable2 de "+navegador+": "+altovariablePx2);
+	
 		
 	}else if(navegador == "iphone"){
 		//alert("ESTO ES "+navegador);
