@@ -143,9 +143,9 @@ $(document).ready(function(e) {
 		
 		
 		
-		//alert("alto completo de "+navegador+": "+altoIod+"px");
-		//alert("alto variable1 de "+navegador+": "+altovariablePx1);
-		//alert("alto variable2 de "+navegador+": "+altovariablePx2);
+		alert("alto completo de "+navegador+": "+altoIod+"px");
+		alert("alto variable1 de "+navegador+": "+altovariablePx1);
+		alert("alto variable2 de "+navegador+": "+altovariablePx2);
 		
 	}else if(navegador == "iphone"){
 		//alert("ESTO ES "+navegador);
