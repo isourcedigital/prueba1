@@ -8,7 +8,7 @@ $(document).ready(function(e) {
 	
 	/*--Alturas de los Devices---*/
 	
-	var debug = false;
+	var debug = true;
 	var web = false;
 	
 	var alto_ventana = $(window).height(); 
