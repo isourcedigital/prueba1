@@ -37,13 +37,13 @@ $(document).ready(function(e) {
 	
 	$(function() {
         	// Bind the tapHandler callback function to the tap event on div.box
-            $( "a#testPop" ).on( 'tap', tapHandler );
+       $( "a#testPop" ).on( 'tap', tapHandler );
  
             // Callback function references the event target and adds the 'tap' class to it
             function tapHandler( event ) {
 				$.mobile.navigate( "#blog1-nota1" );
 			}
-      });
+  });
 	
 	//cantidad de blogs
 	total = ($('#home .blog').length);
@@ -229,11 +229,6 @@ $(document).ready(function(e) {
 		$('#blog .notaDestacada .texto').remove();
 		$('#blog .notaDestacada .texto2').remove();
 		
-		
-
-		
-		
-		
 		var textoCompletoNotaPop="";
 	
 	$('.notaPop .texto p').each(function(index, element) {
@@ -252,10 +247,6 @@ $(document).ready(function(e) {
 		}
 	});
 	
-
-		
-		
-
 	$('#boxFooter').css('margin-top','60px');
 	$('#boxTitContent').css('margin-top','30px');
 	
@@ -287,8 +278,9 @@ $(document).ready(function(e) {
 		height: altovariablePx2, /*--75-- 929*/
 	});
 	
-	$('.ui-icon-delete').css('background-position','0 0 ');
-		$('.ui-icon,').css('background-image','url(images/icons-cerrar.png)');
+	
+	$('.ui-icon-delete').css('background-position','0');
+	$('.ui-icon').css('background-image','url(images/icons-cerrar.png)');
 	
 /*---PRUEBAS--*/
 	/*$(window).bind("orientationchange", function(event){            
