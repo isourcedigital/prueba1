@@ -98,7 +98,7 @@ $(document).ready(function(e) {
 	/*---Contenidos--*/
 
 	
-	if(navegador == "ipod" ){
+	if(navegador == "ipod" || navegador == "ipod simulator" ){
 		alert("ESTO ES "+navegador);	
 		
 		altovariable1 = altoIpod - restaAlto1Ipod;
@@ -151,7 +151,7 @@ $(document).ready(function(e) {
 		
 	
 		
-	}else if(navegador == "iphone"){
+	}else if(navegador == "iphone" || navegador == "iphone simulator"){
 		//alert("ESTO ES "+navegador);
 		altovariable1 = altoIphone - restaAlto1Iphone;
 		altovariable2 = altoIphone - restaAlto2Iphone;
