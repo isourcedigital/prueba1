@@ -9,7 +9,6 @@ $(document).ready(function(e) {
 	/*--Alturas de los Devices---*/
 	
 	var debug = true;
-	var web = false;
 	
 	var alto_ventana = $(window).height(); 
 	var ancho_ventana = $(window).width();
@@ -104,20 +103,14 @@ $(document).ready(function(e) {
 	
 	/*---Contenidos--*/
 
-	if(debug && web ){
-	var ancho_debug = 600;	
-	}else{
-	var ancho_debug	= 0;
-	}
-	if(navegador == "ipod" || navegador == "ipod simulator" || alto_ventana <=480 || ancho_ventana <= ancho_debug ){
+
+	if(navegador == "ipod" || navegador == "ipod simulator" || alto_ventana <=480 ){
 		
 		if(debug){
 		alert("ESTO ES "+navegador);	
 		
 			if (alto_ventana <=480 && navegador=="iphone"){
 			alert("ESTO ES IPHONE 4");
-			} else {
-			alert("ESTO ES TEST WEB");
 			}
 			
 		}
