@@ -100,14 +100,18 @@ $(document).ready(function(e) {
 	
 	if(navegador == "ipod" ){
 		alert("ESTO ES "+navegador);	
-		alert("alto completo de "+navegador+": "+altoIod+"px");
-		alert("alto variable1 de "+navegador+": "+altovariablePx1);
-		alert("alto variable2 de "+navegador+": "+altovariablePx2);
+		
 		altovariable1 = altoIpod - restaAlto1Ipod;
 		altovariable2 = altoIpod - restaAlto2Ipod;
 		
 		altovariablePx1 = altovariable1 + "px";
 		altovariablePx2 = altovariable2 + "px";
+		
+		
+		alert("alto completo de "+navegador+": "+alto_ventana+"px");
+		alert("alto variable1 de "+navegador+": "+altovariablePx1);
+		alert("alto variable2 de "+navegador+": "+altovariablePx2);
+		
 		
 		
 		$('#blog .notaPrincipal .imagen').html(imagenNotaPrincipal);
