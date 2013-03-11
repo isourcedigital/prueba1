@@ -105,6 +105,10 @@ $(document).ready(function(e) {
 	if(navegador == "ipod" || navegador == "ipod simulator" || alto_ventana <=480  ){
 		alert("ESTO ES "+navegador);	
 		
+		if (alto_ventana <=480){
+		alert("ESTO ES IPHONE 4");
+		}
+		
 		altovariable1 = altoIpod - restaAlto1Ipod;
 		altovariable2 = altoIpod - restaAlto2Ipod;
 		
