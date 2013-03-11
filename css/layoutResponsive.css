@@ -289,6 +289,7 @@ img { max-width: 100%; }
  float: left;
  color: #b2b2b2;
  margin-right: 10px;
+ margin-left:-10px;
 }
 
 .nota .contentFechaComent .fecha p
@@ -297,6 +298,7 @@ img { max-width: 100%; }
  margin-left: 10px;
  margin-top: 0!important;
  margin-bottom: 0!important;
+ font-size:13px;
 }
 
 .nota .contentFechaComent .fecha img { float: left; }
@@ -313,6 +315,7 @@ img { max-width: 100%; }
  margin-left: 10px;
  margin-top: 0!important;
  margin-bottom: 0!important;
+ font-size:13px;
 }
 
 .nota .contentFechaComent .coment img { float: left; }
@@ -784,7 +787,7 @@ top: -17px!important;
 .contenedorNotas
 {
  width: 280px;
- height: 899px;
+ height: auto;
  margin: auto;
 }
 .header
@@ -872,15 +875,15 @@ padding: 5px;
 .notaPrincipal .imagen .titulo
 {
  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
- font-size: 22px;
+ font-size: 20px;
  color: #373737;
  float: left;
  position: relative;
  z-index: 9999;
  top: 0px;
- padding:10px;
+ padding:5px;
  font-weight: bold;
- line-height: 24px;
+ line-height:22px;
  text-shadow:none;
  filter:none;
 }

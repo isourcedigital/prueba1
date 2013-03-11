@@ -11,6 +11,8 @@ $(document).ready(function(e) {
 	var alto_ventana = $(window).height(); 
 	var ancho_ventana = $(window).width();
 	
+	console.log(ancho_ventana);
+	
 	var altoIpad = 1004;
 	var altoIphone = 1096;
 	var altoIpod = 940;
@@ -151,8 +153,8 @@ $(document).ready(function(e) {
 		
 	
 		
-	}else if(navegador == "iphone" || navegador == "iphone simulator"){
-		//alert("ESTO ES "+navegador);
+	}else if(navegador == "iphone" || navegador == "iphone simulator" || ancho_ventana <= 600){
+		alert("ESTO ES "+navegador);
 		altovariable1 = altoIphone - restaAlto1Iphone;
 		altovariable2 = altoIphone - restaAlto2Iphone;
 		
