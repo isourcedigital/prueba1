@@ -98,7 +98,7 @@ $(document).ready(function(e) {
 	/*---Contenidos--*/
 
 	
-	if(navegador == "ipod simulator" ){
+	if(navegador == "ipod" ){
 		//alert("ESTO ES "+navegador);
 		altovariable1 = altoIpod - restaAlto1Ipod;
 		altovariable2 = altoIpod - restaAlto2Ipod;
@@ -107,13 +107,47 @@ $(document).ready(function(e) {
 		altovariablePx2 = altovariable2 + "px";
 		
 		
+		$('#blog .notaPrincipal .imagen').html(imagenNotaPrincipal);
+		$('#blog .notaPrincipal .texto').html("");
+		$('#blog .notaPrincipal .imagen .contentFechaComent .fecha img').attr("src","images/calendarGris.png");
+		$('#blog .notaPrincipal .imagen .contentFechaComent .coment img').attr("src","images/comentGris.png");
+		
+		$('#blog .nota .imagen').remove();
+		$('#blog .nota .titulo').html(TituloNota);
+		$('#blog .nota .contentFechaComent').html(FechaNota);
+		$('#blog .nota .texto').remove();
+		
+		$('#blog .notaDestacada .imagen').html(imagenNotaDestacada);
+		$('#blog .notaDestacada .titulo').html(TituloNotaDestacada);
+		$('#blog .notaDestacada .contentFechaComent').html(FechaNotaDestacada);
+		$('#blog .notaDestacada .texto').remove();
+		$('#blog .notaDestacada .texto2').remove();
+		
+		
+		
+		var textoCompletoNotaPop="";
+	
+	$('.notaPop .texto p').each(function(index, element) {
+		//console.log(index);
+		//console.log(element);
+		//textoCompletoNotaPop += $(element).html();
+		$(element).removeClass('colum');
+		if(index > 0){
+			$(element).html("The overwhelming majority of businesses today are encouraging employees to adopt “mobile” working practices, meaning that work can be done wherever, whenever and from whatever device – smartphone, tablet or laptop. This flexibility increases employees’ involvement and labor efficiency, but it also creates fundamentally new threats to business: securing smartphones is far more difficult than securing desktop computers. Mobile Device Management (MDM) has been one of the hottest topics at the Mobile World Congress in Barcelona. To promote this discussion, Kaspersky Lab arranged a panel at which it presented its MDM solution. Mobile security is demanding more and more attention from corporate IT directors. According to a Gartner survey in 2012, smartphones and tablets have skyrocketed to second place on the list of strategically important technologies, up from sixth place in 2011. The situation has fundamentally changed over the past five years");
+		}else{
+			$(element).html("The overwhelming majority of businesses today are encouraging employees to adopt “mobile” working practices, meaning that work can be done wherever, whenever and from whatever device – smartphone, tablet or laptop. This flexibility increases employees’ involvement and labor efficiency, but it also creates fundamentally new threats to business: securing smartphones is far more difficult than securing desktop computers. Mobile Device Management (MDM) has been one of...");
+		}
+	});
+	
+	var paginasP = $('#flipBlog2:first-child').html();
+		
 		
 		
 		//alert("alto completo de "+navegador+": "+altoIod+"px");
 		//alert("alto variable1 de "+navegador+": "+altovariablePx1);
 		//alert("alto variable2 de "+navegador+": "+altovariablePx2);
 		
-	}else if(navegador == "iphone simulator" || ancho_ventana <= 350 ){
+	}else if(navegador == "iphone"){
 		//alert("ESTO ES "+navegador);
 		altovariable1 = altoIphone - restaAlto1Iphone;
 		altovariable2 = altoIphone - restaAlto2Iphone;
