@@ -202,8 +202,8 @@ $(document).ready(function(e) {
 		//alert("alto variable1 de "+navegador+": "+altovariablePx1);
 		//alert("alto variable2 de "+navegador+": "+altovariablePx2);
 
-	$('#boxFooter').css('margin-top','30px');
-	$('#boxTitContent').css('margin-top','20px');
+	$('#boxFooter').css('margin-top','60px');
+	$('#boxTitContent').css('margin-top','30px');
 	
 		
 	} else {
