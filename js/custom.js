@@ -199,6 +199,11 @@ $(document).ready(function(e) {
 	
 		
 	}else if(navegador == "iphone" || navegador == "iphone simulator"){
+
+
+		//hack X iphon5
+		$("span.ui-icon-delete").css("background-position","-50px -50px");
+
 		
 		if (debug){
 			alert("ESTO ES "+navegador);
@@ -260,6 +265,8 @@ $(document).ready(function(e) {
 	$('#boxFooter').css('margin-top','60px');
 	$('#boxTitContent').css('margin-top','30px');
 	
+	$('.ui-icon-delete').css('background-position','0px 0px');
+	$('.ui-icon').css('background-image','url(images/icons-cerrar.png)');
 		
 	} else {
 		
@@ -289,8 +296,8 @@ $(document).ready(function(e) {
 	});
 	
 	
-	$('.ui-icon-delete').css('background-position','0% 0%');
-	$('.ui-icon').css('background-image','url(images/icons-cerrar.png)');
+	
+	
 	
 	
 	

@@ -615,7 +615,7 @@ margin-top:20px;
 
 .clear { clear: both; }
 
-#popupAdd { width: 400px!important; }
+#popupAdd { width: 400px!important;padding-left: 30px; }
 
 .custom .blogMore p { margin-top: 20px; }
 
@@ -702,6 +702,11 @@ top: -17px!important;
 .pop{
  padding-top: 20px;padding-bottom: 20px;padding-left: 25px;}
 /*--CONTENEDORES--*/
+
+.ui-icon-delete{background-position:center!important;}
+.ui-icon{background-image:url(images/icons-cerrar.png)!important;}
+.ui-icon{background-size:auto!important;}
+
 
 
 @media (max-width:320px){
