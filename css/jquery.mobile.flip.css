@@ -114,7 +114,9 @@
   width: 100%;
   cursor: pointer;
   font-size: 6px;
+	float:left;
   overflow: hidden;
+	z-index:999;
 }
 
 .flipContainer .pager span.dot {
@@ -125,9 +127,10 @@
 .flipContainer .pager span.dot  {
   text-decoration: none;
   margin: 8px 5px;
-  background-image: url('images/pager6x6.png');
+/*-  background-image: url('images/pager6x6.png');
   background-repeat: no-repeat;
-  background-position: 0 -6px;
+  background-position: 0 -6px;-*/
+	background-color:#333;
 }
 
 .flipContainer .pager span.dot.current  {

@@ -6,6 +6,18 @@ $(document).ready(function(e) {
 	});
 	*/
 	
+	
+	/*---ORIENTACION---*/
+	
+	$( window ).on( "orientationchange", function( event ) {
+                   console.log("This device is in " + event.orientation + " mode!" );
+                   //if(event.orientation == 'landscape') $("#flipBlog1").flip({ forwardDir: 'btor' });
+                   //else $("#flipBlog1").flip({ forwardDir: 'btot' });
+	});
+ 
+	// You can also manually force this event to fire.
+	$( window ).orientationchange();
+	
 	/*--Alturas de los Devices---*/
 	
 	var debug = false;
@@ -13,7 +25,7 @@ $(document).ready(function(e) {
 	var alto_ventana = $(window).height(); 
 	var ancho_ventana = $(window).width();
 	
-	console.log(ancho_ventana);
+	//console.log(ancho_ventana);
 	
 	var altoIpad = 1004;
 	var altoIphone = 1096;
@@ -33,7 +45,7 @@ $(document).ready(function(e) {
 	
 	var navegador =  navigator.platform.toLowerCase();
 	
-	console.log(navegador);
+	//console.log(navegador);
 	
 	$(function() {
         	// Bind the tapHandler callback function to the tap event on div.box
@@ -50,6 +62,8 @@ $(document).ready(function(e) {
 	visibles = ($('#home .ui-grid-a .blog').length);
 	//Print cantidad de Blogs
 	$('#home').find('#cantidad').html("Blogs "+visibles+" of "+total);  
+	
+	
 	
 	//cantidad de Paginas Blog
 	totalPaginas = ($('#blog1-page .p').length);
@@ -288,57 +302,35 @@ $(document).ready(function(e) {
 	}
 
 	
+	
+	
+	
 	$("#flipBlog1").flip({
 		height: altovariablePx1, /*--127-- 877*/
+		
 	});
 	$("#flipBlog2").flip({
-		height: altovariablePx2, /*--75-- 929*/
+		//height: altovariablePx2, /*--75-- 929*/
+	
 	});
-	
-	
-	
-	
-	
-	
-	
-	
-	
-/*---PRUEBAS--*/
-	/*$(window).bind("orientationchange", function(event){            
-		if (event.orientation){          
-			 console.log("Me han reorientado a " + event.orientation);     
-		}
- 	});
-	
-	$(window).trigger("orientationchange");*/
-		
-
-	
-/*	$('#flipBlog1 .p:first-child').live("swiperight", function(){
-		$.mobile.changePage( "#home", {
-			transition: "slide",
-			reverse: true,
-			changeHash: true,
-		});
-	});*/
-	
-	
-	
-	//pinch
-/*	$("a#pinchTest").fidget({
-		swipe: null,
-		dragThis: false,
-		pinch: handleSwipe,
-		zoomThis: false,
-		rotateThis: false,
-		tap: null,
-		doubleTap: null
-	});
-	function handleSwipe(event, fidget) {
-		//$('.dragMe').html('<p>Status: ' + fidget.swipe.status + '</p>');
-		alert("pinch");
-	}*/
-			
-	//alert("probando 2");
-	
+    
+    intIndexBigCarousel = setInterval('fIndexBigCarousel();', 7000);
+    intIndexBigScroll = setInterval('fIndexBigScroll();', 10);
 });
+
+var iIndexBigCarousel = 0;
+function fIndexBigCarousel()
+{
+    document.getElementById('imgIndexBig'+iIndexBigCarousel).style.display = 'none';
+    document.getElementById('dIndexBig'+iIndexBigCarousel).style.display = 'none';
+    iIndexBigCarousel++;
+    if(iIndexBigCarousel == 4) iIndexBigCarousel = 0;
+    document.getElementById('imgIndexBig'+iIndexBigCarousel).style.display = 'block';
+    document.getElementById('dIndexBig'+iIndexBigCarousel).style.display = 'block';
+    document.getElementById('imgIndexBig'+iIndexBigCarousel).style.marginLeft = '0px';
+}
+
+function fIndexBigScroll()
+{
+    document.getElementById('imgIndexBig'+iIndexBigCarousel).style.marginLeft = (parseInt(document.getElementById('imgIndexBig'+iIndexBigCarousel).style.marginLeft, 10)-1)+'px';
+}

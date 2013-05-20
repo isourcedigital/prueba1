@@ -454,6 +454,12 @@
 
   // This can be done by complete css animation. That should be faster.
   Flip.prototype.action = function(to) {
+    //console.log("FLIP OUT");
+
+    // modificación realizada por chris //
+    // PARAMETRO PARA CAMBIAR LA VELOCIDAD DEL EASING //
+    var stepSize = 0.01;
+
     var endRatio = to;
     var startRatio = this.currentRatio;
 
@@ -492,7 +498,7 @@
 
     var loop = function() {
       // to next step
-      x = Math.min(1, x + 0.05);
+      x = Math.min(1, x + stepSize);
       var y = Math.min(1.0, formula(x));
       if (endRatio === 0) {
         // set next ratio to the reverse direction
@@ -505,6 +511,8 @@
       }
 
       _this.step(y);
+
+      //console.log("anima "+x);
 
       // call until ratio is 1
       if (x + 0.05 < d) {
@@ -1026,7 +1034,7 @@
 	var contained = event.target;
 	var contenido = $.contains( container , contained );
 	var identico = container == contained;
-	console.log(contenido + " - " + identico);
+	//console.log(contenido + " - " + identico);
 	
 	if (contenido || identico) {
 		//return false;
@@ -1227,7 +1235,6 @@
       this._clickContext.lastInfo = null;
       this._clickContext.dList = [];
       this._clickContext.aList = [];
-
       return true;
     }
 
@@ -1267,7 +1274,7 @@
     }
 
     // run animation
-    this.effect.action(targetRatio);
+    this.effect.action(targetRatio);//aca larga la animaciÃ³n de salida
 
     event.preventDefault();
 
@@ -1319,9 +1326,11 @@
     if (mouse.x < pagerWidth / 2) {
       // backward
       this.flipPrev();
+			console.log("atras");
     } else {
       // forward
       this.flipNext();
+			console.log("adelante");			
     }
   }
 
@@ -1423,17 +1432,17 @@
     }
 
     $(this.element).bind(mousedown, function(event) {
-	  console.log("buscando event 4");
+	     //console.log("buscando event 4");
       return _this.vmousedown(event);
     });
 
     $(this.element).bind(mousemove, function(event) {
-	  //console.log("buscando event 5");
+	     //console.log("buscando event 5");
       return _this.vmousemove(event);
     });
 
     $(this.element).bind(mouseup, function(event) {
-	  console.log("buscando event 6");
+	     //console.log("buscando event 6");
       return _this.vmouseup(event);
     });
 

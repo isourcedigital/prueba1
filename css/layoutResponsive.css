@@ -3,610 +3,551 @@
 
 
 
-* { font-family: "Trebuchet MS", Arial, Helvetica, sans-serif!important; }
 
-p
-{
- margin-top: 0!important;
- margin-bottom: 0!important;
+* { font-family: "Trebuchet MS", Arial, Helvetica, sans-serif!important; font-size:1em;}
+
+p {
+	margin-top: 0!important;
+	margin-bottom: 0!important;
 }
 
-.p { background:#F1F1F1; }
+.p { background: #F1F1F1; }
 
-p.colum
-{
- -webkit-column-count: 2; /* Saf3, Chrome*/
- -webkit-column-gap: 14px; /* Saf3, Chrome*/
- -moz-column-count: 2; /* FF3.5+ */
- -moz-column-gap: 14px; /* FF3.5+ */
- column-count: 2; /* Opera 11+*/
- column-gap: 14px /* Opera 11+*/
+p.colum {
+	-webkit-column-count: 2; /* Saf3, Chrome*/
+	-webkit-column-gap: 14px; /* Saf3, Chrome*/
+	-moz-column-count: 2; /* FF3.5+ */
+	-moz-column-gap: 14px; /* FF3.5+ */
+	column-count: 2; /* Opera 11+*/
+	column-gap: 14px /* Opera 11+*/
 }
 
-#popupPanel-popup
-{
- right: 0 !important;
- left: auto !important;
- width: 25%;
- height: 100%;
+
+
+
+
+
+
+
+
+
+
+
+#popupPanel-popup {
+	right: 0 !important;
+	left: auto !important;
+	width: 25%;
+	height: 100%;
 }
  @media all and (max-width: 900px) {
 
 #popupPanel { width: 40%; }
 }
 
-#popupPanel
-{
- border: 1px solid #000;
- border-right: none;
- background: rgba(0,0,0,.5);
- margin: -1px 0;
- height: 100%;
+#popupPanel {
+	border: 1px solid #000;
+	border-right: none;
+	background: rgba(0,0,0,.5);
+	margin: -1px 0;
+	height: 100%;
 }
 
 #popupPanel .ui-btn { margin: 2em 15px; }
 
-.footerBottons
-{
- background-color: #414141;
- margin-left: 5px;
- margin-right: 5px;
- height: 50px;
- line-height: 50px;
- margin-top:10px;
+.footerBottons {
+	background-color: #414141;
+	margin-left: 5px;
+	margin-right: 5px;
+	height: 50px;
+	line-height: 50px;
+	margin-top: 10px;
 }
 
-.button
-{
- display: block;
- font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
- text-decoration: none!important;
- float: right;
- color: #FFF!important;
- text-shadow: none!important;
- margin-right: 13px;
- margin-left: 25px;
- font-weight: normal!important;
+.button {
+	display: block;
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	text-decoration: none!important;
+	float: left;
+	color: #333!important;
+	text-shadow: none!important;
+	font-weight: normal!important;
 }
 
-.button img
-{
- margin-right: 5px;
- top: -1px;
- position: relative;
+.button img {
+	margin-right: 5px;
+	top: -1px;
+	position: relative;
 }
 
 img { max-width: 100%; }
 
-.footerMargin { margin-top: 20px!important; }
+.footerMargin { /*-margin-top: 20px!important;-*/}
 
-.header
-{
- height: 60px;
- background-color:#E0E1DD;
+.header {
+	height: 60px;
+	background-color: #E0E1DD;
 }
 
-.logo
-{
- float: left;
- margin-top: 16px;
- position: relative;
- z-index: 999;
+.logo {
+	float: left;
+	margin-top: 16px;
+	position: relative;
+	z-index: 999;
 }
 
-.menu
-{
- width: 100%;
- float: left;
- position: relative;
+.menu {
+	width: 100%;
+	float: left;
+	position: relative;
 }
 
 .selectMenu { }
 
-.blogActual
-{
- width: 100%;
- text-align: center;
- margin-top: -38px;
+.blogActual {
+	width: 100%;
+	text-align: center;
+	margin-top: -38px;
 }
 
-.blogActual a
-{
- font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
- font-size: 34px;
- color: #373737!important;
- text-decoration: none;
- text-shadow: none!important;
+.blogActual a {
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size:2.125em;
+	color: #373737!important;
+	text-decoration: none;
+	text-shadow: none!important;
 }
 
-#popupSelcBlog-popup
-{
- top: 60px!important;
- z-index: 10;
+#popupSelcBlog-popup {
+	top: 60px!important;
+	z-index: 10;
 }
 
-.flechita
-{
- top: -4px;
- position: relative;
+.flechita {
+	top: -4px;
+	position: relative;
 }
 
-.rot180
-{
- -webkit-transform: rotate(180deg);
- -moz-transform: rotate(180deg);
- rotation: 180deg;
+.rot180 {
+	-webkit-transform: rotate(180deg);
+	-moz-transform: rotate(180deg);
+	rotation: 180deg;
 }
 
-.notaPrincipal
-{
- width: 725px;
- float: left;
- height: 463px;
- display: block;
- background-color: #FFFFFF;
- margin: 5px;
+.notaPrincipal {
+	width: 725px;
+	float: left;
+	height: 463px;
+	display: block;
+	background-color: #FFFFFF;
+	margin: 5px;
 }
 
-.nota
-{
- width: 330px;
- float: left;
- height: 389px;
- display: block;
- background-color: #FFFFFF;
- margin: 5px;
- padding: 14px;
+.nota {
+	width: 330px;
+	float: left;
+	height: 389px;
+	display: block;
+	background-color: #FFFFFF;
+	margin: 5px;
+	padding: 14px;
 }
 
-.notaDestacada
-{
- width: 697px;
- float: left;
- height: 435px;
- display: block;
- background-color: #FFFFFF;
- margin: 5px;
- padding: 14px;
+.notaDestacada {
+	width: 697px;
+	float: left;
+	height: 435px;
+	display: block;
+	background-color: #FFFFFF;
+	margin: 5px;
+	padding: 14px;
 }
 
-.contenedorNotas
-{
- width: 736px;
- height: 899px;
- margin: auto;
+.contenedorNotas {
+	width: 736px;
+	height: 899px;
+	margin: auto;
 }
 
-.notaPrincipal .imagen
-{
- height: 338px;
- width: 100%;
- float: left;
- position: relative;
+.notaPrincipal .imagen {
+	height: 338px;
+	width: 100%;
+	float: left;
+	position: relative;
 }
 
-.notaPrincipal .imagen .titulo
-{
- font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
- font-size: 52px;
- color: #FFF;
- float: left;
- position: relative;
- z-index: 9999;
- top: -155px;
- padding: 14px;
- font-weight: bold;
- line-height: 50px;
- text-shadow: 1px 1px 3px #141414;
- filter: dropshadow(color=#141414, offx=1, offy=1);
+.notaPrincipal .imagen .titulo {
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size:3.250em;
+	color: #FFF;
+	float: left;
+	position: relative;
+	z-index: 9999;
+	top: -155px;
+	padding: 14px;
+	font-weight: bold;
+	line-height: 50px;
+	text-shadow: 1px 1px 3px #141414;
+	filter: dropshadow(color=#141414, offx=1, offy=1);
 }
 
-.notaPrincipal .imagen .contentFechaComent
-{
- width: 100%;
- float: left;
- position: relative;
- top: -175px;
- padding: 14px;
+.notaPrincipal .imagen .contentFechaComent {
+	width: 100%;
+	float: left;
+	position: relative;
+	top: -175px;
+	padding: 14px;
 }
 
-.notaPrincipal .imagen .contentFechaComent .fecha
-{
- float: left;
- color: #FFF;
- margin-right: 10px;
+.notaPrincipal .imagen .contentFechaComent .fecha {
+	float: left;
+	color: #FFF;
+	margin-right: 10px;
 }
 
-.notaPrincipal .imagen .contentFechaComent .fecha p
-{
- float: left;
- margin-left: 10px;
- margin-top: 0!important;
- margin-bottom: 0!important;
+.notaPrincipal .imagen .contentFechaComent .fecha p {
+	float: left;
+	margin-left: 10px;
+	margin-top: 0!important;
+	margin-bottom: 0!important;
 }
 
 .notaPrincipal .imagen .contentFechaComent .fecha img { float: left; }
 
-.notaPrincipal .imagen .contentFechaComent .coment
-{
- float: left;
- color: #FFF;
+.notaPrincipal .imagen .contentFechaComent .coment {
+	float: left;
+	color: #FFF;
 }
 
-.notaPrincipal .imagen .contentFechaComent .coment p
-{
- float: left;
- margin-left: 10px;
- margin-top: 0!important;
- margin-bottom: 0!important;
+.notaPrincipal .imagen .contentFechaComent .coment p {
+	float: left;
+	margin-left: 10px;
+	margin-top: 0!important;
+	margin-bottom: 0!important;
 }
 
 .notaPrincipal .imagen .contentFechaComent .coment img { float: left; }
 
-.texto
-{
- font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
- color: #5e5e5e;
- font-size: 14px;
- float: left;
- line-height: 24px;
+.texto {
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	color: #5e5e5e;
+	font-size:0.875em;
+	float: left;
+	line-height: 24px;
 }
 
-.texto p
-{
- margin-top: 0!important;
- margin-bottom: 0!important;
- padding: 14px;
+.texto p {
+	margin-top: 0!important;
+	margin-bottom: 0!important;
+	padding: 14px;
 }
 
-.nota .imagen
-{
- height: 178px;
- width: 333px;
- float: left;
+.nota .imagen {
+	height: 178px;
+	width: 333px;
+	float: left;
 }
 
-.nota .titulo
-{
- font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
- font-size: 20px;
- color: #373737;
- float: left;
- font-weight: bold;
- line-height: 25px;
- margin-top: 20px;
+.nota .titulo {
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size: 1.250em;
+	color: #373737;
+	float: left;
+	font-weight: bold;
+	line-height: 25px;
+	margin-top: 20px;
 }
 
-.nota .contentFechaComent
-{
- width: 100%;
- float: left;
- margin-top: 10px;
+.nota .contentFechaComent {
+	width: 100%;
+	float: left;
+	margin-top: 10px;
 }
 
-.nota .contentFechaComent .fecha
-{
- float: left;
- color: #b2b2b2;
- margin-right: 10px;
- margin-left:-10px;
+.nota .contentFechaComent .fecha {
+	float: left;
+	color: #b2b2b2;
+	margin-right: 10px;
+	margin-left: -10px;
 }
 
-.nota .contentFechaComent .fecha p
-{
- float: left;
- margin-left: 10px;
- margin-top: 0!important;
- margin-bottom: 0!important;
- font-size:13px;
+.nota .contentFechaComent .fecha p {
+	float: left;
+	margin-left: 10px;
+	margin-top: 0!important;
+	margin-bottom: 0!important;
+	font-size:0.813em;
 }
 
 .nota .contentFechaComent .fecha img { float: left; }
 
-.nota .contentFechaComent .coment
-{
- float: left;
- color: #b2b2b2;
+.nota .contentFechaComent .coment {
+	float: left;
+	color: #b2b2b2;
 }
 
-.nota .contentFechaComent .coment p
-{
- float: left;
- margin-left: 10px;
- margin-top: 0!important;
- margin-bottom: 0!important;
- font-size:13px;
+.nota .contentFechaComent .coment p {
+	float: left;
+	margin-left: 10px;
+	margin-top: 0!important;
+	margin-bottom: 0!important;
+		font-size:0.813em;
 }
 
 .nota .contentFechaComent .coment img { float: left; }
 
-.nota .texto p
-{
- padding: 0;
- margin-top: 10px!important;
- float: left;
+.nota .texto p {
+	padding: 0;
+	margin-top: 10px!important;
+	float: left;
 }
 
 .notaDestacada .imagen { float: right; }
 
-.notaDestacada .titulo
-{
- font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
- font-size: 23px;
- color: #373737;
- float: left;
- font-weight: bold;
- line-height: 28px;
- width: 347px;
+.notaDestacada .titulo {
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size: 1.438em;
+	color: #373737;
+	float: left;
+	font-weight: bold;
+	line-height: 28px;
+	width: 347px;
 }
 
-.notaDestacada .contentFechaComent
-{
- width: 347px;
- float: left;
- margin-top: 6px;
+.notaDestacada .contentFechaComent {
+	width: 347px;
+	float: left;
+	margin-top: 6px;
 }
 
-.notaDestacada .contentFechaComent .fecha
-{
- float: left;
- color: #b2b2b2;
- margin-right: 10px;
+.notaDestacada .contentFechaComent .fecha {
+	float: left;
+	color: #b2b2b2;
+	margin-right: 10px;
 }
 
-.notaDestacada .contentFechaComent .fecha p
-{
- float: left;
- margin-left: 10px;
- margin-top: 0!important;
- margin-bottom: 0!important;
+.notaDestacada .contentFechaComent .fecha p {
+	float: left;
+	margin-left: 10px;
+	margin-top: 0!important;
+	margin-bottom: 0!important;
 }
 
 .notaDestacada .contentFechaComent .fecha img { float: left; }
 
-.notaDestacada .contentFechaComent .coment
-{
- float: left;
- color: #b2b2b2;
+.notaDestacada .contentFechaComent .coment {
+	float: left;
+	color: #b2b2b2;
 }
 
-.notaDestacada .contentFechaComent .coment p
-{
- float: left;
- margin-left: 10px;
- margin-top: 0!important;
- margin-bottom: 0!important;
+.notaDestacada .contentFechaComent .coment p {
+	float: left;
+	margin-left: 10px;
+	margin-top: 0!important;
+	margin-bottom: 0!important;
 }
 
 .notaDestacada .contentFechaComent .coment img { float: left; }
 
-.notaDestacada .texto
-{
- font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
- color: #5e5e5e;
- font-size: 14px;
- float: left;
- line-height: 24px;
- width: 330px;
- margin-top: 10px;
+.notaDestacada .texto {
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	color: #5e5e5e;
+	font-size: 0.875em;
+	float: left;
+	line-height: 24px;
+	width: 330px;
+	margin-top: 10px;
 }
 
-.notaDestacada .texto2
-{
- font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
- color: #5e5e5e;
- font-size: 14px;
- float: left;
- line-height: 24px;
+.notaDestacada .texto2 {
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	color: #5e5e5e;
+	font-size:  0.875em;
+	float: left;
+	line-height: 24px;
 }
 
-.notaDestacada .texto p
-{
- margin-top: 0!important;
- margin-bottom: 0!important;
- padding: 0px;
- width: 330px;
- float: left;
+.notaDestacada .texto p {
+	margin-top: 0!important;
+	margin-bottom: 0!important;
+	padding: 0px;
+	width: 330px;
+	float: left;
 }
 
-.notaDestacada .texto2 p
-{
- margin-top: 0!important;
- margin-bottom: 0!important;
- padding: 0px;
+.notaDestacada .texto2 p {
+	margin-top: 0!important;
+	margin-bottom: 0!important;
+	padding: 0px;
 }
 
 #popupSelcBlog-screen { z-index: 9; }
 
-.volver
-{
- position: absolute;
- z-index: 999;
- top: 0;
- left: 0;
+.volver {
+	position: absolute;
+	z-index: 999;
+	top: 0;
+	left: 0;
 }
 
-.notaPop .notaPrincipal
-{
- width: 697px;
- float: left;
- height: 914px;
- display: block;
- background-color: #FFFFFF;
- margin: 5px;
- padding: 14px;
+.notaPop .notaPrincipal {
+	width: 697px;
+	float: left;
+	height: 914px;
+	display: block;
+	background-color: #FFFFFF;
+	margin: 5px;
+	padding: 14px;
 }
 
-.notaPop .notaPrincipal .imagen
-{
- height: 314px;
- width: 697px;
- float: left;
- position: relative;
- overflow: hidden;
+.notaPop .notaPrincipal .imagen {
+	height: 314px;
+	width: 697px;
+	float: left;
+	position: relative;
+	overflow: hidden;
 }
 
-.notaPop .notaPrincipal .titulo
-{
- font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
- font-size: 40px;
- color: #373737;
- float: left;
- font-weight: bold;
- line-height: 48px;
- margin-top: 10px;
+.notaPop .notaPrincipal .titulo {
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size:2.500em;
+	color: #373737;
+	float: left;
+	font-weight: bold;
+	line-height: 48px;
+	margin-top: 10px;
 }
 
-.notaPop .notaPrincipal .contentFechaComent
-{
- width: 100%;
- float: left;
- margin-top: 10px;
+.notaPop .notaPrincipal .contentFechaComent {
+	width: 100%;
+	float: left;
+	margin-top: 10px;
 }
 
-.notaPop .notaPrincipal .contentFechaComent .fecha
-{
- float: left;
- color: #b2b2b2;
- margin-right: 10px;
+.notaPop .notaPrincipal .contentFechaComent .fecha {
+	float: left;
+	color: #b2b2b2;
+	margin-right: 10px;
 }
 
-.notaPop .notaPrincipal .contentFechaComent .fecha p
-{
- float: left;
- margin-left: 10px;
- margin-top: 0!important;
- margin-bottom: 0!important;
+.notaPop .notaPrincipal .contentFechaComent .fecha p {
+	float: left;
+	margin-left: 10px;
+	margin-top: 0!important;
+	margin-bottom: 0!important;
 }
 
 .notaPop .notaPrincipal .contentFechaComent .fecha img { float: left; }
 
-.notaPop .notaPrincipal .contentFechaComent .coment
-{
- float: left;
- color: #b2b2b2;
+.notaPop .notaPrincipal .contentFechaComent .coment {
+	float: left;
+	color: #b2b2b2;
 }
 
-.notaPop .notaPrincipal .contentFechaComent .coment p
-{
- float: left;
- margin-left: 10px;
- margin-top: 0!important;
- margin-bottom: 0!important;
+.notaPop .notaPrincipal .contentFechaComent .coment p {
+	float: left;
+	margin-left: 10px;
+	margin-top: 0!important;
+	margin-bottom: 0!important;
 }
 
 .notaPop .notaPrincipal .contentFechaComent .coment img { float: left; }
 
-.notaPop .texto
-{
- font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
- color: #5e5e5e;
- font-size: 14px;
- float: left;
- line-height: 30px;
- margin-top: 10px;
+.notaPop .texto {
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	color: #5e5e5e;
+	font-size:0.875em;
+	float: left;
+	line-height: 30px;
+	margin-top: 10px;
 }
 
-.notaPop .texto p
-{
- margin-top: 0!important;
- margin-bottom: 0!important;
- padding: 0px;
- float: left;
+.notaPop .texto p {
+	margin-top: 0!important;
+	margin-bottom: 0!important;
+	padding: 0px;
+	float: left;
 }
 
-.bloque
-{
- background-color: #FFF;
- padding: 12px;
- margin: 5px;
-}
+.bloque { }
 
 .bloque img { width: 100%; }
 
 .customPanel { background-color: #F0F0F0; }
 
-.close
-{
- float: left;
- position: relative;
- z-index: 999;
+.close {
+	float: left;
+	position: relative;
+	z-index: 999;
 }
 
-.close a
-{
- color: #5e5e5e!important;
- text-decoration: none;
+.close a {
+	color: #5e5e5e!important;
+	text-decoration: none;
 }
 
 .customPanel.ui-panel { width: 50%!important; }
 
 #panelMore { }
 
-.contenedorBlogMore
-{
- float: left;
- width: 360px;
- margin-top: 130px;
- margin-left: 20px;
+.contenedorBlogMore {
+	/*float: left;*/
+	width: 360px;
+	margin-top: 130px;
+	margin-left: 20px;
 }
 
-.contenedorBlogMore p
-{
- font-size: 38px;
- font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
- color: #006c54;
- float: left;
- margin-bottom: 20px!important
+.contenedorBlogMore p {
+	font-size:2.375em;
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	color: #006c54;
+	float: left;
+	margin-bottom: 20px!important
 }
 
 .contenedorBlogMore .blogMore { float: left; }
 
-.contenedorBlogMore .blogMore img
-{
- float: left;
- margin: 10px;
- margin-left: 2px;
- -webkit-box-shadow: 0px 0px 15px 0px #666;
- box-shadow: 0px 0px 15px 0px #666;
- border: 6px #fff solid;
+.contenedorBlogMore .blogMore img {
+	float: left;
+	margin: 10px;
+	margin-left: 2px;
+	-webkit-box-shadow: 0px 0px 15px 0px #666;
+	box-shadow: 0px 0px 15px 0px #666;
+	border: 6px #fff solid;
 }
 
-.contenedorBlogMore .blogMore p
-{
- font-size: 18px!important;
- font-weight: bold!important;
- float: left!important;
- margin-top: 50px!important;
- color: #4c4c4c;
- width: 200px;
- margin-left: 5px;
+.contenedorBlogMore .blogMore p {
+	font-size:1.125em!important;
+	font-weight: bold!important;
+	float: left!important;
+	margin-top: 50px!important;
+	color: #4c4c4c;
+	width: 200px;
+	margin-left: 5px;
 }
 
+#panelOptions .contenedorBlogMore {
+	margin-top: 20px;
+	margin-left: 10px;
+	padding-bottom: 50px;
 
-#panelOptions .contenedorBlogMore{
-margin-top:20px;
- margin-left:10px;"
 }
 
-
-#panelOptions .contenedorBlogMore .blogMore{
- margin-bottom:10px;
- margin-left:-15px;
+#panelOptions .contenedorBlogMore .blogMore {
+	margin-bottom: 10px;
+	margin-left: -15px;
 }
-.margin40{
- padding-bottom:40px!important;
- }
-#panelOptions .contenedorBlogMore .blogMore p
-{
- font-size: 13px!important;
- font-weight: bold!important;
- float: left!important;
- margin-top:-7px!important;
- color: #4c4c4c;
- width: 200px;
- margin-left: 5px;
- float:right!important
+
+.margin40 { padding-bottom: 40px!important; }
+
+#panelOptions .contenedorBlogMore .blogMore p {
+	font-size:0.813em!important;
+	font-weight: bold!important;
+	float: left!important;
+	margin-top: -7px!important;
+	color: #4c4c4c;
+	width: 200px;
+	margin-left: 5px;
+	float: right!important
 }
 
 .contenedorBlogMore .blogMore:first-child p { margin-top: 30px!important; }
@@ -615,54 +556,52 @@ margin-top:20px;
 
 .clear { clear: both; }
 
-#popupAdd { width: 400px!important;padding-left: 30px; }
+#popupAdd {
+	width: 400px!important;
+	padding-left: 30px;
+}
 
 .custom .blogMore p { margin-top: 20px; }
 
-.customFieldcontain
-{
- position: relative!important;
-top: -17px!important;
- margin-left: 17px!important;
- float:right;
+.customFieldcontain {
+	position: relative!important;
+	top: -17px!important;
+	margin-left: 17px!important;
+	float: right;
 }
 
-.closeRight
-{
- float: right;
- position: relative;
- z-index: 999;
+.closeRight {
+	float: right;
+	position: relative;
+	z-index: 999;
 }
 
-.closeRight a
-{
- color: #5e5e5e!important;
- text-decoration: none;
+.closeRight a {
+	color: #5e5e5e!important;
+	text-decoration: none;
 }
 
-.tituloBlog
-{
- width: 100%;
- height: 75px;
- float: left;
- position: relative;
- background-color: rgba(0,0,0,0.4);
- margin-top: -80px;
+.tituloBlog {
+	width: 100%;
+	height: 75px;
+	float: left;
+	position: relative;
+	background-color: rgba(0,0,0,0.4);
+	margin-top: -80px;
 }
 
-.tituloBlog p
-{
- text-decoration: none;
- text-align: left;
- text-shadow: -2px 2px 2px #363636;
- filter: dropshadow(color=#363636, offx=-2, offy=2);
- font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
- color: #FFF!important;
- font-size: 32px;
- line-height: 30px;
- text-transform: uppercase;
- margin-left: 20px;
- margin-top: 5px!important;
+.tituloBlog p {
+	text-decoration: none;
+	text-align: left;
+	text-shadow: -2px 2px 2px #363636;
+	filter: dropshadow(color=#363636, offx=-2, offy=2);
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	color: #FFF!important;
+	font-size:2.000em;
+	line-height: 30px;
+	text-transform: uppercase;
+	margin-left: 20px;
+	margin-top: 5px!important;
 }
 
 /*---RESPONSIVE CONTENEDORES---*/
@@ -670,620 +609,634 @@ top: -17px!important;
 
 /*--CONTENEDORES--*/
 
-.contentTit
-{
- margin: auto;
- font-family: 'Trebuchet MS', Arial, Helvetica, sans-serif;
- font-size: 50px;
- text-align: right;
- font-weight: bold;
- color: #c5c5c5;
- width: 735px;
+
+.contentTit {
+	margin: auto;
+	font-family: 'Trebuchet MS', Arial, Helvetica, sans-serif;
+	font-size: 3.125em;
+	text-align: left;
+	font-weight: bold;
+	color: #c5c5c5;
+	width: 100%;
 }
 
-.contenti
-{
- width: 735px;
- margin: auto
+.contenti {
+	width: 100%;
+	margin: auto
 }
 
-.logoHome
-{
- width: 735px;
- margin: auto;
- margin-top: 30px;
-}
-.logoHome img
-{
- width:40%;
- margin-left:7px;
+.logoHome {
+	width: 100%;
+	margin: auto;
+	margin-top: 30px;
 }
 
-.pop{
- padding-top: 20px;padding-bottom: 20px;padding-left: 25px;}
+.logoHome img { /*width:40%;*/
+margin-left: 7px; }
+
+.pop {
+	padding-top: 20px;
+	padding-bottom: 20px;
+	padding-left: 25px;
+}
+
 /*--CONTENEDORES--*/
 
-.ui-icon-delete{background-position:center!important;}
-.ui-icon{background-image:url(images/icons-cerrar.png)!important;}
-.ui-icon{background-size:auto!important;}
 
+.ui-icon-delete { background-position: center!important; }
 
+.ui-icon { background-image: url(images/icons-cerrar.png)!important; }
 
-@media (max-width:320px){
-.contentTit
-{
- margin: auto;
- font-family: 'Trebuchet MS', Arial, Helvetica, sans-serif;
- font-size: 20px;
- text-align: right;
- font-weight: bold;
- color: #c5c5c5;
- width: 280px;
+.ui-icon { background-size: auto!important; }
+ @media (max-width:320px) {
+
+.contentTit {
+	margin: auto;
+	font-family: 'Trebuchet MS', Arial, Helvetica, sans-serif;
+	font-size:1.250em;
+	text-align: right;
+	font-weight: bold;
+	color: #c5c5c5;
+	width: 100%;
 }
 
-.contenti
-{
- width: 280px;
- margin: auto
-}
-.logo
-{
- float: left;
- margin-top: 13px;
- position: relative;
- z-index: 999;
-}
-.logoHome
-{
- width: 280px;
- margin: auto;
- margin-top: 30px;
+.logo {
+	float: left;
+	margin-top: 13px;
+	position: relative;
+	z-index: 999;
 }
 
-.tituloBlog p
-{
- font-size: 12px;
- line-height:18px;
- margin-left: 10px;
- margin-top: 5px!important;
+.logoHome {
+	width: 280px;
+	margin: auto;
+	margin-top: 30px;
 }
 
-.tituloBlog
-{
- width: 100%;
- height: 50px;
- float: left;
- position: relative;
- background-color: rgba(0,0,0,0.4);
- margin-top: -55px;
+.tituloBlog p {
+	font-size: 0.750em;
+	line-height: 18px;
+	margin-left: 10px;
+	margin-top: 5px!important;
 }
 
-.button
-{
- display: block;
- font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
- text-decoration: none!important;
- float: right;
- color: #FFF!important;
- text-shadow: none!important;
- margin-right: 7px;
- margin-left: 10px;
- font-weight: normal!important;
- font-size:12px;
+.tituloBlog {
+	width: 100%;
+	height: 50px;
+	float: left;
+	position: relative;
+	background-color: rgba(0,0,0,0.4);
+	margin-top: -55px;
+}
+
+.button {
+	display: block;
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	text-decoration: none!important;
+	float: right;
+	color: #FFF!important;
+	text-shadow: none!important;
+	margin-right: 7px;
+	margin-left: 10px;
+	font-weight: normal!important;
+	font-size:0.750em;
 }
 
 .footerMargin { margin-top: 10px!important; }
-.bloque
-{
- background-color: #FFF;
- padding: 6px;
- margin: 3px;
+
+.bloque {
+	background-color: #FFF;
+	padding: 6px;
+	margin: 3px;
 }
 
-.footerBottons
-{
- background-color: #414141;
- margin-left: 5px;
- margin-right: 5px;
- height: 30px;
- line-height: 30px;
+.footerBottons {
+	background-color: #414141;
+	margin-left: 5px;
+	margin-right: 5px;
+	height: 30px;
+	line-height: 30px;
 }
 
-.contenedorNotas
-{
- width: 100%;
- height: auto;
- margin: auto;
-}
-.header
-{
- height: 40px;
- background-color:#E0E1DD;
-}
-.logo img{ width:70%;}
-
-
-#panelOptions .contenedorBlogMore{
-margin-top:0px;
- margin-left:10px;
+.contenedorNotas {
+	width: 100%;
+	height: auto;
+	margin: auto;
 }
 
-.contenedorBlogMore p
-{
- font-size: 28px;
- font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
- color: #006c54;
- float: left;
- margin-bottom:10px!important
+.header {
+	height: 40px;
+	background-color: #E0E1DD;
 }
 
-#panelOptions .contenedorBlogMore .blogMore{
- margin-bottom:5px;
- margin-left:-15px;
+.logo img { width: 70%; }
+
+#panelOptions .contenedorBlogMore {
+	margin-top: 0px;
+	margin-left: 10px;
 }
-.margin40{
- padding-bottom:20px!important;
- }
-#panelOptions .contenedorBlogMore .blogMore p
-{
- font-size: 11px!important;
- font-weight: bold!important;
- float: left!important;
- margin-top:-7px!important;
- color: #4c4c4c;
- width: 200px;
- margin-left: 5px;
- float:right!important
+
+.contenedorBlogMore p {
+	font-size: 1.750em;
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	color: #006c54;
+	float: left;
+	margin-bottom: 10px!important
+}
+
+#panelOptions .contenedorBlogMore .blogMore {
+	margin-bottom: 5px;
+	margin-left: -15px;
+}
+
+.margin40 { padding-bottom: 20px!important; }
+
+#panelOptions .contenedorBlogMore .blogMore p {
+	font-size: 0.688em!important;
+	font-weight: bold!important;
+	float: left!important;
+	margin-top: -7px!important;
+	color: #4c4c4c;
+	width: 200px;
+	margin-left: 5px;
+	float: right!important
 }
 
 .blogActual {
-width: 100%;
-text-align: center;
-margin-top: -29px;
-margin-left: 12px;
-}
-.blogActual a{
- font-size:23px;
- }
- 
-.notaPrincipal
-{
- width:100%;
- float: left;
- height: auto;
- display: block;
- background-color: #FFFFFF;
- margin-left: 0px;
- margin-top: 0px;
-  margin-bottom:10px;
+	width: 100%;
+	text-align: center;
+	margin-top: -29px;
+	margin-left: 12px;
 }
 
-.nota
-{
- width: 100%;
- float: left;
- height: auto;
- display: block;
- background-color: #FFFFFF;
- margin:0px;
- margin-bottom:10px;
-padding: 5px;
-margin-left: 0px;
+.blogActual a { font-size: 1.438em; }
+
+.notaPrincipal {
+	width: 100%;
+	float: left;
+	height: auto;
+	display: block;
+	background-color: #FFFFFF;
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-bottom: 10px;
 }
 
-.notaDestacada
-{
- width: 100%;
- float: left;
- height: auto;
- display: block;
- background-color: #FFFFFF;
- margin:0px;
- margin-bottom:10px;
- padding: 5px;
- margin-left: 0px;
+.nota {
+	width: 100%;
+	float: left;
+	height: auto;
+	display: block;
+	background-color: #FFFFFF;
+	margin: 0px;
+	margin-bottom: 10px;
+	padding: 5px;
+	margin-left: 0px;
 }
 
-.notaPrincipal .imagen .titulo
-{
- font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
- font-size: 20px;
- color: #373737;
- float: left;
- position: relative;
- z-index: 9999;
- top: 0px;
- padding:5px;
- font-weight: bold;
- line-height:22px;
- text-shadow:none;
- filter:none;
+.notaDestacada {
+	width: 100%;
+	float: left;
+	height: auto;
+	display: block;
+	background-color: #FFFFFF;
+	margin: 0px;
+	margin-bottom: 10px;
+	padding: 5px;
+	margin-left: 0px;
 }
 
-.notaPrincipal .imagen .contentFechaComent
-{
- width: 95%;
- float: left;
- position: relative;
- top:0;
- padding:5px 10px;
- font-size:12px;
-}
-.notaPrincipal .imagen .contentFechaComent .coment
-{
- float: left;
- color: #b2b2b2;
-}
-
-.notaPrincipal .imagen .contentFechaComent .fecha
-{
- float: left;
- color: #b2b2b2;
- margin-right: 10px;
+.notaPrincipal .imagen .titulo {
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size:1.250em;
+	color: #373737;
+	float: left;
+	position: relative;
+	z-index: 9999;
+	top: 0px;
+	padding: 5px;
+	font-weight: bold;
+	line-height: 22px;
+	text-shadow: none;
+	filter: none;
 }
 
-.notaPrincipal .imagen .contentFechaComent .fecha p
-{
- float: left;
- margin-left: 10px;
- margin-top: 3px!important;
- margin-bottom: 0!important;
- font-size:12px;
+.notaPrincipal .imagen .contentFechaComent {
+	width: 95%;
+	float: left;
+	position: relative;
+	top: 0;
+	padding: 5px 10px;
+	font-size:0.750em;
 }
 
+.notaPrincipal .imagen .contentFechaComent .coment {
+	float: left;
+	color: #b2b2b2;
+}
+
+.notaPrincipal .imagen .contentFechaComent .fecha {
+	float: left;
+	color: #b2b2b2;
+	margin-right: 10px;
+}
+
+.notaPrincipal .imagen .contentFechaComent .fecha p {
+	float: left;
+	margin-left: 10px;
+	margin-top: 3px!important;
+	margin-bottom: 0!important;
+	font-size: 0.750em;
+}
 
 .notaPrincipal .imagen .contentFechaComent .coment p {
-float: left;
-margin-left: 10px;
-margin-top: 3px!important;
-margin-bottom: 0!important;
-font-size:12px;
+	float: left;
+	margin-left: 10px;
+	margin-top: 3px!important;
+	margin-bottom: 0!important;
+	font-size:  0.750em;
 }
 
-.notaPrincipal .imagen
-{
- height: auto;
- width: 100%;
- float: left;
- position: relative;
+.notaPrincipal .imagen {
+	height: auto;
+	width: 100%;
+	float: left;
+	position: relative;
 }
 
 .nota .titulo {
-font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
-font-size: 11px;
-color: #373737;
-float: left;
-font-weight: bold;
-line-height: 15px;
-margin-top:5px;
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size: 0.688em;
+	color: #373737;
+	float: left;
+	font-weight: bold;
+	line-height: 15px;
+	margin-top: 5px;
 }
 
-.texto
-{
- font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
- color: #5e5e5e;
- font-size:12px;
- float: left;
- line-height:14px;
+.texto {
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	color: #5e5e5e;
+	font-size:0.750em;
+	float: left;
+	line-height: 14px;
 }
 
-.texto p
-{
- margin-top: 0!important;
- margin-bottom: 0!important;
- padding:10px;
+.texto p {
+	margin-top: 0!important;
+	margin-bottom: 0!important;
+	padding: 10px;
 }
-
 
 .notaDestacada .imagen {
-height: 50%;
- width: 50%;
- float: right;
- position: relative;
- }
-
-.notaDestacada .titulo
-{
- font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
- font-size: 22px;
- color: #373737;
- float: left;
- font-weight: bold;
- line-height: 26px;
- width:40%;
+	height: 50%;
+	width: 50%;
+	float: right;
+	position: relative;
 }
 
-.notaDestacada .contentFechaComent
-{
- width: 347px;
- float: left;
- margin-top: 6px;
+.notaDestacada .titulo {
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size:1.375em;
+	color: #373737;
+	float: left;
+	font-weight: bold;
+	line-height: 26px;
+	width: 40%;
 }
 
-.notaDestacada .contentFechaComent .fecha
-{
- float: left;
- color: #b2b2b2;
- margin-right: 10px;
+.notaDestacada .contentFechaComent {
+	width: 347px;
+	float: left;
+	margin-top: 6px;
 }
 
-.notaDestacada .contentFechaComent .fecha p
-{
- float: left;
- margin-left: 10px;
- margin-top: 3px!important;
- margin-bottom: 0!important;
+.notaDestacada .contentFechaComent .fecha {
+	float: left;
+	color: #b2b2b2;
+	margin-right: 10px;
+}
+
+.notaDestacada .contentFechaComent .fecha p {
+	float: left;
+	margin-left: 10px;
+	margin-top: 3px!important;
+	margin-bottom: 0!important;
 }
 
 .notaDestacada .contentFechaComent .fecha img { float: left; }
 
-.notaDestacada .contentFechaComent .coment
-{
- float: left;
- color: #b2b2b2;
+.notaDestacada .contentFechaComent .coment {
+	float: left;
+	color: #b2b2b2;
 }
 
-.notaDestacada .contentFechaComent .coment p
-{
- float: left;
- margin-left: 10px;
- margin-top: 3px!important;
- margin-bottom: 0!important;
+.notaDestacada .contentFechaComent .coment p {
+	float: left;
+	margin-left: 10px;
+	margin-top: 3px!important;
+	margin-bottom: 0!important;
 }
 
 .notaDestacada .contentFechaComent .coment img { float: left; }
 
-.notaDestacada .texto
-{
- font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
- color: #5e5e5e;
- font-size: 14px;
- float: left;
- line-height: 24px;
- width: 330px;
- margin-top: 10px;
+.notaDestacada .texto {
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	color: #5e5e5e;
+	font-size:0.875em;
+	float: left;
+	line-height: 24px;
+	width: 330px;
+	margin-top: 10px;
 }
 
-.notaDestacada .texto2
-{
- font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
- color: #5e5e5e;
- font-size: 14px;
- float: left;
- line-height: 24px;
+.notaDestacada .texto2 {
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	color: #5e5e5e;
+	font-size:0.875em;
+	float: left;
+	line-height: 24px;
 }
 
-.notaDestacada .texto p
-{
- margin-top: 0!important;
- margin-bottom: 0!important;
- padding: 0px;
- width: 330px;
- float: left;
+.notaDestacada .texto p {
+	margin-top: 0!important;
+	margin-bottom: 0!important;
+	padding: 0px;
+	width: 330px;
+	float: left;
 }
 
-.notaDestacada .texto2 p
-{
- margin-top: 0!important;
- margin-bottom: 0!important;
- padding: 0px;
+.notaDestacada .texto2 p {
+	margin-top: 0!important;
+	margin-bottom: 0!important;
+	padding: 0px;
 }
 
-.notaPop .notaPrincipal
-{
- width: 100%;
- float: left;
- height: auto;
- display: block;
- background-color: #FFFFFF;
- margin: 5px;
- padding: 5px;
+.notaPop .notaPrincipal {
+	width: 100%;
+	float: left;
+	height: auto;
+	display: block;
+	background-color: #FFFFFF;
+	margin: 5px;
+	padding: 5px;
 }
 
-.notaPop .notaPrincipal .imagen
-{
- height: auto;
- width:100%;
- float: left;
- position: relative;
- overflow: hidden;
+.notaPop .notaPrincipal .imagen {
+	height: auto;
+	width: 100%;
+	float: left;
+	position: relative;
+	overflow: hidden;
 }
 
-.notaPop .notaPrincipal .titulo
-{
- font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
- font-size: 20px;
- color: #373737;
- float: left;
- font-weight: bold;
- line-height:24px;
- margin-top: 5px;
+.notaPop .notaPrincipal .titulo {
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size:1.250em;
+	color: #373737;
+	float: left;
+	font-weight: bold;
+	line-height: 24px;
+	margin-top: 5px;
 }
 
-.notaPop .notaPrincipal .contentFechaComent
-{
- width: 100%;
- float: left;
- margin-top: 10px;
+.notaPop .notaPrincipal .contentFechaComent {
+	width: 100%;
+	float: left;
+	margin-top: 10px;
 }
 
-.notaPop .notaPrincipal .contentFechaComent .fecha
-{
- float: left;
- color: #b2b2b2;
- margin-right: 10px;
+.notaPop .notaPrincipal .contentFechaComent .fecha {
+	float: left;
+	color: #b2b2b2;
+	margin-right: 10px;
 }
 
-.notaPop .notaPrincipal .contentFechaComent .fecha p
-{
- float: left;
- margin-left: 10px;
- margin-top: 0!important;
- margin-bottom: 0!important;
- font-size:12px;
+.notaPop .notaPrincipal .contentFechaComent .fecha p {
+	float: left;
+	margin-left: 10px;
+	margin-top: 0!important;
+	margin-bottom: 0!important;
+	font-size:0.750em;
 }
 
-.notaPop .notaPrincipal .contentFechaComent .fecha img { float: left; width:18px; }
-
-.notaPop .notaPrincipal .contentFechaComent .coment
-{
- float: left;
- color: #b2b2b2;
-
+.notaPop .notaPrincipal .contentFechaComent .fecha img {
+	float: left;
+	width: 18px;
 }
 
-.notaPop .notaPrincipal .contentFechaComent .coment p
-{
- float: left;
- margin-left: 10px;
- margin-top: 0!important;
- margin-bottom: 0!important;
-   font-size:12px;
+.notaPop .notaPrincipal .contentFechaComent .coment {
+	float: left;
+	color: #b2b2b2;
 }
 
-.notaPop .notaPrincipal .contentFechaComent .coment img { float: left; width:18px; }
-
-.notaPop .texto
-{
- font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
- color: #5e5e5e;
- font-size: 12px;
- float: left;
- line-height: 20px;
- margin-top: 10px;
- width:95%;
+.notaPop .notaPrincipal .contentFechaComent .coment p {
+	float: left;
+	margin-left: 10px;
+	margin-top: 0!important;
+	margin-bottom: 0!important;
+	font-size:0.750em;
 }
 
-.notaPop .texto p
-{
- margin-top: 0!important;
- margin-bottom: 0!important;
- padding: 0px;
- float: left;
+.notaPop .notaPrincipal .contentFechaComent .coment img {
+	float: left;
+	width: 18px;
+}
+
+.notaPop .texto {
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	color: #5e5e5e;
+	font-size:0.750em;
+	float: left;
+	line-height: 20px;
+	margin-top: 10px;
+	width: 95%;
+}
+
+.notaPop .texto p {
+	margin-top: 0!important;
+	margin-bottom: 0!important;
+	padding: 0px;
+	float: left;
 }
 
 .contenedorBlogMore {
-float: left;
-width: 360px;
-margin-top: 20px;
-margin-left:0px;
+	float: left;
+	width: 360px;
+	margin-top: 20px;
+	margin-left: 0px;
 }
-
 
 .contenedorBlogMore .blogMore { float: left; }
 
-.contenedorBlogMore .blogMore img
-{
- float: left;
- width:50px!important;
- margin: 10px;
- margin-left: 2px;
- -webkit-box-shadow: 0px 0px 15px 0px #666;
- box-shadow: 0px 0px 15px 0px #666;
- border: 6px #fff solid;
+.contenedorBlogMore .blogMore img {
+	float: left;
+	width: 50px!important;
+	margin: 10px;
+	margin-left: 2px;
+	-webkit-box-shadow: 0px 0px 15px 0px #666;
+	box-shadow: 0px 0px 15px 0px #666;
+	border: 6px #fff solid;
 }
 
-.contenedorBlogMore .blogMore p
-{
- font-size: 12px!important;
- font-weight: bold!important;
- float: left!important;
- margin-top: 30px!important;
- color: #4c4c4c;
- width: 100px;
- margin-left: 0px;
+.contenedorBlogMore .blogMore p {
+	font-size:0.750em!important;
+	font-weight: bold!important;
+	float: left!important;
+	margin-top: 30px!important;
+	color: #4c4c4c;
+	width: 100px;
+	margin-left: 0px;
 }
 
-.popAdd{
- padding-top: 10px;padding-bottom: 10px;padding-left: 12px;}
-#popupAdd { width: 200px!important; padding:10px;}
+.popAdd {
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 12px;
+}
 
-.nota .contentFechaComent .fecha p
-{
- float: left;
- margin-left: 10px;
- margin-top: 3px!important;
- margin-bottom: 0!important;
- font-size:13px;
+#popupAdd {
+	width: 200px!important;
+	padding: 10px;
+}
+
+.nota .contentFechaComent .fecha p {
+	float: left;
+	margin-left: 10px;
+	margin-top: 3px!important;
+	margin-bottom: 0!important;
+	font-size:0.813em;
 }
 
 .nota .contentFechaComent .coment p {
-float: left;
-margin-left: 10px;
-margin-top: 3px!important;
-margin-bottom: 0!important;
-font-size: 13px;
+	float: left;
+	margin-left: 10px;
+	margin-top: 3px!important;
+	margin-bottom: 0!important;
+	font-size:0.813em;
 }
 
-.ui-icon-arrow-r {
-background-position: -129px 0px;
-}
-#popupSelcBlog-popup{
- top: 40px!important;
-}
+.ui-icon-arrow-r { background-position: -129px 0px; }
 
+#popupSelcBlog-popup { top: 40px!important; }
 
+.ui-header {
+	float: none!important;
+	width: 100%!important
 }
-
-@media  (min-width:321px) and (max-width:520px){
-  .contentTit
-{
- margin: auto;
- font-family: 'Trebuchet MS', Arial, Helvetica, sans-serif;
- font-size: 40px;
- text-align: right;
- font-weight: bold;
- color: #c5c5c5;
- width: 600px;
+! .ui-grid-b {
+float:none!important;
+width:100%!important;
+padding: 0%!important;
 }
-
-.contenti
-{
- width: 600px;
- margin: auto
+.ui-footer {
+	float: none;
+	width: 100%!important;
+	margin-top:0!important;
 }
+}
+ @media (min-width:321px) and (max-width:768px) {
 
-.logoHome
-{
- width: 600px;
- margin: auto;
- margin-top: 30px;
+.contentTit {
+	margin: auto;
+	font-family: 'Trebuchet MS', Arial, Helvetica, sans-serif;
+	font-size:2.500em;
+	text-align: right;
+	font-weight: bold;
+	color: #c5c5c5;
+	width: 100%;
 }
 
-.tituloBlog p
-{
- font-size: 23px;
- line-height:25px;
- margin-left: 10px;
- margin-top: 5px!important;
+.logoHome {
+	width: 100%;
+	margin: auto;
+	margin-top: 30px;
 }
 
-.tituloBlog
-{
- width: 100%;
- height: 60px;
- float: left;
- position: relative;
- background-color: rgba(0,0,0,0.4);
- margin-top: -65px;
+.tituloBlog p {
+	font-size:0.125em;
+	line-height: 25px;
+	margin-left: 10px;
+	margin-top: 5px!important;
 }
 
-.button
-{
- display: block;
- font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
- text-decoration: none!important;
- float: right;
- color: #FFF!important;
- text-shadow: none!important;
- margin-right: 13px;
- margin-left: 25px;
- font-weight: normal!important;
- font-size:22px;
+.tituloBlog {
+	width: 100%;
+	height: 60px;
+	float: left;
+	position: relative;
+	background-color: rgba(0,0,0,0.4);
+	margin-top: -65px;
+}
+
+.button {
+	display: block;
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	text-decoration: none!important;
+	float: right;
+	color: #FFF!important;
+	text-shadow: none!important;
+	margin-right: 13px;
+	margin-left: 25px;
+	font-weight: normal!important;
+	font-size:1.375em;
 }
 
 .footerMargin { margin-top: 20px!important; }
 
+.ui-header {
+	float: none;
+	width: 100%!important
+}
+
+.ui-grid-b {
+	float: none;
+	width: 100%!important;
+	padding: 0%!important;
+}
+
+.ui-footer {
+	float: none;
+	width: 100%!important;
+	margin-top:0!important;
+}
+}
+
+/*---NUEVO---*/
 
 
+.bloque1 {
+	width: 65%!important;
+	float: left;
+	height: 65%!important;
+}
+
+.bloqueFijo { }
+
+.bloqueNuevo {
+	width: 32%!important;
+	float: left;
+}
+
+.ui-grid-b > div { margin: 0.5%!important }
+
+.ui-header {
+	float: right;
+	width: 40%
+}
+
+.ui-grid-b {
+	float: left;
+	width: 60%;
+}
+
+.ui-footer {
+	float: right;
+	width: 40%;
+	margin-top:40%;
+}
+
+.ui-content { padding: 5px!important; }
+.ui-overlay-a{
+	background-color:rgba(0,0,0,0.3)!important;
 }
