@@ -730,6 +730,7 @@ a.ui-link-inherit {
 /* corner rounding classes
 -----------------------------------------------------------------------------------------------------------*/
 .ui-corner-all {
+	border-radius:10px;
 }
 /* Form field separator
 -----------------------------------------------------------------------------------------------------------*/
@@ -977,6 +978,7 @@ a.ui-link-inherit {
 /* Button corner class
 -----------------------------------------------------------------------------------------------------------*/
 .ui-btn-corner-all {
+	border-radius:10px;
 }
 /* radius clip workaround for cleaning up corner trapping */
 .ui-corner-all,
