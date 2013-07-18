@@ -2,19 +2,19 @@
 <widget xmlns     = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
         id        = "com.phonegap.hello-world"
-        version   = "2.2.0">
-    <name>KL Blogs</name>
+        version   = "3.1">
+    <name>KL BLOG DEV</name>
 
     <description>
-        Test
+        KL BLOG DEV
     </description>
 
     
-    <preference name="phonegap-version" value="2.7.0" />
-    <preference name="orientation"      value="portrait" />
+    <preference name="phonegap-version" value="2.9.0" />
     <preference name="target-device"    value="universal" />
     <preference name="fullscreen"       value="false" />
     <preference name="android-installLocation" value="preferExternal" />
+    
 
     <icon src="icon.png" />
     <icon src="res/icon/android/icon-36-ldpi.png"   gap:platform="android"    gap:density="ldpi" />
@@ -32,7 +32,7 @@
     <gap:splash src="res/screen/android/screen-xhdpi-portrait.png" gap:platform="android" gap:density="xhdpi" />
 		
    
-		<gap:splash src="res/launch_image_ipad.png"    gap:platform="ios"     width="768" height="1004" />
+    <gap:splash src="res/launch_image_ipad.png"    gap:platform="ios"     width="768" height="1004" />
     <gap:splash src="res/launch_image-iphone5.png"    gap:platform="ios"     width="640" height="1136" />
 
     
