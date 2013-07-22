@@ -1,0 +1,1498 @@
+
+/* CSS Document *----V.2*/
+body.ui-mobile-viewport{overflow: hidden!important;}
+body{ 
+    overflow: hidden;
+    font-size: 1em;
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif!important;
+
+}
+a{ text-decoration: none!important; outline: none!important; display: block;}
+
+.log{
+    position: absolute;
+    z-index: 999;
+    font-size: 18px;
+    color:#000;
+    background-color: rgba(0,0,0,0.3);
+    padding:20px;
+}
+
+
+
+a img {
+    border:0;
+
+
+}
+
+* { font-family: "Trebuchet MS", Arial, Helvetica, sans-serif!important;}
+
+p
+{
+    margin-top: 0!important;
+    margin-bottom: 0!important;
+}
+
+.ui-content{
+    padding: 0!important;
+
+}
+
+.ui-page {
+    background: #f7f7f7!important;
+}
+.ui-header  {
+    background: #f7f7f7!important;
+}
+
+
+
+.ui-loader-default {
+    width: 100%!important;
+    height: 99.5%!important;
+    background-color: #000!important;
+    position: absolute!important;
+    top: 0!important;
+    left: 0!important;
+    margin-left: 0!important;
+    margin-top: 0!important;
+    border-radius: 0!important;
+    opacity: 0.5;
+}
+
+.ui-loader .ui-icon {
+    margin: auto!important;
+    margin-top: 50%!important;
+
+}
+.header {
+    border: 0!important;
+    float: left;
+    width: 97%;
+    padding: 1.5% 1.5% 10.9% 1.5%;
+}
+
+
+
+
+.footer {   
+    border: 0!important;
+    width: 100%;
+    float: left;
+}
+
+.page {
+    width: 100%!important;
+    overflow: hidden!important;
+    padding: 0!important;
+    margin: auto!important;
+    position: relative!important;
+    max-height: 1024px!important
+}
+
+.wrapper {
+    margin: auto;
+    float: left;
+}
+.wrapperInner {
+    float: left;
+}
+
+.box {
+    /*    width: 33.3%;*/
+    background: url('images/ajax-loader.gif') #f2f2f2 no-repeat center; 
+    float: left; 
+    overflow: hidden;
+    position: relative;
+
+}
+.box img{
+    box-sizing: border-box;
+    width: 100%;
+    height: auto;
+    /*border: 0.1em solid #9E9E9E;-*/
+}
+
+.box .linkBlog{
+    position: absolute;
+    z-index: 9999;
+    width: 100%;
+    height: 100%;
+    border: 0.1em solid #A5A5A5;
+    box-sizing: border-box;
+}
+
+
+.blog1Box {
+
+    /*    width: 66.6%;*/
+    float: left; 
+    overflow: hidden;
+    position: relative;
+
+}
+.boxinner {
+    border: 0.15em solid #fff;
+    box-sizing: border-box;
+    position: relative; /* GAB*/
+}
+
+.titleBlog {
+    box-sizing: border-box;
+    position: absolute;
+    display: block;
+    color: #fff;
+    width: 100%;
+    z-index: 999;
+    bottom: 0;/* GAB*/
+    padding: 0;
+}
+
+
+.titleBlog h1{
+    box-sizing: border-box;
+    float: left!important;
+    width: 80%!important;
+    padding: 0;
+    text-transform: uppercase;
+    text-shadow: none;
+    margin: 0 0 4% 2.6%;
+}
+
+
+.titleBlog h2{
+    clear: both;
+    box-sizing: border-box;
+    padding: 0.5em;
+    text-shadow: none;
+    font-size: 0.9em;
+    font-weight: normal;
+    margin: 0; /* GAB*/
+    min-height: 3.6em;
+    background-color: rgba(0, 0, 0, .6);
+    line-height: 1.3em;
+
+}
+
+
+.blog1Box .titleBlog h2{
+    font-size: 1.2em!important;
+    margin: 0; /* GAB*/
+}
+
+
+.titleBlog h1 div{
+    box-sizing: border-box;
+    float: left;
+    font-size: 0.6em!important;    
+    padding: 1.5%;
+    left: 2em;
+    background-color: rgba(0, 106, 82, .8);
+    margin-top: 0.1em;
+}
+
+.blog1Box .titleBlog h1 div{
+    box-sizing: border-box;
+    font-size: 1.2em!important;
+    left: 2em!important;
+    padding: 1.5%;
+
+}
+
+.titleBlog .bullet{
+    float: left;
+    margin-right: 0.2em;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    border: 0;
+}
+
+.titleBlog .bulletB1{
+    float: left;
+    margin-right: 0.4em;
+    padding-top: 1.5%;
+    padding-bottom: 1.5%;
+    border: 0;
+
+
+}
+
+
+
+.logoHome{
+    float:left;
+}
+
+.contentTit {
+    margin: auto;
+    font-family: 'Trebuchet MS', Arial, Helvetica, sans-serif;
+    font-size: 3.125em;
+    text-align: right;
+    font-weight: bold;
+    color: #c5c5c5;
+    width: 100%;
+    clear: both
+}
+.loginbox{
+    float:right;
+
+}
+
+
+.ui-body-c .ui-link {
+    color: #006C55!important /*{c-body-link-color}*/;
+    font-weight: bold;
+}
+.ui-body-c .ui-link:visited {
+    color: #006C55!important /*{c-body-link-visited}*/;
+}
+
+
+.pagerCustom {
+    text-align: center;
+    background-color: #e2e2e2;
+    float: left;
+    width: 100%!important;
+    font-size: 0.8em;
+    padding-top: 0.6%;
+    padding-bottom: 0.6%; 
+    border-top: 0.1em solid #CCC;
+
+    box-sizing: border-box;
+    border-bottom: 5px solid #E2E2E2;
+}
+
+.btn_refresh{
+    display: block;
+    width: 33%;
+    float: left;
+    text-align: left;
+
+}
+.btn_refresh1{
+    display: block;
+    width: 33%;
+    float: left;
+    text-align: left;
+
+}
+
+.btn_add{
+    display: block;
+    width: 33%;
+    float: left;
+    text-align: center;
+
+
+}
+
+.btn_setting{
+    display: block;
+    width: 33%;
+    float: right;
+    text-align: right;
+
+
+
+}
+
+.btn_shuffle{
+    display: block;
+    width: 33%;
+    float: right;
+    text-align: right;
+}
+
+
+
+
+.boxfooter{
+    float: left;
+    width: 96%;
+    padding-top: 1.7%;
+    padding-bottom: 1.9%;
+    padding-left: 2%;
+    padding-right: 2%;
+    background-color:#ECEBEB;
+}
+
+
+.notaPop .boxfooter{
+
+    border-top: 0.1em solid #CCC;
+
+}
+
+#blogs .header {
+    padding-top: 2%!important;
+    padding-bottom: 2%!important;
+    width: 98%!important;
+    padding-left: 1%!important;
+    padding-right: 1%!important;
+    background-color: #F7F7F7;
+}
+#blogs .footerBlogs {
+    float: left;
+    width: 100%;
+}
+
+
+#blogs .logo{
+    float: left;
+    position: relative;
+    z-index: 999;
+    width: 33.333%;       
+
+}
+
+#blogs .menu {
+    width: 33.333%;
+    float: left;
+    position: relative;
+}
+
+#blogs .actualBlog {
+    width: 100%;
+    text-align: center;
+    margin-top: -0.5em;
+}
+
+#blogs .actualBlog a {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    font-size: 2.125em;
+    color: #373737!important;
+    text-decoration: none;
+    text-shadow: none!important;
+    font-weight: normal;
+}
+
+.actualBlog .arrow {
+    top: -0.3em;
+    position: relative;
+    left: 0.2em;
+}
+
+#popupSelcBlog-popup {
+    top: 59px!important;
+    width: 40%;
+}
+
+
+#blogs .ui-popup-screen {background-color:rgba(0,0,0,0.8);}
+
+
+
+#blogs .contentNotes {
+    width: 100%;
+    padding-left:0;
+    padding-right:0;
+    margin: auto;
+    float: left;
+    height: 58.8em;
+}
+
+.details .contentNotes {
+
+    width: 100%;
+    padding-left:0;
+    padding-right:0;
+    margin: auto;
+    float: left;
+    height: 63em;
+}
+
+#blogs .principalNote {
+    width: 99%;
+    float: left;
+    height: 45%;
+    display: block;
+    padding: 0%;
+    margin: 0.5%;
+    background-color: #FFF;
+    overflow: hidden;
+}
+
+.principalNote .image {
+    height: 70%;
+    width: 100%;
+    float: left;
+    background-repeat: no-repeat;
+    background-position: center;
+    overflow: hidden;
+    background: url('images/ajax-loader.gif') #F2F2F2 no-repeat center;
+
+}
+
+.principalNote .image img {
+    width: 100%;
+}
+
+.principalNote .noteTitle{
+    position:relative;
+    width:90%;
+    top: -7em;
+    left: 2.5%;
+    float: left;
+}
+
+.principalNote .contentDateComent {
+    width: 100%;
+    float: left;
+    position: relative;
+    top: -7em;
+    padding: 0.8em;
+    left: 0.4%;
+}
+
+
+.principalNote .contentDateComent .date {
+    float: left;
+    color: #FFF;
+    margin-right: 10px;
+}
+
+.principalNote  .contentDateComent .date img {
+    float: left;
+}
+
+.principalNote .contentDateComent .date p {
+    float: left;
+    margin-left: 10px;
+    margin-top: 0!important;
+    margin-bottom: 0!important;
+}
+
+.principalNote .contentDateComent .coment {
+    float: left;
+    color: #FFF;
+}
+
+.principalNote  .contentDateComent .coment img {
+    float: left;
+}
+
+.principalNote  .contentDateComent .coment p {
+    float: left;
+    margin-left: 10px;
+    margin-top: 0!important;
+    margin-bottom: 0!important;
+}
+
+.principalNote .text {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    color: #5E5E5E;
+    font-size:0.87em;
+    float: left;
+    line-height: 1.4em;
+    position: relative;
+    top: -7em;
+    text-shadow: none;
+    font-weight: normal;
+}
+
+.text {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    color: #5E5E5E;
+    font-size: 0.87em;
+    float: left;
+    line-height:1.4em;
+}
+
+.text p {
+    margin-top: 0!important;
+    margin-bottom: 0!important;
+    padding: 1.6%;
+}
+
+.note {
+    width: 49%;
+    float: left;
+    height:45%;
+    display: block;
+    padding: 1.5%;
+    margin: 0.5%;
+    background-color: #FFF;
+    overflow: hidden;
+    box-sizing: border-box;
+    border-collapse: collapse;
+}
+
+.note .image {
+    width: 100%;
+    height: 178px;
+    float: left;
+    overflow: hidden;
+    background: url('images/ajax-loader.gif') #F2F2F2 no-repeat center;
+}
+
+.note .imageLandscape {
+    width: 100%;
+    height: 178px;
+    float: left;
+    overflow: hidden;
+    background: url('images/ajax-loader.gif') #F2F2F2 no-repeat center;
+    display: none;
+}
+
+
+.note .text .image p{
+    margin-top: 0!important;
+}
+
+
+
+.note img {
+    width: 100%;
+}
+
+.note .title {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    font-size: 1.250em;
+    color: #373737;
+    float: left;
+    font-weight: bold;
+    line-height: 25px;
+    margin-top: 20px;
+}
+
+.note .contentDateComent {
+    width: 100%;
+    float: left;
+    margin-top: 10px;
+}
+
+.note .contentDateComent .date {
+    float: left;
+    color: #B2B2B2;
+    margin-right: 10px;
+    margin-left: -10px;
+}
+
+.note .contentDateComent .date p {
+    float: left;
+    margin-left: 10px;
+    margin-top: 0!important;
+    margin-bottom: 0!important;
+    font-size: 0.813em;
+    line-height: 1.9em;
+}
+
+.note .contentDateComent .date img {
+    float: left;
+}
+
+.note .contentDateComent .coment {
+    float: left;
+    color: #B2B2B2;
+}
+
+.note .contentDateComent .coment p {
+    float: left;
+    margin-left: 10px;
+    margin-top: 0!important;
+    margin-bottom: 0!important;
+    font-size: 0.813em;
+    line-height: 1.9em;
+}
+
+.note .contentDateComent .coment img {
+    float: left;
+}
+
+.note .text p {
+    padding: 0;
+    margin-top: 10px!important;
+    float: left;
+}
+
+.principalNote .noteTitle img{
+    float:left;
+    width:38px!important;
+    margin-top: 0.2em;
+    margin-right: 0.2em;
+}
+
+
+.noteTitle {
+    text-transform: uppercase;
+    color: #F1F1F1!important;
+    text-shadow: none!important;
+}
+
+
+
+.noteTitle h1 div {
+    float: left;
+    background-color: rgba(0, 106, 82, .8);
+    margin-top: 0.1em;
+    font-size: 1em!important;
+    left: 2em;
+    padding: 1.5%;
+}
+.noteTitle h1 {
+    float: left!important;
+    width: 100%!important;
+    margin: 0;
+}
+
+.pager{
+    height: 2em!important;
+    width: 99.9%;
+    background-color:#ccc;
+    float: left;
+}
+
+.completText, .completImg, .imghide{ display: none;}
+
+
+/*--DETALLE--*/
+
+.volver {
+    position: absolute;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    width: 8%;
+}
+.volver img {
+/*    width: 100%;
+    height: 100%;*/
+}
+
+
+.notaPop .notaPrincipal {
+    width: 94%;
+    float: left;
+    display: block;
+    background-color: #FFF;
+    margin: 1%;
+    padding: 2%;
+}
+
+.notaPop .notaPrincipal .imagen {
+    height: 28em;
+    width: 100%;
+    float: left;
+    position: relative;
+    overflow: hidden;
+}
+
+.notaPop .notaPrincipal .imagen img{
+    width: 100%;
+} 
+.notaPop .notaPrincipal .titulo {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    font-size:2.45em;
+    color: #373737;
+    float: left;
+    font-weight: bold;
+    line-height: 1.2em;
+    margin-top: 1.3%;
+}
+
+
+.notaPop .notaPrincipal .contentFechaComent {
+    width: 100%;
+    float: left;
+    margin-top: 10px;
+}
+
+.notaPop .notaPrincipal .contentFechaComent .fecha {
+    float: left;
+    color: #B2B2B2;
+    margin-right: 10px;
+}
+
+.notaPop .notaPrincipal .contentFechaComent .fecha img {
+    float: left;
+}
+
+.notaPop .notaPrincipal .contentFechaComent .fecha p {
+    float: left;
+    margin-left: 10px;
+    margin-top: 0!important;
+    margin-bottom: 0!important;
+}
+
+.notaPop .notaPrincipal .contentFechaComent .coment {
+    float: left;
+    color: #B2B2B2;
+}
+
+.notaPop .notaPrincipal .contentFechaComent .coment img {
+    float: left;
+}
+
+.notaPop .notaPrincipal .contentFechaComent .coment p {
+    float: left;
+    margin-left: 10px;
+    margin-top: 0!important;
+    margin-bottom: 0!important;
+}
+
+.notaPop .texto {
+    ont-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    color: #5E5E5E;
+    font-size: 0.8em;
+    float: left;
+    margin-top: 10px;
+    text-shadow: none;
+    font-weight: normal;
+    line-height: 1.5em;
+    text-align: justify;
+}
+
+
+.notaPop .texto p {
+    margin-top: 0!important;
+    margin-bottom: 0!important;
+    padding: 0px;
+
+}
+
+
+p.colum {
+    -webkit-column-count: 2;
+    -webkit-column-gap: 18px;
+    -moz-column-count: 2;
+    -moz-column-gap: 18px;
+    column-count: 2;
+    column-gap: 18px;/* Opera 11+*/;
+}
+
+.lastest{
+    width: 40%;
+    text-align: right;
+    float: left;
+    height: 2em;
+    line-height: 2.5em;
+    font-size: 0.8em;
+}
+.oldest{
+    width: 40%;
+    text-align: left;
+    float: left;
+    height: 2em;
+    line-height: 2.5em;
+    font-size: 0.8em;
+}
+.pagerInner{
+    width: 20%;
+    text-align: center;
+    float: left;
+    height: 2em;
+    line-height: 2.5em;
+    font-size: 0.8em;
+}
+
+.details .lastest{display: none}
+.details .oldest{display: none}
+.details .pagerInner{width: 100%; text-align: center;float: left;height: 2em;
+                     line-height: 2em;}
+
+
+.details .flipContainer .pager span.dot {
+    text-decoration: none;
+    margin-right: 1%;
+    margin-left: 1%;
+    background-color: #333;
+    border-radius: 10px;
+    border: 0px solid;
+    height: 7px;
+    margin-bottom: 1%;
+    margin-top: 2%;
+}
+
+.details .flipContainer .pager span.dot.current {
+    background-position: 0 0;
+    background-color: #CCC;
+    margin-right: 1%;
+    margin-left: 1%;
+    border-radius: 1em;
+    border: 4px solid #006C54;
+    height: 7px;
+    margin-top: 1.4%;
+    margin-bottom: 0.7%;
+}
+
+
+
+.ui-popup-container {
+    width: 70%;
+}
+.btn_comment{float: right; margin-right:10px;}
+.btn_share{float:right; margin-right:5px;}
+
+.popups{
+    width: 90%;
+    padding: 5%;
+    display: block; 
+   
+}
+
+.tituloPop{
+    width:100%;
+    font-size:2.000em;
+    color:#666666;
+    line-height:60px;
+}
+.separator{
+    margin-top:20px;
+    width:100%;
+}
+.greyline{
+    float:left;
+    margin-top:8px;
+    width:33%;
+    height:1px;
+    background-color:#CCCCCC;
+}
+.textSeparator{
+    float:left;
+    width:30%;
+    text-align: center;
+    margin-top: -1em;
+padding-left: 2%;
+padding-right: 2%;
+}
+
+ #msj_error_addblog{
+     color: rgb(179, 34, 34);
+     text-align: center; 
+     margin-top:5px;
+     margin-right:5px;
+ }
+ 
+ .boxInput{
+      float:left;
+      margin-left:20%; 
+      width:60%;
+ }
+ .boxFooterPopups{
+    float:left;
+    width:100%;
+    margin-top:20px;    
+ }
+ .clear{clear: both;}
+ 
+ .btn_left{
+     float:left;
+     width:45%;
+     height:auto;
+ }
+ .btn_left img{
+     float:left;
+ }
+ .btn_left p{
+     line-height:50px;
+     font-size:0.750em;
+     float:left;
+     display:block;
+     margin-left:10px;
+     color:#999999;
+    
+ }
+ 
+ .btn_right{
+     margin-left:10px;
+     width:45%;
+     float:right;
+     text-align: right;
+ }
+
+ .width20{
+     width:20%!important;
+ }
+
+ .btn_green{width:100%; height:50px; line-height:50px; background-color:#196D53; color:#FFFFFF; text-align: center; }
+ 
+ .error{color: rgb(179, 34, 34);text-align: center;}
+ .done{color: #196D53;}
+ 
+ .linkPopups{
+     margin-top: 3%;
+     float: left;
+     color:#666666!important;
+     text-decoration: none;
+     font-size: 1.125em;
+ }
+  .btn_right .linkPopups{
+     float: right;
+      font-size: 1.125em;
+ }
+ 
+ .subtitle p{width:100%;}
+ 
+ 
+ 
+ /*--SETTIGNS --*/
+
+
+.contenedorBlogMore p {
+	font-size:2.375em;
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	color: #006c54;
+	float: left;
+	margin-bottom: 20px!important
+}
+
+.contenedorBlogMore .blogMore { }
+
+#settingblog{
+    padding-top: 30px;
+    padding-bottom: 20px;
+}
+
+.contenedorBlogMore .blogMore img {
+	float: left;
+	
+}
+
+.contenedorBlogMore .blogMore p {
+	font-size:1.125em!important;
+	font-weight: bold!important;
+	float: left!important;
+	/*margin-top: 50px!important;*/
+	color: #4c4c4c;
+	width: 200px;
+	margin-left: 5px;
+}
+
+#panelOptions .contenedorBlogMore {
+    float: lefT;
+    width: 100%;
+
+}
+
+#panelOptions .contenedorBlogMore .blogMore {
+
+}
+
+.margin40 { padding-bottom: 40px!important; }
+
+#panelOptions .contenedorBlogMore .blogMore p {
+	font-size:0.813em!important;
+	font-weight: bold!important;
+	float: left!important;
+	/*margin-top: -7px!important;*/
+	color: #4c4c4c;
+	width: 200px;
+	margin-left: 10px;
+        line-height: 42px;
+        margin-bottom: 0px!important;
+}
+
+.contenedorBlogMore .blogMore:first-child p { /*margin-top: 30px!important;*/ }
+
+.contenedorBlogMore .blogMore p span { color: #e2061a }
+
+.clear { clear: both; }
+
+#popupAdd {
+	width: 400px!important;
+	padding-left: 30px;
+}
+
+.custom .blogMore p { margin-top: 0px; }
+
+.customFieldcontain {
+	position: relative!important;
+	/*top: -30px!important;*/
+	/*margin-left: 17px!important;*/
+	float: right;
+}
+
+.tituloPopShare{
+   color: #666;
+    font-size:1em;
+    margin-bottom: 1em;
+    float: left;
+    width: 100%;
+    height: 1em;
+}
+.shareBtns{
+    float: left;
+    width: 100%;
+    margin-bottom: 1em;
+}
+.readMoreBox{
+     width: 100%;
+     float:left;
+     border-top:1px solid #999;
+     border-bottom:1px solid #999;
+     padding-top: 0.5em;
+     padding-bottom: 0.5em;
+
+}
+
+.readleater{
+    height: 15px;
+}
+.readleater img{
+    float:left;
+    height: 15px;
+}
+
+.readleater span{
+font-size: 12px;
+float: left;
+line-height: 15px;
+margin-left: 5px;
+color: #999999;
+margin-top: 1px;
+}
+
+#popupShare{
+    width: 100%;
+}
+
+#popupShare-popup{ width: 30%;}
+
+
+.slabtexted .slabtext{
+    display:-moz-inline-box;
+    display:inline-block;
+    white-space:nowrap;
+}
+
+.slabtextinactive .slabtext{
+    display:inline;
+    white-space:normal;
+    font-size:1em !important;
+    letter-spacing:inherit !important;
+    word-spacing:inherit !important;
+    *letter-spacing:0 !important;
+    *word-spacing:0 !important;
+}
+
+.slabtextdone .slabtext{
+    display:block;
+    line-height:0.9;
+}
+
+
+/*-----TABS COMMENTS---*/
+
+.boxBtnComments{
+    width: 100%;
+    height: 2.6em;
+}
+
+.dTwitterButton{
+    float:right;
+    width:100px; 
+    height:40px;
+    background-color:#48CBFE;
+    color:#FFFFFF;
+    font-weight:bold;
+    line-height:45px;
+    cursor:pointer;
+    text-shadow: none;
+}
+
+.dFacebookButton{
+    float:right;
+    margin:0px 5px 0px 0px;
+    width:100px;
+    height:40px;
+    background-color:#3B5998;
+    color:#FFFFFF;
+    font-weight:bold;
+    line-height:45px;
+    cursor:pointer;
+    text-shadow: none;
+}
+
+.dKlblogButton{
+    float:right;
+    margin:0px 5px 0px 0px;
+    width:100px;
+    height:45px;
+    background-color:#1F6F55;
+    color:#FFFFFF;
+    font-weight:bold;
+    line-height:45px;
+    cursor:pointer;
+    text-shadow: none;
+}
+
+.dBox{
+    margin:0px 0px 0px 0px;
+    width:98%;
+    height:100%;
+    background-color:#FFFFFF;
+    border:5px solid #1F6F55;
+}
+
+.dFacebook{
+    display: none;
+}
+
+.dTwitter{
+    display: none;
+}
+
+.dKlblog{
+
+}
+
+.commentsTiutlo{
+    text-align: left;
+    color: rgb(31,111,85)!important;
+    font-size: 1.2em;
+}
+
+.nameInput{width: 90%;}
+
+.commentInput{width: 92%;}
+
+.buttonComment{}
+
+.btnPublish{
+    padding: 5%;
+    background-color:#1F6F55;
+    color:#fff!important;
+    float: right;
+    text-decoration: none;
+    text-shadow: none;
+}
+
+.twitterBTN{
+    padding: 5%;
+    background-color:rgb(62,202,255);
+    color:#fff!important;
+    float: right;
+    text-decoration: none;
+    text-shadow: none;
+}
+
+
+.facebookCommentBTN{
+    padding: 3%;
+    background-color: #3B5998;
+    color: #FFF!important;
+    float: right;
+    text-decoration: none;
+    text-shadow: none;
+}
+
+.user{
+    float: left;
+    padding-left: 2%;
+    padding-top: 2%;
+    color: #555;
+    width: 100%;    
+}
+.user img{ 
+    float: left;
+    background-color: #ccc;
+}
+.user p{ 
+    float: left;
+    padding-left: 2%;
+    padding-top: 2.5%;
+    font-size: 1.3em;
+}
+
+
+.commentStreaming{
+    width: 41%;
+    height:17em;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+    float: right;
+    margin-top: 20px;
+    border-left: 1px solid #c3c4c0;
+    text-align: left;
+    margin-bottom: 3%;
+    padding-left: 0.8em;
+
+}
+
+.dFacebook .bloqueInputComment{
+    width: 96%;
+    padding: 2%;
+    margin: 0;
+}
+
+.dFacebook .bloqueInputComment textarea{
+    height: 10.3em!important;
+}
+
+.bloqueInputComment{
+    width: 50%;
+    height: auto;
+    float: left;
+    margin-left: 15px;
+    margin-top: 10px;
+}
+
+.dKlblog .bloqueInputComment textarea{
+    height: 11.6em!important;
+}
+.bloqueInputComment textarea{
+    width: 100%!important;
+    float: left!important;
+    height: 14em!important;
+    border: 0px!important;
+    background: transparent!important;
+    color:#666666!important;
+    border-radius: 0!important;
+    -moz-box-shadow: inset 0 1px 4px rgba(0,0,0,.2)!important;
+    -webkit-box-shadow: inset 0 1px 4px rgba(0, 0, 0, .2)!important;
+    box-shadow: inset 0 1px 4px rgba(0, 0, 0, .2)!important;
+    border: 1px solid #ccc;
+}
+
+.facebook{ color:#ccc;}
+
+.facebook .name{ color:#3b5998; margin: 0; margin-bottom: 5px!important;}
+.facebook .fecha{ color:#999999; margin: 0; font-size: 10px;margin-bottom: 10px!important;}
+.facebook .mensaje{ color:#666; margin: 0;}
+
+
+.bloqueInputComment textarea .hash{ color:#666666; font-style: italic; font-size: 26px;}
+
+.bloqueInputComment .numberRest{
+    color:#666666; font-style: italic; font-size: 1.5em; float: left;
+    width: 35%; text-align: center; margin-top: 3%;
+}
+
+#logIn-popup, #forgot-popup, #register-popup, #options-popup, #blog_add-popup, #popupComment-popup{
+
+}
+
+
+
+
+
+
+.ui-shadow-inset{
+    -moz-box-shadow: inset 0 1px 4px rgba(0,0,0,.2)!important;
+    -webkit-box-shadow: inset 0 1px 4px rgba(0, 0, 0, .2)!important;
+    box-shadow: inset 0 1px 4px rgba(0, 0, 0, .2)!important;
+}
+
+
+.ui-popup-hidden{
+    display: none!important;
+    left: 25%!important;
+}
+
+/*----TITLES----*/
+
+#title1{
+    color: #fff;
+    background-color: rgba(0, 106, 82, .8);
+    text-transform: uppercase;
+    text-shadow: none;
+    font-size: 2em;
+    font-weight: normal;
+    height: 1.2em;
+    padding: 0.1em 0.1em 0.1em 0.2em;
+    margin: 0 0 0.2em 0em  ;
+    overflow: hidden;
+           
+    }
+#title2{
+    color: #fff;
+    background-color: rgba(0, 106, 82, .8);
+    text-transform: uppercase;
+    text-shadow: none;
+    font-size: 2em;
+    font-weight: normal;
+    height: 1.2em;
+    padding: 0.1em 0.1em 0.1em 0.2em;
+    margin: 0 0 0.2em 0 ;
+    overflow: hidden;
+}
+
+
+
+
+
+
+/*---------------------------------------------------------------------------------------------------------CASES---------------------------------------------------------------------------------------------------------*/
+
+@media all
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : landscape) { 
+    .header {
+        float: right!important;
+        /* width:31%!important;
+         background-color:red!important;*/
+        padding: 0!important;
+        width: 360px!important;
+    }
+    .ui-page{ max-height: 768px!important;}
+    .logoHome{
+        float:left;
+        position: absolute;
+        top: 679px;
+        right: 46px;
+    }
+    .loginbox{
+        float: right;
+        position: absolute;
+        top: 10px;
+        right: 46px;
+    }
+
+
+    .boxfooter{
+        width: 99.6%!important;
+        border-top: 0.1em solid #CCC;
+        border-right: 0.1em solid #CCC;
+        box-sizing: border-box;
+    }
+
+
+
+    #blogs .contentNotes {
+
+        height: 42.3em!important;
+    }
+
+    .details .contentNotes {
+
+        height: 48em!important;
+    }
+
+
+    #blogs .principalNote {
+        width: 49%!important;
+        height: 85%!important;
+        box-sizing: border-box;
+        border-collapse: collapse;
+    }
+    .principalNote .image {
+        height:auto;
+    }
+
+    #blogs .boxfooter{
+        width: 100%!important;
+        border-top: 0.1em solid #CCC;
+        border-right: 0.1em solid #CCC;
+        border-left: 0.1em solid #CCC;
+        box-sizing: border-box;
+        border-collapse: collapse;
+    }
+
+
+    .note .title {
+        margin-top:0px!important;
+        width: 100%!important;
+
+    }
+
+    .note {
+        width: 49%!important;
+        height:41.7%!important;
+        box-sizing: border-box;
+    }
+    .note .image {
+        width: 50%!important;
+        float: right!important;       
+        height: auto;
+        margin: 2%;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        margin-top: 1%;
+        display: none;
+        visibility: hidden;
+
+    }
+
+    .note .imageLandscape {
+        width: 45%!important;
+        float: left!important;
+        height: auto;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        margin-top: 1%;
+        display: block;
+        visibility: visible;
+        background: url('images/ajax-loader.gif') #F2F2F2 no-repeat center;
+        margin-right: 2%;
+        margin-bottom: 1%;
+
+    }
+
+    .principalNote .text{
+        top: -8em;
+        width: 100%!important;
+    }
+
+    .text p {
+        padding:2%;
+    }
+
+    .text {
+
+        float: left!important;
+        width: 100%!important;
+    }
+
+    .note .contentDateComent {
+        width: 100%!important;
+        float: left!important;
+        margin-top: 0.5em;
+    }
+
+    .note .text p {
+        margin-top: 0.7em!important;
+
+    }
+
+    .principalNote .noteTitle{
+
+        top: -10em;
+        width: 85%;
+
+    }
+
+    .principalNote .contentDateComent {
+
+        top: -10em;
+
+    }
+
+    .principalNote .text {
+
+        top:-9.7em;
+
+    }
+    .page {
+        max-height: 768px;
+    }
+
+    .notaPop .notaPrincipal .imagen {
+        height:13em;
+        width: 100%;
+        float: left;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .notaPop .notaPrincipal .imagen img {
+        width: 100%;
+        top: -100%;
+        position: relative;
+    }
+
+    .notaPop .boxfooter{
+        width: 100%!important;
+        border-top: 0.1em solid #CCC;
+        border-right: 0em solid #CCC;
+    }
+
+    .ui-popup-container {
+        width: 50%;
+    }
+
+    .pagerCustom {
+        width: 99.6%!important;
+        border-right: 0.1em solid #CCC;
+
+    }
+}
