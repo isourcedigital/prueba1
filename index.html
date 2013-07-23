@@ -16,14 +16,13 @@
 <script type="text/javascript">
 if (navigator.onLine){
 		document.write('<iframe src="http://www.isourcedev.com/klblog/" frameborder="0" style="overflow:hidden;overflow-x:hidden;overflow-y:hidden;height:100%;width:100%;position:absolute;top:0px;left:0px;right:0px;bottom:0px;border:0;padding:0;margin:0;" height="100%" width="100%"></iframe>');
-}else{
-	alert("estoy OFF");
+}else{	
 	var newsfeed = new gfeedfetcher("rssfeeds", "wrapperInner loading", "_new");
 	for (var j = 0; j < 6; j++) {
 	var retrievedObject = JSON.parse(localStorage.getItem('listBlogObject'+j));
 	if(retrievedObject==null){
 		alert("Some blog posts could not be loaded: ");			
-		return false;
+		//return false;
 	}else{
 		//console.log(retrievedObject);
 		var blog = {
