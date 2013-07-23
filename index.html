@@ -19,7 +19,7 @@ if (navigator.onLine){
 }else{	
 	var newsfeed = new gfeedfetcher("rssfeeds", "wrapperInner loading", "_new");
 	for (var j = 0; j < 6; j++) {
-	var retrievedObject = JSON.parse(localStorage.getItem('listBlogObject'+j));
+	var retrievedObject = JSON.parse(window.localStorage.getItem('listBlogObject'+j));
 	if(retrievedObject==null){
 		alert("Some blog posts could not be loaded: ");			
 		//return false;
