@@ -1,392 +1,399 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <title>Kaspersky Mobile</title>
-        <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
-        <meta name="apple-mobile-web-app-capable" content="yes" />
-        <link rel="stylesheet" type="text/css" href="css/layoutResponsive.css" />
+<head>
+<meta charset="utf-8">
+<title>Kaspersky Mobile</title>
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<link rel="stylesheet" type="text/css" href="css/layoutResponsive.css" />
 
-        <script type="text/javascript" src="js/js-all.js"></script>
-        <script type="text/javascript" src="js/blockUI.js"></script>
-        <script type="text/javascript" src="js/custom.js"></script>
-        <script type="text/javascript" charset="utf-8" src="js/cordova.js"></script>
+	<script type="text/javascript" src="js/js-all.js"></script>
+	<script type="text/javascript" src="js/blockUI.js"></script>
+	<script type="text/javascript" src="js/custom.js"></script>
+</head>
+  
+<body style="margin:0px;padding:0px;overflow:hidden">
+<script type="text/javascript">
+if (navigator.onLine){
+		document.write('<iframe src="http://www.isourcedev.com/klblog/" frameborder="0" style="overflow:hidden;overflow-x:hidden;overflow-y:hidden;height:100%;width:100%;position:absolute;top:0px;left:0px;right:0px;bottom:0px;border:0;padding:0;margin:0;" height="100%" width="100%"></iframe>');
+}else{	
+	var newsfeed = new gfeedfetcher("rssfeeds", "wrapperInner loading", "_new");
+	for (var j = 0; j < 6; j++) {
+	var retrievedObject = JSON.parse(localStorage.getItem('listBlogObject'+j));
+	if(retrievedObject==null){
+		alert("Some blog posts could not be loaded: ");			
+		//return false;
+	}else{
+		//console.log(retrievedObject);
+		var blog = {
+	            id:retrievedObject[0]["ddlabel"]["id"],
+	            name: retrievedObject[0]["ddlabel"]["name"],
+	            url: retrievedObject[0]["ddlabel"]["url"],
+	            hastag: retrievedObject[0]["ddlabel"]["hastag"],
+	            img: retrievedObject[0]["ddlabel"]["img"]
+		}
+		newsfeed.addFeed(blog, blog["url"]);
+	}
+	}
+	    newsfeed.displayoptions("label datetime snippet");
+	    newsfeed.setentrycontainer("p");
+	    newsfeed.filterfeed(1, "date");    
+	    newsfeed.init();
+	    
+	    document.write('<div data-role="page" class="page" id="home">');  
+	    document.write('<div data-role="content">');
+	    document.write('<div id="flipRoot">');
+	    document.write('<div id="bigNews" data-url="&ui-page=bigNews">');
+	    document.write('<div class="bigNewsContent">');
+	    document.write('<div class="kllogo">');
+	    document.write('<img src="img/klbigNews.png">');
+	    document.write('</div>');
+	    document.write('<div class="flipImg">');
+	    document.write('<img src="img/flip.png" width="61" height="122">');
+	    document.write('</div>');
+	    document.write('<div class="img">');
+	    document.write('<img src="img/bigNews/bigUno.jpg">');
+	    document.write('<img src="img/bigNews/bigUno1.jpg">');    
+	    document.write('<img src="img/bigNews/bigUno2.jpg">');    
+	    document.write('<img src="img/bigNews/bigUno3.jpg">');    
+	    document.write('<img src="img/bigNews/bigUno4.jpg">');
+	    document.write('</div>');
+	    document.write('<div class="titlesBox">');
+	    document.write('<div class="titles">');
+	    document.write('<div>I Just Received a Data Breach Notification1 I Just Received a Data Breach Notification1 </div>');
+	    document.write('<div>I Just Received a Data Breach Notification2 I Just Received a Data Breach Notification2</div>');
+	    document.write('<div> Just Received a Data Breach Notification3 I Just Received a Data Breach Notification3</div>');
+	    document.write('<div>I Just Received a Data Breach Notification4 I Just Received a Data Breach Notification4</div>');
+	    document.write('<div> Just Received a Data Breach Notification5 I Just Received a Data Breach Notification5</div>');
+	    document.write('</div>');
+	    document.write('<div class="textBignews">');
+	    document.write('<p>I Just Received a Data Breach Notification1 I Just Received a Data Breach Notification1 I Just Received a Data Breach Notification1 I Just Received a Data Breach Notification1</p>');
+	    document.write('<p>I Just Received a Data Breach Notification2 I Just Received a Data Breach Notification2 I Just Received a Data Breach Notification2 I Just Received a Data Breach Notification2</p>');
+	    document.write('<p>I Just Received a Data Breach Notification3 I Just Received a Data Breach Notification3 I Just Received a Data Breach Notification3 I Just Received a Data Breach Notification3</p>');
+	    document.write('<p>I Just Received a Data Breach Notification4 I Just Received a Data Breach Notification4 I Just Received a Data Breach Notification4 I Just Received a Data Breach Notification4</p>');
+	    document.write('<p>I Just Received a Data Breach Notification5 I Just Received a Data Breach Notification5 I Just Received a Data Breach Notification5 I Just Received a Data Breach Notification5</p>');
+	    document.write('</div>');
+	    document.write('</div>');   
+	    document.write('</div>');
+	    document.write('</div>');            
+	    document.write('<div id="blogskl" data-url="&ui-page=blogskl">');
+		document.write('<div class="header">');
+	    document.write('<div class="logoHome">');
+		document.write('<img src="img/logo.png" width="261">');
+		document.write('</div>');
+		document.write('<div align="right" style="" class="loginbox">');
+		document.write('<div>Existing account?</div>');
+		document.write('<div class="tap"><a href="#logIn" data-rel="popup" data-position-to="window" data-transition="pop">tap to sign in</a></div>');
+		document.write('</div>');
+		document.write('</div>	<div class="wrapper">');   
+		document.write('<div id="feedrss" class="wrapperInner loading"></div>');		
+		document.write('<div class="footer">');
+		document.write('<div class="boxfooter">');
+		document.write('<div class="btn_refresh1">');    
+	    document.write('<a><img src="img/icons/icon_refresh.png"></a>');
+		document.write('</div>');                   
+		document.write('<div class="btn_add">');
+		document.write('<a href="#logIn" data-rel="popup" data-position-to="window" data-transition="pop">');
+		document.write('<img src="img/icons/icon_add.png">');
+		document.write('</a>');
+		document.write('</div>');
+		document.write('<div class="btn_setting">');
+		document.write('<a href="#logIn" data-rel="popup" data-position-to="window" data-transition="pop">');
+		document.write('<img src="img/icons/icon_settings.png">');
+		document.write('</a>');
+		document.write('</div>');
+		document.write('</div>');
+		document.write('<div class="pagerCustom" id="paginateblog"></div>');
+		document.write('</div>');		
+		document.write('</div>');
+		document.write('</div>');            
+	    document.write('</div>');
+	    document.write('</div>');
+	    document.write('<!--BLOGS PAGE-->');
+	    document.write('<div data-role="subpage" id="blogs" class="blogs">');
+	    document.write('<div data-role="content">');
+		document.write('<div class="header" style="position: relative; z-index: 11;" id="headerBlog">');
+	    document.write('<div class="logo">');
+	    document.write('<a href="#home" data-role="back" data-transition="slidefade"  data-direction="reverse" class="ui-link"><img src="img/logoInterno.png" alt="kaspersky" /></a>');
+	    document.write('</div>');
+	    document.write('<div align="right" style="" class="loginbox">');
+		document.write('<div>Existing account?</div>');
+		document.write('<div class="tap"><a href="#logInb" data-rel="popup" data-position-to="window" data-transition="pop">tap to sign in</a></div>');
+		document.write('</div>');
+		document.write('</div>');            
+		document.write('<div class="contentNotes" id="blog"></div>');
+	    document.write('</div>');
+	    document.write('</div>');
+	    document.write('<!--BLOGS PAGE-->');
+	    document.write('<!--DETALLE PAGE-->');
+	    document.write('<div id="detalleblog"></div>');    
+	    document.write('<!--DETALLE PAGE-->');
+	    document.write('<!--END APP-->');
+		document.write('</div>');
+	//*****FUNCION QUE CARGA CUANDO SE HACE UN CLICK EN BLOG DE LA HOME***********//
+	    function viewBlog(url, hastag) {
+	             
+	        //LOADER HOME CREATE
+	        $("#home .ui-content").append('<div class="ui-loader ui-corner-all ui-body-a ui-loader-default loadingHome" style="display: block;"><span class="ui-icon ui-icon-loading"></span><h2 class="textLoading">loading</h2></div>');       
+	        var getblog = new gfeedfetcher1();
+	        getblog.addFeed("", "", url, hastag);
+	        getblog.init();
+	        location.href = "#blogs";        
+	        //LOADER HOME REMOVE
+	        $(".loadingHome").remove();              
+	        var blog_arr = url + ';' + hastag;
+	        if (url) {
+	            $.cookie('view_blog', blog_arr);
+	        } else {
+	            $.removeCookie('view_blog');
+	        }
+	 
+	    }
+	    function backBlogs() {
+	        location.href = "#blogs";
+	        $.removeCookie('view_details');
+	    }
+	//*****FUNCION QUE CARGA CUANDO SE HACE UN CLICK EN DETALLE DE CADA NOTA***********//
+	    function viewDetails(urlblog, url, id, hastag) {
+	        var detail_arr = urlblog + ';' + url + ';' + id + ';' + hastag;
+	        if (urlblog) {
+	            $.cookie('view_details', detail_arr);
+	        } else {
+	            $.removeCookie('view_details');
+	        }
+	        
+	        location.href = "#details" + id;
+	        
+	    }
+	    
 
-        
-        
-        <script type="text/javascript" charset="utf-8">
-            
-            // Wait for device API libraries to load
-            //
-            document.addEventListener("deviceready", onDeviceReady, false);
-            
-            // device APIs are available
-            //
-            function onDeviceReady() {
-               
-                if(navigator.connection.type !== 'none'){
-                    
-                   alert('Connection type: ' + navigator.connection.type );
-                    navigator.splashscreen.show();
-                    var ref = window.open('http://www.isourcedev.com/klblog', '_self', 'location=no,transitionstyle=crossdissolve,toolbar=no');
-                    ref.addEventListener('loadstart', function(event) {console.log("arranco!");});
-                    ref.addEventListener('loadstop', function(event) {console.log("Stop");});
-                    ref.addEventListener('loaderror', function(event) {console.log("Error");});
-                    ref.addEventListener('exit', function(event) { console.log("BYe!");});
- 
-                }else{
-                    alert('Connection type: ' + navigator.connection.type );
-                 }
-                
-            }
-            
-          </script>
-    </head>
+	    $(document).ready(function() {
+	        $("#flipRoot").hide();
+	        
 
-    <body style="margin:0px;padding:0px;overflow:hidden">
-                    <script type="text/javascript" charset="utf-8">
-
-var newsfeed = new gfeedfetcher("rssfeeds", "wrapperInner loading", "_new");
-for (var j = 0; j < 6; j++) {
-var retrievedObject = JSON.parse(window.localStorage.getItem('listBlogObject' + j));
-if (retrievedObject == null){
-alert("Some blog posts could not be loaded: ");
-//return false;
-} else{
-//console.log(retrievedObject);
-var blog = {
-        id:retrievedObject[0]["ddlabel"]["id"],
-        name: retrievedObject[0]["ddlabel"]["name"],
-        url: retrievedObject[0]["ddlabel"]["url"],
-        hastag: retrievedObject[0]["ddlabel"]["hastag"],
-img: retrievedObject[0]["ddlabel"]["img"]
-}
-newsfeed.addFeed(blog, blog["url"]);
-}
-}
-        newsfeed.displayoptions("label datetime snippet");
-        newsfeed.setentrycontainer("p");
-        newsfeed.filterfeed(1, "date");
-        newsfeed.init();
-        document.write('<div data-role="page" class="page" id="home">');
-        document.write('<div data-role="content">');
-        document.write('<div id="flipRoot">');
-        document.write('<div id="bigNews" data-url="&ui-page=bigNews">');
-        document.write('<div class="bigNewsContent">');
-        document.write('<div class="kllogo">');
-        document.write('<img src="img/klbigNews.png">');
-        document.write('</div>');
-        document.write('<div class="flipImg">');
-        document.write('<img src="img/flip.png" width="61" height="122">');             
-        document.write('</div>');
-        document.write('<div class="img">');
-        document.write('<img src="img/bigNews/bigUno.jpg">');             
-        document.write('<img src="img/bigNews/bigUno1.jpg">');
-        document.write('<img src="img/bigNews/bigUno2.jpg">');
-        document.write('<img src="img/bigNews/bigUno3.jpg">');
-        document.write('<img src="img/bigNews/bigUno4.jpg">');
-        document.write('</div>');
-        document.write('<div class="titlesBox">');
-document.write('<div class="titles">');
-        document.write('<div>I Just Received a Data Breach Notification1 I Just Received a Data Breach Notification1 </div>');
-        document.write('<div>I Just Received a Data Breach Notification2 I Just Received a Data Breach Notification2</div>');
-        document.write('<div> Just Received a Data Breach Notification3 I Just Received a Data Breach Notification3</div>');
-        document.write('<div>I Just Received a Data Breach Notification4 I Just Received a Data Breach Notification4</div>');
-        document.write('<div> Just Received a Data Breach Notification5 I Just Received a Data Breach Notification5</div>');
-        document.write('</div>');
-        document.write('<div class="textBignews">');
-        document.write('<p>I Just Received a Data Breach Notification1 I Just Received a Data Breach Notification1 I Just Received a Data Breach Notification1 I Just Received a Data Breach Notification1</p>');
-        document.write('<p>I Just Received a Data Breach Notification2 I Just Received a Data Breach Notification2 I Just Received a Data Breach Notification2 I Just Received a Data Breach Notification2</p>');
-        document.write('<p>I Just Received a Data Breach Notification3 I Just Received a Data Breach Notification3 I Just Received a Data Breach Notification3 I Just Received a Data Breach Notification3</p>');
-        document.write('<p>I Just Received a Data Breach Notification4 I Just Received a Data Breach Notification4 I Just Received a Data Breach Notification4 I Just Received a Data Breach Notification4</p>');
-        document.write('<p>I Just Received a Data Breach Notification5 I Just Received a Data Breach Notification5 I Just Received a Data Breach Notification5 I Just Received a Data Breach Notification5</p>');
-        document.write('</div>');
-        document.write('</div>');
-        document.write('</div>');
-        document.write('</div>');
-        document.write('<div id="blogskl" data-url="&ui-page=blogskl">');
-        document.write('<div class="header">');
-        document.write('<div class="logoHome">');
-        document.write('<img src="img/logo.png" width="261">');
-document.write('</div>');
-        document.write('<div align="right" style="" class="loginbox">');
-        document.write('<div>Existing account?</div>');
-        document.write('<div class="tap"><a href="#logIn" data-rel="popup" data-position-to="window" data-transition="pop">tap to sign in</a></div>');
-document.write('</div>');
-        document.write('</div>	<div class="wrapper">');
-        document.write('<div id="feedrss" class="wrapperInner loading"></div>');
-        document.write('<div class="footer">');
-        document.write('<div class="boxfooter">');
-        document.write('<div class="btn_refresh1">');
-        document.write('<a><img src="img/icons/icon_refresh.png"></a>');
-        document.write('</div>');
-        document.write('<div class="btn_add">');
-        document.write('<a href="#logIn" data-rel="popup" data-position-to="window" data-transition="pop">'); document.write('<img src="img/icons/icon_add.png">');
-document.write('</a>');
-        document.write('</div>');
-        document.write('<div class="btn_setting">');
-        document.write('<a href="#logIn" data-rel="popup" data-position-to="window" data-transition="pop">');
-        document.write('<img src="img/icons/icon_settings.png">');
-        document.write('</a>');
-        document.write('</div>');
-        document.write('</div>');
-        document.write('<div class="pagerCustom" id="paginateblog"></div>');
-document.write('</div>');
-        document.write('</div>');
-        document.write('</div>');
-        document.write('</div>');
-        document.write('</div>');
-        document.write('<!--BLOGS PAGE-->');
-        document.write('<div data-role="subpage" id="blogs" class="blogs">');
-        document.write('<div data-role="content">');
-                document.write('<div class="header" style="position: relative; z-index: 11;" id="headerBlog">');
-                document.write('<div class="logo">');
-        document.write('<a href="#home" data-role="back" data-transition="slidefade"  data-direction="reverse" class="ui-link"><img src="img/logoInterno.png" alt="kaspersky" /></a>');
-        document.write('</div>');
-        document.write('<div align="right" style="" class="loginbox">');
-        document.write('<div>Existing account?</div>');
-        document.write('<div class="tap"><a href="#logInb" data-rel="popup" data-position-to="window" data-transition="pop">tap to sign in</a></div>');
-document.write('</div>');
-        document.write('</div>');
-        document.write('<div class="contentNotes" id="blog"></div>');
-        document.write('</div>');
-document.write('</div>');
-document.write('<!--BLOGS PAGE-->');
-document.write('<!--DETALLE PAGE-->');
-        document.write('<div id="detalleblog"></div>');
-document.write('<!--DETALLE PAGE-->');
-        document.write('<!--END APP-->');
-        document.write('</div>');
-        //*****FUNCION QUE CARGA CUANDO SE HACE UN CLICK EN BLOG DE LA HOME***********//
-        function viewBlog(url, hastag) {
-        //LOADER HOME CREATE
-        $("#home .ui-content").append('<div class="ui-loader ui-corner-all ui-body-a ui-loader-default loadingHome" style="display: block;"><span class="ui-icon ui-icon-loading"></span><h2 class="textLoading">loading</h2></div>');
-        var getblog = new gfeedfetcher1();
-        getblog.addFeed("", "", url, hastag);
-        getblog.init();
-                location.href = "#blogs";
-                //LOADER HOME REMOVE                     $(".loadingHome").remove();
-                var blog_arr = url + ';' + hastag;
-                if (url) {
-        $.cookie('view_blog', blog_arr);
-} else {
-        $.removeCookie('view_blog');
-}
-
-        }
-function backBlogs() {
-location.href = "#blogs";
-        $.removeCookie('view_details');
-        }
-//*****FUNCION QUE CARGA CUANDO SE HACE UN CLICK EN DETALLE DE CADA NOTA***********//
-function viewDetails(urlblog, url, id, hastag) {
-var detail_arr = urlblog + ';' + url + ';' + id + ';' + hastag;
-        if (urlblog) {
-$.cookie('view_details', detail_arr);
-} else {
-$.removeCookie('view_details');
-}
-location.href = "#details" + id;
-}
-
-$(document).ready(function() {
-$("#flipRoot").hide();
-        $("#flipRoot").fadeIn("slow");
-        });
-        google.load("feeds", "1"); //Load Google Ajax Feed API (version 1)
-        var rssoutput = '';
-        var emailusr = '';
-        var facebookusr = '';
-        var twitterurl = '';
-        var twitterhastag = '';
-        function gfeedfetcher1(){
-        this.feedlabels = [] //array holding lables for each RSS feed
-                this.feedurls = []
-                this.feeds = [] //array holding combined RSS feeds' entries from Feed API (result.feed.entries)	
-                this.feedlimit = 23
-
-                }
-
-gfeedfetcher1.prototype.addFeed = function(label, fbusr, url, hastag){
-this.feedlabels[this.feedlabels.length] = label;
-        this.feedurls[this.feedurls.length] = url;
-        emailusr = label;
-        if (label.trim()){
-facebookusr = fbusr;
-        if (!twitterurl.trim()){
-twitterhastag = hastag;
-}
-} else{
-facebookusr = '';
-        twitterhastag = '';
-}
-}
-gfeedfetcher1.prototype.init = function(){
-
-//alert('LOADING');
-$("#blog").html('<div class="ui-loader ui-corner-all ui-body-a ui-loader-default" style="display: block;"><span class="ui-icon ui-icon-loading"></span><h2 class="textLoading">loading</h2></div>');
-        rssoutput = '';
-        this.feeds = [] //reset feeds[] array to empty (in case init() is called more than once)
-
-        for (var i = 0; i < this.feedurls.length; i++){ //loop through the specified RSS feeds' URLs
-var feedpointer = new google.feeds.Feed(this.feedurls[i]) //create new instance of Google Ajax Feed API
-        feedpointer.setResultFormat(google.feeds.Feed.XML_FORMAT);
-        feedpointer.includeHistoricalEntries();
-        feedpointer.setNumEntries(this.feedlimit) //set number of items to display
-        feedpointer.load(function(){
-return function(result){
-
-var thisfeed = (!result.error)? result.xmlDocument.getElementsByTagName('item') : "" //get all feed entries as a JSON array or "" if failed
-        if (thisfeed == ""){ //if error has occured fetching feed
-alert("Some blog posts could not be loaded: " + result.error.message);
-}
-var urlBlog = result.xmlDocument.getElementsByTagName('link')[0].firstChild.nodeValue;
-        rssoutput += '<div id="flipblogs" data-flip-show-pager="true"><div class="flipPage">';
-        $(".details").remove();
-        $("#detalleblog").html('');
-        var p = 0;
-        for (var i = 0; i < thisfeed.length; i++){ //For each entry within feed	
-var item = thisfeed[i];
-        //console.log(item);
-        var arrItem = item.childNodes;
-        var comments = '0';
-        var comments_b = 0;
-        var content = '';
-        var contentclear = '';
-        var content_b = 0;
-        var description = '';
-        var description_b = 0;
-        var title = '';
-        var title_b = 0;
-        var pubDate = '';
-        var pubDate_b = 0;
-        var commentsRss = '';
-        var commentsRss_b = 0;
-        var guid = '';
-        var guid_b = 0;
-        var link = '';
-        var link_b = 0;
-        for (var k = 0; k < arrItem.length; k++){
-if (arrItem[k].nodeName == "slash:comments" && comments_b == 0){
-comments = arrItem[k].firstChild.nodeValue;
-        comments_b = 1;
-}
-if (arrItem[k].nodeName == "content:encoded" && content_b == 0){
-content = arrItem[k].firstChild.nodeValue;
-        contentclear = content.replace(/(?:<(?:script|style)[^>]*>[\s\S]*?<\/(?:script|style)>|<[!\/]?[a-z]\w*(?:\s*[a-z][\w\-]*=?[^>]*)*>|<!--[\s\S]*?-->|<\?[\s\S]*?\?>)[\r\n]*/gi, '');
-        content_b = 1;
-}
-if (arrItem[k].nodeName == "description" && description_b == 0){
-description = arrItem[k].firstChild.nodeValue;
-        description = description.replace(/(?:<(?:script|style)[^>]*>[\s\S]*?<\/(?:script|style)>|<[!\/]?[a-z]\w*(?:\s*[a-z][\w\-]*=?[^>]*)*>|<!--[\s\S]*?-->|<\?[\s\S]*?\?>)[\r\n]*/gi, '');
-        description_b = 1;
-}
-if (arrItem[k].nodeName == "title" && title_b == 0){
-title = arrItem[k].firstChild.nodeValue;
-        title_b = 1;
-}
-if (arrItem[k].nodeName == "pubDate" && pubDate_b == 0){
-pubDate = arrItem[k].firstChild.nodeValue;
-        pubDate_b = 1;
-}
-if (arrItem[k].nodeName == "wfw:commentRss" && commentsRss_b == 0){
-commentsRss = arrItem[k].firstChild.nodeValue;
-        commentsRss_b = 1;
-}
-if (arrItem[k].nodeName == "guid" && guid_b == 0){
-guid = arrItem[k].firstChild.nodeValue;
-        guid_b = 1;
-}
-if (arrItem[k].nodeName == "link" && link_b == 0){
-link = arrItem[k].firstChild.nodeValue;
-        link_b = 1;
-}
-}
-var itemImage = content.match(/<img[^>]+src=[\'"]([^\'"]+)[\'"].*>/i);
-        p++;
-        var parseddate = new Date(pubDate)
-        var itemdate = parseddate.toLocaleDateString()
-        if (itemImage){
-itemImage = itemImage[1];
-} else{
-itemImage = 'img/img_blog.png';
-}
-var itemGuid = guid.split("?p=");
-        if (itemGuid){
-itemGuid = itemGuid[1];
-} else{
-itemGuid = '';
-}
+	        $("#flipRoot").fadeIn("slow");
 
 
-var detalle = '';
-        detalle += '<div data-role="subpage" id="details' + i + '" class="notaPop details">';          detalle += '<div class="volver">';
-                                detalle += '<a href="javascript:backBlogs();" data-role="back" data-transition="slidefade" data-direction="reverse" class="ui-link" ><img src="img/volver.png" height="69" width="69" alt="volver"></a>';
-                                detalle += '</div>';
-                                detalle += '<div data-role="content" data-theme="c" role="main">';
-                                detalle += '<!--page' + i + '-->';
-                                detalle+='<div class="contentNotes">';
-                                                            detalle+='<div id="flipdetalle'+i+'" data-flip-show-pager="false">';
+	        
+
+	        
+
+	     
+
+	        
+	        
+	    });
+
+	google.load("feeds", "1") //Load Google Ajax Feed API (version 1)
+	var rssoutput='';
+	var emailusr='';
+	var facebookusr='';
+	var twitterurl='';
+
+	var twitterhastag='';
+	function gfeedfetcher1(){	
+		this.feedlabels=[] //array holding lables for each RSS feed
+		this.feedurls=[]
+		this.feeds=[] //array holding combined RSS feeds' entries from Feed API (result.feed.entries)	
+		this.feedlimit=23
+		
+	}
+	gfeedfetcher1.prototype.addFeed=function(label,fbusr, url,hastag){
+		this.feedlabels[this.feedlabels.length]=label;
+		this.feedurls[this.feedurls.length]=url;
+		emailusr=label;	
+		if(label.trim()){
+			facebookusr=fbusr;
+			if(!twitterurl.trim()){
+				twitterhastag=hastag;
+			}
+		}else{
+			facebookusr='';
+			twitterhastag='';
+			}	
+	}
+	gfeedfetcher1.prototype.init=function(){	
+	        
+	        //alert('LOADING');
+		$("#blog").html('<div class="ui-loader ui-corner-all ui-body-a ui-loader-default" style="display: block;"><span class="ui-icon ui-icon-loading"></span><h2 class="textLoading">loading</h2></div>');
+	        
+		rssoutput='';
+		
+		this.feeds=[] //reset feeds[] array to empty (in case init() is called more than once)
+			
+		for (var i=0; i<this.feedurls.length; i++){ //loop through the specified RSS feeds' URLs
+			var feedpointer=new google.feeds.Feed(this.feedurls[i]) //create new instance of Google Ajax Feed API
+			feedpointer.setResultFormat(google.feeds.Feed.XML_FORMAT);
+			feedpointer.includeHistoricalEntries();
+			feedpointer.setNumEntries(this.feedlimit) //set number of items to display
+			feedpointer.load(function(){
+				return function(result){
+					
+					var thisfeed=(!result.error)? result.xmlDocument.getElementsByTagName('item') : "" //get all feed entries as a JSON array or "" if failed
+						if (thisfeed==""){ //if error has occured fetching feed
+							alert("Some blog posts could not be loaded: "+result.error.message);
+						}
+					var urlBlog=result.xmlDocument.getElementsByTagName('link')[0].firstChild.nodeValue;
+					
+					
+					
+					rssoutput+='<div id="flipblogs" data-flip-show-pager="true"><div class="flipPage">';
+					$(".details").remove();
+					$("#detalleblog").html('');
+					var p=0;				
+						for (var i=0; i<thisfeed.length; i++){ //For each entry within feed	
+							var item = thisfeed[i];
+							//console.log(item);
+							var arrItem = item.childNodes;
+							
+							var comments='0';						
+							var comments_b=0;
+							
+							var content='';
+							var contentclear='';
+							var content_b=0;
+							
+							var description='';
+							var description_b=0;
+							
+							var title='';
+							var title_b=0;
+							
+							var pubDate='';
+							var pubDate_b=0;
+							
+							var commentsRss='';
+							var commentsRss_b=0;
+							
+							var guid='';
+							var guid_b=0;
+
+							var link='';
+							var link_b=0;
+							for(var k=0; k<arrItem.length;k++){
+								if(arrItem[k].nodeName=="slash:comments" && comments_b==0){
+									comments=arrItem[k].firstChild.nodeValue;
+									comments_b=1;								
+								}
+								if(arrItem[k].nodeName=="content:encoded" && content_b==0){
+									content=arrItem[k].firstChild.nodeValue;
+									contentclear=content.replace(/(?:<(?:script|style)[^>]*>[\s\S]*?<\/(?:script|style)>|<[!\/]?[a-z]\w*(?:\s*[a-z][\w\-]*=?[^>]*)*>|<!--[\s\S]*?-->|<\?[\s\S]*?\?>)[\r\n]*/gi, '');
+									content_b=1;								
+								}
+								if(arrItem[k].nodeName=="description" && description_b==0){
+									description=arrItem[k].firstChild.nodeValue;
+									description=description.replace(/(?:<(?:script|style)[^>]*>[\s\S]*?<\/(?:script|style)>|<[!\/]?[a-z]\w*(?:\s*[a-z][\w\-]*=?[^>]*)*>|<!--[\s\S]*?-->|<\?[\s\S]*?\?>)[\r\n]*/gi, '');
+									description_b=1;								
+								}
+								if(arrItem[k].nodeName=="title" && title_b==0){
+									title=arrItem[k].firstChild.nodeValue;
+									title_b=1;								
+								}
+								if(arrItem[k].nodeName=="pubDate" && pubDate_b==0){
+									pubDate=arrItem[k].firstChild.nodeValue;
+									pubDate_b=1;								
+								}
+								if(arrItem[k].nodeName=="wfw:commentRss" && commentsRss_b==0){
+									commentsRss=arrItem[k].firstChild.nodeValue;
+									commentsRss_b=1;								
+								}
+								if(arrItem[k].nodeName=="guid" && guid_b==0){
+									guid=arrItem[k].firstChild.nodeValue;
+									guid_b=1;								
+								}
+								if(arrItem[k].nodeName=="link" && link_b==0){
+									link=arrItem[k].firstChild.nodeValue;
+									link_b=1;								
+								}
+							}						
+							var itemImage=content.match(/<img[^>]+src=[\'"]([^\'"]+)[\'"].*>/i);
+
+							
+							p++;
+							var parseddate=new Date(pubDate)
+							var itemdate=parseddate.toLocaleDateString()
+							if(itemImage){
+								itemImage=itemImage[1];							
+							}else{
+								itemImage='img/img_blog.png';
+							}
+							var itemGuid=guid.split("?p=");
+							if(itemGuid){
+								itemGuid=itemGuid[1];
+							}else{
+								itemGuid='';
+							}
+							
+							
+							var detalle='';
+							detalle+='<div data-role="subpage" id="details'+i+'" class="notaPop details">';
+							detalle+='<div class="volver">';						
+							detalle+='<a href="javascript:backBlogs();" data-role="back" data-transition="slidefade" data-direction="reverse" class="ui-link" ><img src="img/volver.png" height="69" width="69" alt="volver"></a>';	
+							detalle+='</div>';
+							detalle+='<div data-role="content" data-theme="c" role="main">';
+							detalle+='<!--page'+i+'-->';
+							    detalle+='<div class="contentNotes">';
+							        detalle+='<div id="flipdetalle'+i+'" data-flip-show-pager="false">';
 
 
-                                                            //****star flipPage*****/
-                                                    detalle+='<div class="flipPage">';
-                                                        detalle+='<div class="notaPrincipal">';
-                                                        detalle+='<div class="blank"></div>';
-                                                        detalle+='<div class="imagen">';
-                                                        detalle+='<img src="'+itemImage+'" class="imagenNotaPrincipal" height="" width="723">';							
-                                                        detalle+='</div>';
-                                                        detalle+='<div class="titulo">';
-                                                        detalle+=title;	
-                                                        detalle+='</div>';
-                                                        detalle+='<div class="contentFechaComent">';
-                                                        detalle+='<div class="fecha">';
-                                                        detalle+='<p class="icon_calendar"><img src="img/calendarGris.png" alt="calendarGris"></p>';
-                                                        detalle+='<p>'+itemdate+'</p>';
-                                                        detalle+='</div>';
-                                                        detalle+='<div class="coment">';
-                                                        detalle+='<p class="icon_comment"><img src="img/comentGris.png" alt="coments"></p>';
-                                                        detalle+='<p>'+comments+' comments</p>';
-                                                        detalle+='</div>';
-                                                        detalle+='</div>';
+								//****star flipPage*****/
+						        detalle+='<div class="flipPage">';
+							    detalle+='<div class="notaPrincipal">';
+	                                                    detalle+='<div class="blank"></div>';
+							    detalle+='<div class="imagen">';
+							    detalle+='<img src="'+itemImage+'" class="imagenNotaPrincipal" height="" width="723">';							
+							    detalle+='</div>';
+							    detalle+='<div class="titulo">';
+							    detalle+=title;	
+							    detalle+='</div>';
+							    detalle+='<div class="contentFechaComent">';
+							    detalle+='<div class="fecha">';
+							    detalle+='<p class="icon_calendar"><img src="img/calendarGris.png" alt="calendarGris"></p>';
+							    detalle+='<p>'+itemdate+'</p>';
+							    detalle+='</div>';
+							    detalle+='<div class="coment">';
+							    detalle+='<p class="icon_comment"><img src="img/comentGris.png" alt="coments"></p>';
+							    detalle+='<p>'+comments+' comments</p>';
+							    detalle+='</div>';
+							    detalle+='</div>';
 							    
-                                                        detalle+='<div class="text t1" id="t1">';						    
-                                                        detalle+='<p class="colum">';
+							    detalle+='<div class="text t1" id="t1">';						    
+							    detalle+='<p class="colum">';
 
 								
-                                                            detalle+=contentclear;
+								detalle+=contentclear;
 							    
 							                        
-                                                        detalle+='</p>';
-                                                        detalle+='</div>';
-                                                        detalle+='</div>';
-                                                        detalle+='<div class="footerBlogs">';
-                                                        detalle+='<div class="boxfooter">';
-                                                        if(emailusr){
-                                                        detalle+='<a href="#popupShare'+i+'" data-rel="popup" data-position-to="window" data-transition="pop" style="" class="ui-link btn_comment"><img src="img/app_18-03.png" alt=""></a>';
-                                                        detalle+='<a href="#popupComment'+i+'" data-rel="popup" data-position-to="window" data-transition="none" style="" class="ui-link btn_share"><img src="img/app_18.png" alt=""></a>'
-                                                        }else{
-                                                        detalle+='<a href="#logIn'+i+'" data-rel="popup" data-position-to="window" data-transition="pop" style="" class="ui-link btn_comment"><img src="img/app_18-03.png" alt=""></a>';
-                                                            detalle+='<a href="#logIn'+i+'" data-rel="popup" data-position-to="window" data-transition="pop" style="" class="ui-link btn_share"><img src="img/app_18.png" alt=""></a>'
-                                                        }	
-                                                        detalle+='</div>';
-                                                                    detalle+='<div class="pagerCustom">Page 1 of <span>1</span></div>';
-                                                        detalle+='</div>';
-                                                            detalle+='</div>';
+							    detalle+='</p>';
+							    detalle+='</div>';
+							    detalle+='</div>';
+							    detalle+='<div class="footerBlogs">';
+							    detalle+='<div class="boxfooter">';
+							    if(emailusr){
+							    detalle+='<a href="#popupShare'+i+'" data-rel="popup" data-position-to="window" data-transition="pop" style="" class="ui-link btn_comment"><img src="img/app_18-03.png" alt=""></a>';
+							    detalle+='<a href="#popupComment'+i+'" data-rel="popup" data-position-to="window" data-transition="none" style="" class="ui-link btn_share"><img src="img/app_18.png" alt=""></a>'
+							    }else{
+							    detalle+='<a href="#logIn'+i+'" data-rel="popup" data-position-to="window" data-transition="pop" style="" class="ui-link btn_comment"><img src="img/app_18-03.png" alt=""></a>';
+								detalle+='<a href="#logIn'+i+'" data-rel="popup" data-position-to="window" data-transition="pop" style="" class="ui-link btn_share"><img src="img/app_18.png" alt=""></a>'
+							    }	
+							    detalle+='</div>';
+	                                                                detalle+='<div class="pagerCustom">Page 1 of <span>1</span></div>';
+							    detalle+='</div>';
+								detalle+='</div>';
 
-                                                            //****end flipPage*****/
+								//****end flipPage*****/
 								
 							                    
-                                                                        detalle+='</div>';
-                                                                        detalle+='</div>';
-                                                                        detalle+='</div>';
-                                                                        detalle+='</div>';
+							                    detalle+='</div>';
+							                    detalle+='</div>';
+							                    detalle+='</div>';
+							                    detalle+='</div>';
 								
-                                  $("#detalleblog").append(detalle);
-                                  $("#details"+i).subpage();				
-                                  $("#flipdetalle"+i).flip({
-                                                            height: '100%'
-                                                        });  
+		                      $("#detalleblog").append(detalle);
+		                      $("#details"+i).subpage();				
+		                      $("#flipdetalle"+i).flip({
+			  				        height: '100%'
+			  				    });  
 		                      
 		                      
 				  			     
@@ -396,266 +403,264 @@ var detalle = '';
 
 
 
-    trimFirst();
-    function trimFirst() {  
-       var n = i;
-       //console.log(i);
-        var t1 = $(document).find('#details'+n+' .t1');
-        var anterior = new Array();
-        t1.dotdotdot({
-            ellipsis: '',
-            wrap: 'word',
-            watch: true,
-            callback: function(isTruncated, orgContent) {
-            t1.trigger("originalContent", function(content) {
-                                var firstTextCount = t1.text().length;
-            //                    console.log('first Page: ' + firstTextCount);
-                                var restText = content.text().substring(firstTextCount);
-            //                    console.log(restText);
-                                var id = 1;
-                                var dynamic = $(document).find('div').hasClass('dynamic');
-                                if (restText.length !== 0) {
-                                      nextPages(restText, id, anterior, n);
-                                }
-                            });
-                    }
-            });
-    }
-    function nextPages(restText, id, anterior, n ) {
-        id++;
-        if ($.inArray(id, anterior) !== -1)
-        {
-            console.log('YA PASASTE POR ACA! en ruso : уже проходили здесь');
-        }else{
-            anterior.push(id);
-            console.log(anterior);
-            console.log('id '+id)
-            console.log('Sos nuevito, ENTRA :)');
+	trimFirst();
+	function trimFirst() {  
+	   var n = i;
+	   //console.log(i);
+	    var t1 = $(document).find('#details'+n+' .t1');
+	    var anterior = new Array();
+	    t1.dotdotdot({
+	        ellipsis: '',
+	        wrap: 'word',
+	        watch: true,
+	        callback: function(isTruncated, orgContent) {
+	        t1.trigger("originalContent", function(content) {
+	                            var firstTextCount = t1.text().length;
+	        //                    console.log('first Page: ' + firstTextCount);
+	                            var restText = content.text().substring(firstTextCount);
+	        //                    console.log(restText);
+	                            var id = 1;
+	                            var dynamic = $(document).find('div').hasClass('dynamic');
+	                            if (restText.length !== 0) {
+	                                  nextPages(restText, id, anterior, n);
+	                            }
+	                        });
+	                }
+	        });
+	}
+	function nextPages(restText, id, anterior, n ) {
+	    id++;
+	    if ($.inArray(id, anterior) !== -1)
+	    {
+	        console.log('YA PASASTE POR ACA! en ruso : уже проходили здесь');
+	    }else{
+	        anterior.push(id);
+	        console.log(anterior);
+	        console.log('id '+id)
+	        console.log('Sos nuevito, ENTRA :)');
 	        
-             var nextText = restText;
-            var restcount = nextText.length;
+	         var nextText = restText;
+	        var restcount = nextText.length;
 	    
-            var t;
-            console.log('restcount1 ' + restcount)
-            var currentPageID = 't' + id;
-            console.log('id: ' + currentPageID)
-            var output = '<div class="flipPage dynamic flipContent" style="height:100%">';
-            output += '<div class="notaPrincipal">';
-            output+='<div class="blank"></div>';
-            output += '<div class="text textH " id=' + currentPageID + '>';
-            output += '<p class="colum colH">';
-            output += nextText;
-            output += '</p>';
-            output += '</div>';
-            output += '</div>';
-            output += '<div class="footerBlogs">';
-            output += '<div class="boxfooter">';
-            if(emailusr){
-            output+='<a href="#popupShare'+n+'" data-rel="popup" data-position-to="window" data-transition="pop" style="" class="ui-link btn_comment"><img src="img/app_18-03.png" alt=""></a>';
-            output+='<a href="#popupComment'+n+'" data-rel="popup" data-position-to="window" data-transition="none" style="" class="ui-link btn_share"><img src="img/app_18.png" alt=""></a>'
-            }else{
-            output+='<a href="#logIn'+n+'" data-rel="popup" data-position-to="window" data-transition="pop" style="" class="ui-link btn_comment"><img src="img/app_18-03.png" alt=""></a>';
-            output+='<a href="#logIn'+n+'" data-rel="popup" data-position-to="window" data-transition="pop" style="" class="ui-link btn_share"><img src="img/app_18.png" alt=""></a>'
-            }	
-            output += '</div>';
-            output += ' <div class="pagerCustom"> Page ' + id + ' of <span></span></div>';
-            output += '</div>';
-            output += '</div>';
+	        var t;
+	        console.log('restcount1 ' + restcount)
+	        var currentPageID = 't' + id;
+	        console.log('id: ' + currentPageID)
+	        var output = '<div class="flipPage dynamic flipContent" style="height:100%">';
+	        output += '<div class="notaPrincipal">';
+	        output+='<div class="blank"></div>';
+	        output += '<div class="text textH " id=' + currentPageID + '>';
+	        output += '<p class="colum colH">';
+	        output += nextText;
+	        output += '</p>';
+	        output += '</div>';
+	        output += '</div>';
+	        output += '<div class="footerBlogs">';
+	        output += '<div class="boxfooter">';
+	        if(emailusr){
+	        output+='<a href="#popupShare'+n+'" data-rel="popup" data-position-to="window" data-transition="pop" style="" class="ui-link btn_comment"><img src="img/app_18-03.png" alt=""></a>';
+	        output+='<a href="#popupComment'+n+'" data-rel="popup" data-position-to="window" data-transition="none" style="" class="ui-link btn_share"><img src="img/app_18.png" alt=""></a>'
+	        }else{
+	        output+='<a href="#logIn'+n+'" data-rel="popup" data-position-to="window" data-transition="pop" style="" class="ui-link btn_comment"><img src="img/app_18-03.png" alt=""></a>';
+	        output+='<a href="#logIn'+n+'" data-rel="popup" data-position-to="window" data-transition="pop" style="" class="ui-link btn_share"><img src="img/app_18.png" alt=""></a>'
+	        }	
+	        output += '</div>';
+	        output += ' <div class="pagerCustom"> Page ' + id + ' of <span></span></div>';
+	        output += '</div>';
+	        output += '</div>';
 	        
-            var idDetail = location.hash;
-            var idFlip = idDetail.split("#details");
-            var idFlip = idFlip[1];
+	        var idDetail = location.hash;
+	        var idFlip = idDetail.split("#details");
+	        var idFlip = idFlip[1];
 	        
-            //console.log(idFlip);
+	        //console.log(idFlip);
 	        
-            $(idDetail+' #flipdetalle'+idFlip).append(output);
-            totalPages(idFlip);
+	        $(idDetail+' #flipdetalle'+idFlip).append(output);
+	        totalPages(idFlip);
 
-            var currentPageSel = $(idDetail).find('#' + currentPageID);
-            console.log(currentPageSel);
-            var stop = 0;
-            var stopWatch = new Array();
+	        var currentPageSel = $(idDetail).find('#' + currentPageID);
+	        console.log(currentPageSel);
+	        var stop = 0;
+	        var stopWatch = new Array();
 	       
-            $(currentPageSel).dotdotdot({
-                ellipsis: '',
-                wrap: 'word',
-                watch: true,
-                callback: function(isTruncated, orgContent) {
-                    if ($.inArray(stop, stopWatch) !== -1)
-                    {
-                         console.log(stopWatch);
-                        console.log('stopWatch!');                        
+	        $(currentPageSel).dotdotdot({
+	            ellipsis: '',
+	            wrap: 'word',
+	            watch: true,
+	            callback: function(isTruncated, orgContent) {
+	                if ($.inArray(stop, stopWatch) !== -1)
+	                {
+	                     console.log(stopWatch);
+	                    console.log('stopWatch!');                        
 	                    
-                    } else {
-                        stop++
-                        stopWatch.push(id);
-                         console.log(stopWatch);
-                         if(isTruncated){
-                        var currentPageCount = $(currentPageSel).text().length;
-                        t = nextText.substring(currentPageCount);
-                        console.log('t: ' + nextText);
-                        restcount = t.length;
-                        console.log('restcountNext ' + restcount);
-                        if (restcount !== 0) {
-                             totalPages(idFlip);
-                            nextPages(t, id, anterior, n);
-                            } 
-                         }
-                    }
-                }
-            });       
-        }  
-    }
+	                } else {
+	                    stop++
+	                    stopWatch.push(id);
+	                     console.log(stopWatch);
+	                     if(isTruncated){
+	                    var currentPageCount = $(currentPageSel).text().length;
+	                    t = nextText.substring(currentPageCount);
+	                    console.log('t: ' + nextText);
+	                    restcount = t.length;
+	                    console.log('restcountNext ' + restcount);
+	                    if (restcount !== 0) {
+	                         totalPages(idFlip);
+	                        nextPages(t, id, anterior, n);
+	                        } 
+	                     }
+	                }
+	            }
+	        });       
+	    }  
+	}
 
-    function totalPages(numeroFlip) {
-        var totalPage = $('#flipdetalle' + numeroFlip).find('.flipPage');
-        var totalpageLenght = totalPage.length;
-        //console.log(totalpageLenght);
-        $('.pagerCustom span').text(totalpageLenght);
-    }
+	function totalPages(numeroFlip) {
+	    var totalPage = $('#flipdetalle' + numeroFlip).find('.flipPage');
+	    var totalpageLenght = totalPage.length;
+	    //console.log(totalpageLenght);
+	    $('.pagerCustom span').text(totalpageLenght);
+	}
 
-                                                    if(i==0){
-                                                            rssoutput+='<div class="principalNote loading">';
-                                                            rssoutput+='<a href="javascript:viewDetails(\''+urlBlog+'\',\''+commentsRss+'\',\''+i+'\' , \' '+twitterhastag+' \');void(0);" data-transition="slidefade"  id="" class="linkBlank"></a>';
-                                                            rssoutput+='<div class="imageBlock">';
-                                                            rssoutput+='<div class="image"><img src="'+itemImage+'" /></div>';    
-                                                            rssoutput+='<div style="" class="noteTitle">';
-                                                            rssoutput+='<img src="img/bullet_titleBlog.png" class="bullet">';                                                                                                     
-                                                            rssoutput+='<h1 class="title1">'+title+'</h1>';
-                                                            rssoutput+='<h1 class="title2"></h1>';
-                                                            rssoutput+='</div>';
+							if(i==0){
+								rssoutput+='<div class="principalNote loading">';
+	                                                        rssoutput+='<a href="javascript:viewDetails(\''+urlBlog+'\',\''+commentsRss+'\',\''+i+'\' , \' '+twitterhastag+' \');void(0);" data-transition="slidefade"  id="" class="linkBlank"></a>';
+								rssoutput+='<div class="imageBlock">';
+								rssoutput+='<div class="image"><img src="'+itemImage+'" /></div>';    
+								rssoutput+='<div style="" class="noteTitle">';
+	                                                        rssoutput+='<img src="img/bullet_titleBlog.png" class="bullet">';                                                                                                     
+								rssoutput+='<h1 class="title1">'+title+'</h1>';
+	                                                        rssoutput+='<h1 class="title2"></h1>';
+								rssoutput+='</div>';
 
-                                                            rssoutput+='<div class="contentDateComent">';
-                                                            rssoutput+='<div class="date">';
-                                                            rssoutput+='<img src="img/calendar.png" alt="calendar" />';
-                                                            rssoutput+='<p>'+itemdate+'</p>';
-                                                            rssoutput+='</div>';
-                                                            rssoutput+='<div class="coment">';
-                                                            rssoutput+='<img src="img/coments.png" alt="comenta" />';
-                                                            rssoutput+='<p>'+comments+' comments</p>';
-                                                            rssoutput+='</div>';
-                                                            rssoutput+='</div>';
+								rssoutput+='<div class="contentDateComent">';
+								rssoutput+='<div class="date">';
+								rssoutput+='<img src="img/calendar.png" alt="calendar" />';
+								rssoutput+='<p>'+itemdate+'</p>';
+								rssoutput+='</div>';
+								rssoutput+='<div class="coment">';
+								rssoutput+='<img src="img/coments.png" alt="comenta" />';
+								rssoutput+='<p>'+comments+' comments</p>';
+								rssoutput+='</div>';
+								rssoutput+='</div>';
 
-                                                            rssoutput+='</div>';
+								rssoutput+='</div>';
 
-                                                            rssoutput+='<div class="text">';
-                                                            rssoutput+='<p class="texthtml">'+description+'</p>';
-                                                            rssoutput+='</div>';
-                                                            rssoutput+='</div>';
-                                                            rssoutput+='';
+								rssoutput+='<div class="text">';
+								rssoutput+='<p class="texthtml">'+description+'</p>';
+								rssoutput+='</div>';
+								rssoutput+='</div>';
+								rssoutput+='';
 	                                                        
-                                                    }else{
-                                                            if(p==4){
-                                                                    rssoutput+='<div class="clear"></div><div class="footerBlogs"><div class="boxfooter"><div class="btn_refresh"><a><img src="img/icons/icon_refresh.png"></a></div><!--<div class="btn_shuffle"><a><img src="img/icons/icon_shuffle.png"></a></div>--></div></div></div><div class="flipPage">';
-                                                                    p=0;
-                                                            }
+							}else{
+								if(p==4){
+									rssoutput+='<div class="clear"></div><div class="footerBlogs"><div class="boxfooter"><div class="btn_refresh"><a><img src="img/icons/icon_refresh.png"></a></div><!--<div class="btn_shuffle"><a><img src="img/icons/icon_shuffle.png"></a></div>--></div></div></div><div class="flipPage">';
+									p=0;
+								}
 								
-                                                            rssoutput+='<div class="note loading">';
-                                                            rssoutput+='<a href="javascript:viewDetails(\''+urlBlog+'\',\''+commentsRss+'\',\''+i+'\', \' '+twitterhastag+' \');void(0);" data-transition="slide"  id="" class="linkBlank"></a>';
-                                                            rssoutput+='<div class="imageBlock">';							
-                                                            rssoutput+='<div class="title">';
-                                                            rssoutput+='<p>'+title+'</p>';
-                                                            rssoutput+='</div>';
-                                                            rssoutput+='<div class="contentDateComent">';
-                                                            rssoutput+='<div class="date">';
-                                                            rssoutput+='<p class="icon_calendar"><img src="img/calendarGris.png" height="22" width="20" alt="calendarGris" /></p>';
-                                                            rssoutput+=' <p>'+itemdate+'</p>';
-                                                            rssoutput+='</div>';
-                                                            rssoutput+='<div class="coment">';
-                                                            rssoutput+='<p class="icon_comment"><img src="img/comentGris.png" height="21" width="25" alt="coment" /></p>';
-                                                            rssoutput+='<p>'+comments+' comments</p>';
-                                                            rssoutput+='</div>';
-                                                            rssoutput+='</div>';
-                                                            rssoutput+='</div>';
-                                                            rssoutput+='<div class="text">';							
-                                                            rssoutput+='<div class="image"><img src="'+itemImage+'" /></div>';
-                                                            rssoutput+='<p class="texthtml">';
-                                                            rssoutput+=description;
-                                                            rssoutput+='</p>';
-                                                            rssoutput+='</div>';
-                                                            rssoutput+='</div>';
-                                                            rssoutput+='';
-                                                    }
-                                            }
+								rssoutput+='<div class="note loading">';
+								rssoutput+='<a href="javascript:viewDetails(\''+urlBlog+'\',\''+commentsRss+'\',\''+i+'\', \' '+twitterhastag+' \');void(0);" data-transition="slide"  id="" class="linkBlank"></a>';
+								rssoutput+='<div class="imageBlock">';							
+								rssoutput+='<div class="title">';
+								rssoutput+='<p>'+title+'</p>';
+								rssoutput+='</div>';
+								rssoutput+='<div class="contentDateComent">';
+								rssoutput+='<div class="date">';
+								rssoutput+='<p class="icon_calendar"><img src="img/calendarGris.png" height="22" width="20" alt="calendarGris" /></p>';
+								rssoutput+=' <p>'+itemdate+'</p>';
+								rssoutput+='</div>';
+								rssoutput+='<div class="coment">';
+								rssoutput+='<p class="icon_comment"><img src="img/comentGris.png" height="21" width="25" alt="coment" /></p>';
+								rssoutput+='<p>'+comments+' comments</p>';
+								rssoutput+='</div>';
+								rssoutput+='</div>';
+								rssoutput+='</div>';
+								rssoutput+='<div class="text">';							
+								rssoutput+='<div class="image"><img src="'+itemImage+'" /></div>';
+								rssoutput+='<p class="texthtml">';
+								rssoutput+=description;
+								rssoutput+='</p>';
+								rssoutput+='</div>';
+								rssoutput+='</div>';
+								rssoutput+='';
+							}
+						}
 						
 						
 
 
 
 
-                                            rssoutput+='<div class="clear"></div><div class="footerBlogs"><div class="boxfooter"><div class="btn_refresh"><a><img src="img/icons/icon_refresh.png"></a></div><!--<div class="btn_shuffle"><a><img src="img/icons/icon_shuffle.png"></a></div>--></div></div></div></div>';
-                                            $("#blog").html(rssoutput);          
-                                            console.log('LLENO CONTENIDO');
-                                            sliptTitles('#blogs');
-                                            $("#blog").find('.loading').krioImageLoader();
-                                            withdCalculator1();
-                                            $("#flipblogs").flip({
-                                                height: '100%',
-                                            });
+						rssoutput+='<div class="clear"></div><div class="footerBlogs"><div class="boxfooter"><div class="btn_refresh"><a><img src="img/icons/icon_refresh.png"></a></div><!--<div class="btn_shuffle"><a><img src="img/icons/icon_shuffle.png"></a></div>--></div></div></div></div>';
+						$("#blog").html(rssoutput);          
+	                                        console.log('LLENO CONTENIDO');
+	                                        sliptTitles('#blogs');
+	                                        $("#blog").find('.loading').krioImageLoader();
+						withdCalculator1();
+						$("#flipblogs").flip({
+	                                            height: '100%',
+	                                        });
 	                                        
 						
 
 						
 					
-                            }
-                    }(this.feedlabels[i])) //call Feed.load() to retrieve and output RSS feed.
-            }
-    }
+				}
+			}(this.feedlabels[i])) //call Feed.load() to retrieve and output RSS feed.
+		}
+	}
 	
-    $(document).ready(function() {
-            if($.cookie('view_blog')){		
-                    var arr1=$.cookie('view_blog').split(";");
-                    var url_blog_feed='';
-                    var hastag_blog='';
-                    if(arr1[0]){
-                            if(arr1[1]){
-                                    hastag_blog=arr1[1];
-                            }
-                            url_blog_feed=arr1[0];
-                            //REDIRECCIONAMIENTO
-                            $('#home').prepend('<div class="blank" style="background-color:#fff;margin:0;"></div>');
-                            $.mobile.loading('show');
+	$(document).ready(function() {
+		if($.cookie('view_blog')){		
+			var arr1=$.cookie('view_blog').split(";");
+			var url_blog_feed='';
+			var hastag_blog='';
+			if(arr1[0]){
+				if(arr1[1]){
+					hastag_blog=arr1[1];
+				}
+				url_blog_feed=arr1[0];
+	                        //REDIRECCIONAMIENTO
+	                        $('#home').prepend('<div class="blank" style="background-color:#fff;margin:0;"></div>');
+	                        $.mobile.loading('show');
 	                        
-                            viewBlog(url_blog_feed,hastag_blog);
-                    }
-                    if($.cookie('view_details')){
+				viewBlog(url_blog_feed,hastag_blog);
+			}
+			if($.cookie('view_details')){
 	                       
-                            var arr2=$.cookie('view_details').split(";");
-                            var url_blog='';
-                            var url_note_feed='';
-                            var note_id=0;
-                            var note_hastag='';
-                            if(arr2[0]){
-                                    url_blog=arr2[0];
-                                    if(arr2[1]){
-                                            url_note_feed=arr2[1];
-                                            }
-                                    if(arr2[2]){
-                                            note_id=arr2[2];
-                                            }
-                                    if(arr2[3]){
-                                            note_hastag=arr2[3];
-                                            }
-                                    //REDIRECCIONAMIENTO        
-                                    $('#home').prepend('<div class="blank" style="background-color:#fff;margin:0;"></div>');
-                                    $.mobile.loading('show');
+				var arr2=$.cookie('view_details').split(";");
+				var url_blog='';
+				var url_note_feed='';
+				var note_id=0;
+				var note_hastag='';
+				if(arr2[0]){
+					url_blog=arr2[0];
+					if(arr2[1]){
+						url_note_feed=arr2[1];
+						}
+					if(arr2[2]){
+						note_id=arr2[2];
+						}
+					if(arr2[3]){
+						note_hastag=arr2[3];
+						}
+	                                //REDIRECCIONAMIENTO        
+	                                $('#home').prepend('<div class="blank" style="background-color:#fff;margin:0;"></div>');
+	                                $.mobile.loading('show');
 	                                
-                                    viewDetails(url_blog,url_note_feed,note_id,note_hastag);
-                            }
-                    }
-                    //REDIRECCIONAMIENTO
-                    $('#bigNews').removeClass('flipCurrent');
-                    $('#blogskl').addClass('flipCurrent');
+					viewDetails(url_blog,url_note_feed,note_id,note_hastag);
+				}
+			}
+	                //REDIRECCIONAMIENTO
+			$('#bigNews').removeClass('flipCurrent');
+		        $('#blogskl').addClass('flipCurrent');
 			
-            }
-            });
+		}
+		});
 	
 }
 	
 	 	
-        </script>
-    </body>
-</html>
+</script>
 
 
 
@@ -665,7 +670,8 @@ var detalle = '';
 
 
 
+   
+    
 
 
-
-
+    
