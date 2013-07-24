@@ -14,28 +14,15 @@
         <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
 
 
-        <script type="text/javascript" charset="utf-8">
+        
+    </head>
 
-                    // Wait for device API libraries to load
-                    //
-                    document.addEventListener("deviceready", onDeviceReady, false);
-                    // device APIs are available
-                            //
-                    function onDeviceReady() {
-
-                    if (navigator.connection.type !== 'none'){
-
-                    alert('Connection type: ' + navigator.connection.type);
-                            navigator.splashscreen.show();
-                            var ref = window.open('http://www.isourcedev.com/klblog', '_self', 'location=no,transitionstyle=crossdissolve,toolbar=no');
-                            ref.addEventListener('loadstart', function(event) {console.log("arranco!"); });
-                            ref.addEventListener('loadstop', function(event) {console.log("Stop"); });
-                            ref.addEventListener('loaderror', function(event) {console.log("Error"); });
-                            ref.addEventListener('exit', function(event) { console.log("BYe!"); });
-                        } else{
-
-                            
-                            var newsfeed = new gfeedfetcher("rssfeeds", "wrapperInner loading", "_new");
+    <body style="margin:0px;padding:0px;overflow:hidden">
+        <script type="text/javascript">
+                                    if (navigator.onLine){
+                                    document.write('<iframe src="http://www.isourcedev.com/klblog/" frameborder="0" style="overflow:hidden;overflow-x:hidden;overflow-y:hidden;height:100%;width:100%;position:absolute;top:0px;left:0px;right:0px;bottom:0px;border:0;padding:0;margin:0;" height="100%" width="100%"></iframe>');
+                                            } else{
+                                    var newsfeed = new gfeedfetcher("rssfeeds", "wrapperInner loading", "_new");
                                             for (var j = 0; j < 6; j++) {
                                     var retrievedObject = JSON.parse(localStorage.getItem('listBlogObject' + j));
                                             if (retrievedObject == null){
@@ -641,20 +628,18 @@
 			
                         }
                         });
-                            
-                            
-
-                        }
-
-                    }
-
+	
+        }
+	
+	 	
         </script>
-    </head>
-
-    <body style="margin:0px;padding:0px;overflow:hidden">
-        
     </body>
 </html>
+
+
+
+
+
 
 
 
