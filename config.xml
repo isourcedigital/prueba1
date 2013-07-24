@@ -34,6 +34,16 @@
    
     <gap:splash src="res/launch_image_ipad.png"    gap:platform="ios"     width="768" height="1004" />
     <gap:splash src="res/launch_image-iphone5.png"    gap:platform="ios"     width="640" height="1136" />
-
+    
+    
+    <plugins>
+        <plugin name="InAppBrowser" value="org.apache.cordova.InAppBrowser" />
+        <plugin name="InAppBrowser" value="CDVInAppBrowser" />
+        <plugin name="NetworkStatus" value="org.apache.cordova.NetworkManager" />
+        <plugin name="NetworkStatus" value="CDVConnection" />
+        <plugin name="Storage" value="org.apache.cordova.Storage" />
+        <plugin name="SplashScreen" value="org.apache.cordova.SplashScreen"/>
+        <plugin name="SplashScreen" value="CDVSplashScreen" />
+    </plugins>
     
 </widget>
