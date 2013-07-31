@@ -5,13 +5,14 @@
         <meta name="viewport" content="initial-scale=1, maximum-scale=1">
         <meta name="apple-mobile-web-app-capable" content="yes" />
 		<link rel="stylesheet" type="text/css" href="css/layoutResponsive.css" />
-
 		<script type="text/javascript" src="js/js-all.js"></script>	
 		<script type="text/javascript" src="js/custom.js"></script>
-        <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+            <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
     </head>
     <body>
         <div data-role="page" class="page" id="home">
+            
+            
             <div data-role="content">
                 <div id="flipRoot">
                     <div id="bigNews" data-url="&ui-page=bigNews">
@@ -19,6 +20,7 @@
                             <div class="kllogo">
                                 <img src="img/klbigNews.png">
                                     </div>
+                            
                             <div class="flipImg">
                                 <img src="img/flip.png" width="61" height="122">
                                     </div>
@@ -28,6 +30,7 @@
                                         <img src="img/bigNews/bigUno2.jpg">
                                             <img src="img/bigNews/bigUno3.jpg">
                                                 <img src="img/bigNews/bigUno4.jpg">
+                                                    
                                                     </div>
                             <div class="titlesBox">
                                 <div class="titles">
@@ -48,6 +51,7 @@
                         </div>
                     </div>
                     <div id="blogskl" data-url="&ui-page=blogskl">
+                        
                         <div class="header">
                             <div class="logoHome">
                                 <img src="img/logo.png" width="261">
@@ -59,6 +63,7 @@
                         </div>	<div class="wrapper">
                             <div id="feedrss" class="wrapperInner loading"></div>
                             <div class="footer">
+                                
                                 <div class="boxfooter">
                                     <div class="btn_refresh1">
                                         <a><img src="img/icons/icon_refresh.png"></a>
@@ -75,18 +80,23 @@
                                     </div>
                                 </div>
                                 <div class="pagerCustom" id="paginateblog"></div>
-                            </div>	
+                            </div>		
                         </div>
                     </div>            
                 </div>
             </div>
             <!--BLOGS PAGE-->
             <div data-role="subpage" id="blogs" class="blogs">
+                
+                
                 <div data-role="content">
+                    
                     <div class="header" style="position: relative; z-index: 11;" id="headerBlog">
                         <div class="logo">
                             <a href="#home" data-role="back" data-transition="slidefade"  data-direction="reverse" class="ui-link"><img src="img/logoInterno.png" alt="kaspersky" /></a>
                         </div>
+                        
+                        
                         <div align="right" style="" class="loginbox">
                             <div>Existing account?</div>
                             <div class="tap"><a href="#logInb" data-rel="popup" data-position-to="window" data-transition="pop">tap to sign in</a></div>
@@ -96,681 +106,364 @@
                 </div>
             </div>
             <!--BLOGS PAGE-->
+            
             <!--DETALLE PAGE-->
             <div id="detalleblog"></div>    
             <!--DETALLE PAGE-->
+            
+            
             <!--END APP-->
         </div>
 <script type="text/javascript">
+    
+    
     $(document).ready(function() {
-
     document.addEventListener("deviceready", onDeviceReady, false);
-
     // device APIs are available
-
     //
-
                       
-
                       $(document).bind('mobileinit',function(){
-
                                        $.mobile.allowCrossDomainPages=true;
-
                                        
-
                                        })
-
     function onDeviceReady() {
-
         
-
-        if (navigator.connection.type !== 'none'){// AQUI VA TODO ONLINE!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-
-            $("#home").hide();//OCULTA EL HTML QUE SE CARGA DE ARRIBA, ESE HTML SOLO SIRVE SI ESTAS OFFLINE
-
+        if (navigator.connection.type !== 'none'){
+            $("#home").hide();
             
-
             
-
             //alert('Connection type: ' + navigator.connection.type);
-
             //navigator.splashscreen.show();
-
             var ref = window.open('http://www.isourcedev.com/klblog', '_self', 'location=no,transitionstyle=crossdissolve,toolbar=no');
-
             ref.addEventListener('loadstart', function(event) {console.log("arranco!"); });
-
             ref.addEventListener('loadstop', function(event) {console.log("Stop"); });
-
             ref.addEventListener('loaderror', function(event) {console.log("Error"); });
-
             ref.addEventListener('exit', function(event) { console.log("BYe!"); });
-
             
-
             
-
             function getCode(){
-
                 $.ajax({
-
                        url:'http://www.isourcedev.com/klblog/cache/list.php',
-
                        type:'GET',
-
                        dataType:'jsonp',
-
                        success:function(data){
-
                        var arr=data.split("@klsepara@");
-
                        var arrContent=arr[0].split("@klcontent@");
-
                        var arrBlog=arr[1].split("@klblog@");
-
                        for(var i=0;i<arrContent.length;i++){
-
                        var objContent=JSON.parse(arrContent[i]);
-
                        window.localStorage.setItem('listBlogObject'+i,arrContent[i]);
-
                        //alert(objContent[0]["ddlabel"]["url"]);
-
                        window.localStorage.setItem(objContent[0]["ddlabel"]["url"],arrBlog[i]);
-
                        }
-
                        },
-
                        error:function(){
-
-                       alert("No setearon las LocalStorage");
-
+                       alert("errorrrr");
                        }
-
                        });
-
             }
-
             getCode();
-
             
+        } else{
+            
+            
+            
+            
+            
+            
+        
 
-        } else{// AQUI VA TODO OFFLINE!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
+
+                  
                   var rssoutput='';
-
                   for(var i=0; i<6;i++){
-
                   var objBlog=JSON.parse(window.localStorage.getItem("listBlogObject"+i));
-
                   //console.log(objBlog);
-
                   var itemdescription = objBlog[0]["contentSnippet"];
-
                   if (i == 0) {
-
                   rssoutput += '<div id="blog' + (i + 1) + '" class="box blog1Box"><div class="boxInner"><a href="javascript:$.viewBlog(\'' + objBlog[0]["ddlabel"]["url"] + '\');" data-transition="slidefade" class="linkBlog"></a>    <img src="' + objBlog[0]["ddlabel"]["img"] + '"><div class="titleBlog"><img src="img/bullet_titleBlog.png" class="bullet" /><h1 class="title1">' + objBlog[0]["ddlabel"]["name"] + '</h1><h1 class="title2"></h1><div class="desc"><h2>' + itemdescription + '</h2></div></div></div></div>';
-
                   } else {
-
                   rssoutput += '<div id="blog' + (i + 1) + '" class="box blogBox"><div class="boxInner"><a href="javascript:$.viewBlog(\'' + objBlog[0]["ddlabel"]["url"] + '\')" data-transition="slidefade" class="linkBlog"></a>    <img src="' + objBlog[0]["ddlabel"]["img"] + '"><div class="titleBlog"><img src="img/bullet_titleBlog.png" class="bullet" /><h1 class="title1">' + objBlog[0]["ddlabel"]["name"] + '</h1><h1 class="title2"></h1><div class="desc"><h2>' + itemdescription + '</h2></div></div></div></div>';
-
                   }
-
                   }
-
                   $("#feedrss").css('opacity', '0');    
-
                   $("#feedrss").html(rssoutput);
-
                   $("#feedrss").animate({
-
                                         opacity: 1
-
                                         }, "fast", function() {
-
                                         if (mastropiero == false) {            
-
                                         sliptTitlesHome('#blogskl');
-
                                         }
-
                                         });    
-
                   $("#feedrss .titleBlog").css('opacity', '0'); 
-
                   withdCalculator1();
-
                   
-
                   
-
     $.viewBlog=function(url) {
-
-    var thisfeed=JSON.parse(window.localStorage.getItem((url)));
-
-    if(thisfeed==null){
-
-    alert("error");
-
-    return;
-
-    }
-
-    $("#home .ui-content").append('<div class="ui-loader ui-corner-all ui-body-a ui-loader-default loadingHome" style="display: block;"><span class="ui-icon ui-icon-loading"></span><h2 class="textLoading">loading</h2></div>');        
-
+    	var thisfeed=JSON.parse(window.localStorage.getItem((url)));
+    	if(thisfeed==null){
+    		alert("error");
+    		return;
+    	}
+    	$("#home .ui-content").append('<div class="ui-loader ui-corner-all ui-body-a ui-loader-default loadingHome" style="display: block;"><span class="ui-icon ui-icon-loading"></span><h2 class="textLoading">loading</h2></div>');        
         
-
         $("#blog").html('<div class="ui-loader ui-corner-all ui-body-a ui-loader-default" style="display: block;"><span class="ui-icon ui-icon-loading"></span><h2 class="textLoading">loading</h2></div>');
-
         var rssoutput='';
-
         
-
         console.log(thisfeed);
-
         var objItem='';
-
         rssoutput+='<div id="flipblogs" data-flip-show-pager="true"><div class="flipPage">';
-
         $(".details").remove();
-
         $("#detalleblog").html('');
-
         var p=0;
-
         
-
         
-
         for (var i=0; i<thisfeed["itemblog"].length; i++){ //For each entry within feed
-
-        var item = thisfeed["itemblog"][i];
-
-        //console.log(item);
-
-        var itemImage=item["itemImage"];
-
-        var title=item["title"];
-
-        var itemdate=item["itemDate"];
-
-        var comments=item["comments"];
-
-        var contentclear=item["contentclear"];
-
-        var description=item["description"];
-
-        var urlBlog='';
-
-        var commentsRss='';
-
-        var twitterhastag='';
-
-        p++;
-
-        	var detalle='';
-
+        	var item = thisfeed["itemblog"][i];
+        	//console.log(item);
+        	var itemImage=item["itemImage"];
+        	var title=item["title"];
+        	var itemdate=item["itemDate"];
+        	var comments=item["comments"];
+        	var contentclear=item["contentclear"];
+        	var description=item["description"];
+        	var urlBlog='';
+        	var commentsRss='';
+        	var twitterhastag='';
+        	p++;
+        	 var detalle='';
         detalle+='<div data-role="subpage" id="details'+i+'" class="notaPop details">';
-
         detalle+='<div class="volver">';
-
         detalle+='<a href="javascript:$.backBlogs();" data-role="back" data-transition="slidefade" data-direction="reverse" class="ui-link" ><img src="img/volver.png" height="69" width="69" alt="volver"></a>';
-
         detalle+='</div>';
-
         detalle+='<div data-role="content" data-theme="c" role="main">';
-
         detalle+='<!--page'+i+'-->';
-
         detalle+='<div class="contentNotes">';
-
         detalle+='<div id="flipdetalle'+i+'" data-flip-show-pager="false">';
 
-
         //****star flipPage*****/
-
         detalle+='<div class="flipPage">';
-
         detalle+='<div class="notaPrincipal">';
-
         detalle+='<div class="blank"></div>';
-
         detalle+='<div class="imagen">';
-
         detalle+='<img src="'+itemImage+'" class="imagenNotaPrincipal" height="" width="723">';
-
         detalle+='</div>';
-
         detalle+='<div class="titulo">';
-
         detalle+=title;
-
         detalle+='</div>';
-
         detalle+='<div class="contentFechaComent">';
-
         detalle+='<div class="fecha">';
-
         detalle+='<p class="icon_calendar"><img src="img/calendarGris.png" alt="calendarGris"></p>';
-
         detalle+='<p>'+itemdate+'</p>';
-
         detalle+='</div>';
-
         detalle+='<div class="coment">';
-
         detalle+='<p class="icon_comment"><img src="img/comentGris.png" alt="coments"></p>';
-
         detalle+='<p>'+comments+' comments</p>';
-
         detalle+='</div>';
-
         detalle+='</div>';
-
         detalle+='<div class="text t1" id="t1">';
-
         detalle+='<p class="colum">';
-
         detalle+=contentclear;
-
         detalle+='</p>';
-
         detalle+='</div>';
-
         detalle+='</div>';
-
         detalle+='<div class="footerBlogs">';
-
         detalle+='<div class="boxfooter">';
-
         detalle+='</div>';
-
         detalle+='<div class="pagerCustom">Page 1 of <span>1</span></div>';
-
         detalle+='</div>';
-
         detalle+='</div>';
-
         detalle+='</div>';
-
         detalle+='</div>';
-
         detalle+='</div>';
-
         detalle+='</div>';
-
         $("#detalleblog").append(detalle);
-
         $("#details"+i).subpage();
-
         $("#flipdetalle"+i).flip({height: '100%'});
 
-
         trimFirst();
-
         function trimFirst() {
-
         var n = i;
-
         var t1 = $(document).find('#details'+n+' .t1');
-
         var anterior = new Array();
-
         t1.dotdotdot({
-
         ellipsis: '',
-
         wrap: 'word',
-
         watch: true,
-
         callback: function(isTruncated, orgContent) {
-
         t1.trigger("originalContent", function(content) {
-
         var firstTextCount = t1.text().length;
-
         var restText = content.text().substring(firstTextCount);
-
         var id = 1;
-
         var dynamic = $(document).find('div').hasClass('dynamic');
-
         if (restText.length !== 0) {
-
         nextPages(restText, id, anterior, n);
-
         }
-
         });
-
         }
-
         });
-
         }
-
 
         function nextPages(restText, id, anterior, n ) {
-
         id++;
-
         if ($.inArray(id, anterior) !== -1){
-
         console.log('YA PASASTE POR ACA! en ruso : уже проходили здесь');
-
         }else{
-
         anterior.push(id);
-
         console.log(anterior);
-
         console.log('id '+id)
-
         console.log('Sos nuevito, ENTRA :)');
-
         var nextText = restText;
-
         var restcount = nextText.length;
-
         var t;
-
         console.log('restcount1 ' + restcount)
-
         var currentPageID = 't' + id;
-
         console.log('id: ' + currentPageID)
-
         var output = '<div class="flipPage dynamic flipContent" style="height:100%">';
-
         output += '<div class="notaPrincipal">';
-
         output+='<div class="blank"></div>';
-
         output += '<div class="text textH " id=' + currentPageID + '>';
-
         output += '<p class="colum colH">';
-
         output += nextText;
-
         output += '</p>';
-
         output += '</div>';
-
         output += '</div>';
-
         output += '<div class="footerBlogs">';
-
         output += '<div class="boxfooter">';
-
         output += '</div>';
-
         output += ' <div class="pagerCustom"> Page ' + id + ' of <span></span></div>';
-
         output += '</div>';
-
         output += '</div>';
-
         var idDetail = location.hash;
-
         var idFlip = idDetail.split("#details");
-
         var idFlip = idFlip[1];
-
         $(idDetail+' #flipdetalle'+idFlip).append(output);
-
         totalPages(idFlip);
-
         var currentPageSel = $(idDetail).find('#' + currentPageID);
-
         console.log(currentPageSel);
-
         var stop = 0;
-
         var stopWatch = new Array();
-
         $(currentPageSel).dotdotdot({
-
         ellipsis: '',
-
         wrap: 'word',
-
         watch: true,
-
         callback: function(isTruncated, orgContent) {
-
         if ($.inArray(stop, stopWatch) !== -1){
-
         console.log(stopWatch);
-
         console.log('stopWatch!');
-
         } else {
-
         stop++
-
         stopWatch.push(id);
-
         console.log(stopWatch);
-
         if(isTruncated){
-
         var currentPageCount = $(currentPageSel).text().length;
-
         t = nextText.substring(currentPageCount);
-
         console.log('t: ' + nextText);
-
         restcount = t.length;
-
         console.log('restcountNext ' + restcount);
-
         if (restcount !== 0) {
-
         totalPages(idFlip);
-
         nextPages(t, id, anterior, n);
-
         }
-
         }
-
         }
-
         }
-
         });
-
         }
-
         }
-
 
         function totalPages(numeroFlip) {
-
         var totalPage = $('#flipdetalle' + numeroFlip).find('.flipPage');
-
         var totalpageLenght = totalPage.length;
-
         $('.pagerCustom span').text(totalpageLenght);
-
         }
-
         if(i==0){
-
         rssoutput+='<div class="principalNote loading">';
-
         rssoutput+='<a href="javascript:$.viewDetails(\''+urlBlog+'\',\''+commentsRss+'\',\''+i+'\' , \' '+twitterhastag+' \');void(0);" data-transition="slidefade"  id="" class="linkBlank"></a>';
-
         rssoutput+='<div class="imageBlock">';
-
         rssoutput+='<div class="image"><img src="'+itemImage+'" /></div>';
-
         rssoutput+='<div style="" class="noteTitle">';
-
         rssoutput+='<img src="img/bullet_titleBlog.png" class="bullet">';
-
         rssoutput+='<h1 class="title1">'+title+'</h1>';
-
         rssoutput+='<h1 class="title2"></h1>';
-
         rssoutput+='</div>';
-
         rssoutput+='<div class="contentDateComent">';
-
         rssoutput+='<div class="date">';
-
         rssoutput+='<img src="img/calendar.png" alt="calendar" />';
-
         rssoutput+='<p>'+itemdate+'</p>';
-
         rssoutput+='</div>';
-
         rssoutput+='<div class="coment">';
-
         rssoutput+='<img src="img/coments.png" alt="comenta" />';
-
         rssoutput+='<p>'+comments+' comments</p>';
-
         rssoutput+='</div>';
-
         rssoutput+='</div>';
-
         rssoutput+='</div>';
-
         rssoutput+='<div class="text">';
-
         rssoutput+='<p class="texthtml">'+description+'</p>';
-
         rssoutput+='</div>';
-
         rssoutput+='</div>';
-
         rssoutput+='';
-
         }else{
-
         if(p==4){
-
         rssoutput+='<div class="clear"></div><div class="footerBlogs"><div class="boxfooter"><div class="btn_refresh"><a><img src="img/icons/icon_refresh.png"></a></div><!--<div class="btn_shuffle"><a><img src="img/icons/icon_shuffle.png"></a></div>--></div></div></div><div class="flipPage">';
-
         p=0;
-
         }
-
         rssoutput+='<div class="note loading">';
-
         rssoutput+='<a href="javascript:$.viewDetails(\''+urlBlog+'\',\''+commentsRss+'\',\''+i+'\', \' '+twitterhastag+' \');void(0);" data-transition="slide"  id="" class="linkBlank"></a>';
-
         rssoutput+='<div class="imageBlock">';
-
         rssoutput+='<div class="title">';
-
         rssoutput+='<p>'+title+'</p>';
-
         rssoutput+='</div>';
-
         rssoutput+='<div class="contentDateComent">';
-
         rssoutput+='<div class="date">';
-
         rssoutput+='<p class="icon_calendar"><img src="img/calendarGris.png" height="22" width="20" alt="calendarGris" /></p>';
-
         rssoutput+=' <p>'+itemdate+'</p>';
-
         rssoutput+='</div>';
-
         rssoutput+='<div class="coment">';
-
         rssoutput+='<p class="icon_comment"><img src="img/comentGris.png" height="21" width="25" alt="coment" /></p>';
-
         rssoutput+='<p>'+comments+' comments</p>';
-
         rssoutput+='</div>';
-
         rssoutput+='</div>';
-
         rssoutput+='</div>';
-
         rssoutput+='<div class="text">';
-
         rssoutput+='<div class="image"><img src="'+itemImage+'" /></div>';
-
         rssoutput+='<p class="texthtml">';
-
         rssoutput+=description;
-
         rssoutput+='</p>';
-
         rssoutput+='</div>';
-
         rssoutput+='</div>';
-
         rssoutput+='';
-
         }
-
         }
-
         rssoutput+='<div class="clear"></div><div class="footerBlogs"><div class="boxfooter"><div class="btn_refresh"><a><img src="img/icons/icon_refresh.png"></a></div><!--<div class="btn_shuffle"><a><img src="img/icons/icon_shuffle.png"></a></div>--></div></div></div></div>';
-
         $("#blog").html(rssoutput);
-
         $("#flipblogs").flip({height: '100%',});        
-
         location.href = "#blogs";
-
         $(".loadingHome").remove();
-
     }
-
     $.backBlogs=function() {
-
         location.href = "#blogs";
-
     }
-
     $.viewDetails=function(urlblog, url, id, hastag) {
-
         if (url) {
-
             $(".btn_share").show();
-
         } else {
-
             $(".btn_share").hide();
-
         }
-
         location.href = "#details" + id;
-
     }
-
     
-
 
             
-
         }
-
         
-
     }
-
       });
-
     
-
     
-
       
-
       
-
 </script>
-
     </body>
-
 </html>
